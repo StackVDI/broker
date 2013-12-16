@@ -83,3 +83,6 @@ gem 'pry-debugger'
 gem 'puma'
 gem 'mina'
 gem 'pundit'
+
+gem 'simple_form'
+

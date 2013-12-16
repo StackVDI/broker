@@ -4,7 +4,6 @@ describe AdministrationController do
 
   context 'login as an admin' do
     before do
-      @user = FactoryGirl.build(:user)
       @user = FactoryGirl.build(:user, :approved => true)
       @user.add_role :admin
       @user.confirm!
