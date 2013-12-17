@@ -1,6 +1,6 @@
 class RolesController < ApplicationController
 
-  before_action :set_role, only: [:edit, :update]
+  before_action :set_role, only: [:edit, :update, :destroy]
 
   def new
     @role = Role.new
@@ -28,6 +28,12 @@ class RolesController < ApplicationController
     else
       render action: 'edit' 
     end
+  end
+
+  def destroy
+    authorize @role
+    @role.destroy 
+    redirect_to administration_list_groups_path, notice: 'Role deleted.'
   end
 
   private

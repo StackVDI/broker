@@ -21,6 +21,13 @@ When(/^I edit a role$/) do
   click_button 'Edit Role'
 end
 
+When(/^I delete a role$/) do
+  click_link ('Add role')
+  fill_in 'role_name', :with  => 'newrole'
+  click_button 'Create Role'
+  click_link 'delete_role_2'
+end
+
 ######## THEN
 
 Then(/^I can see the roles list$/) do
@@ -44,3 +51,8 @@ end
 Then(/^I can see the editted rol in the roles list$/) do
   page.should have_content 'newrole2'
 end
+
+Then(/^I can't see the deleted rol in the roles list$/) do
+  page.should_not have_content 'newrole'
+end
+

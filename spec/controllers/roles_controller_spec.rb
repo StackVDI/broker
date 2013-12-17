@@ -67,6 +67,14 @@ describe RolesController do
       end
     end
 
+    describe '.destroy' do
+      it 'destroy a Role' do
+        expect {
+          delete :destroy, id: @rol
+        }.to change(Role, :count).by(-1)
+      end
+    end
+
   end
 
 
@@ -96,6 +104,12 @@ describe RolesController do
     it 'can not put /update' do
       patch :update, id: @rol.id, role: { name: 'rol2'}
       expect(response).to_not be_success
+    end
+
+    it 'can not destroy a rol' do
+      expect {
+        delete :destroy, id: @rol
+      }.to_not change(Role, :count).by(-1)
     end
 
   end

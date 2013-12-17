@@ -21,7 +21,12 @@
             =link_to 'See users', administration_users_from_group_path(:id => group.id), :class => 'btn-info', id: "see_users_from_group_#{group.id}"
           %button.btn.btn-mini.btn-info 
             =link_to 'Edit', edit_role_path(:id => group.id), :class => 'btn-info', id: "edit_role_#{group.id}"
-          %button.btn.btn-mini.btn-danger delete
+          %button.btn.btn-mini.btn-danger
+            =link_to 'Delete', group,
+              class: 'btn-danger', method: :delete, data: { confirm: 'Are you sure?' }, 
+              id: "delete_role_#{group.id}"
+
+
 
 
       
