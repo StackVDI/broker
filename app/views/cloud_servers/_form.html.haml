@@ -1,0 +1,12 @@
+= simple_form_for(@cloud_server) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :description
+    = f.input :username
+    = f.input :password
+    = f.input :url
+
+  .form-actions
+    = f.button :submit

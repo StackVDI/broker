@@ -6,7 +6,7 @@ Feature: Sign_in
   Background:
     Given I am not logged in
 
-Scenario: User sign_in after admin approbation
+  Scenario: User sign_in after admin approbation
     When I sign up with valid data
     Then I receive an email for confirmation
     When I open the email

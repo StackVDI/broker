@@ -1,0 +1,29 @@
+%h1 Cloud Servers
+%p You can manage cloud server in this page
+
+%button.btn.btn-info
+  = link_to 'Add Cloud Server', new_cloud_server_path, class: 'btn-info'
+%br
+
+%table.table.table-bordered.table-hover
+  %thead
+    %th Name
+    %th Description
+    %th Username
+    %th Url
+    %th Actions
+
+  %tbody      
+    - @cloud_servers.each do |cloud_server|
+      %tr
+        %td= cloud_server.name
+        %td= cloud_server.description
+        %td= cloud_server.username
+        %td= cloud_server.url
+        %td
+          %button.btn.btn-mini.btn-info
+            = link_to 'Edit', edit_cloud_server_path(cloud_server), id: "edit_cloud_server_#{cloud_server.id}"
+          %button.btn.btn-mini.btn-danger
+            = link_to 'Delete', cloud_server, :method => :delete, :data => { :confirm => 'Are you sure?' }, id: "delete_cloud_server_#{cloud_server.id}"
+
+

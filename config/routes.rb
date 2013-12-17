@@ -1,5 +1,7 @@
 Broker::Application.routes.draw do
 
+  resources :cloud_servers
+
   # Administracion
   get "administration/list_users"
   get "administration/list_groups"

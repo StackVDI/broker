@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @cloud_server.name
+%p
+  %b Description:
+  = @cloud_server.description
+%p
+  %b Username:
+  = @cloud_server.username
+%p
+  %b Password:
+  = @cloud_server.password
+%p
+  %b Url:
+  = @cloud_server.url
+
+= link_to 'Edit', edit_cloud_server_path(@cloud_server)
+\|
+= link_to 'Back', cloud_servers_path
