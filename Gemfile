@@ -86,3 +86,6 @@ gem 'pundit'
 
 gem 'simple_form'
 
+gem 'openstack'
+
+gem 'anticipate'
