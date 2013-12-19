@@ -30,6 +30,14 @@ When(/^I visit the cloud server link blindy$/) do
   visit cloud_servers_path   
 end
 
+When(/^I visit the images link$/) do
+  click_link 'Images'
+end
+
+When(/^I add a Image$/) do
+    pending # express the regexp above with the code you wish you had
+end
+
 ##### THEN 
 
 Then(/^I can see the new cloud server in the cloud servers list$/) do
@@ -43,3 +51,6 @@ Then(/^I can't see the edited cloud server in the cloud servers list$/) do
     page.should_not have_content 'My openstack server'
 end
 
+Then(/^I can see the new image in the image list$/) do
+  pending # express the regexp above with the code you wish you had
+end

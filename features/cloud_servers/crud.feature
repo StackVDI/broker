@@ -1,4 +1,4 @@
-Feature: CRUD
+Feature: Cloud Servers CRUD
   In order to connect to several cloud servers,
   As an admin
   I want to be able to create, update, delete cloud servers
