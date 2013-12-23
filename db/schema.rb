@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131217080136) do
+ActiveRecord::Schema.define(version: 20131220103039) do
 
   create_table "cloud_servers", force: true do |t|
     t.string   "name"
@@ -22,6 +22,19 @@ ActiveRecord::Schema.define(version: 20131217080136) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "images", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "cloud_server_id"
+    t.string   "machine"
+    t.string   "flavor"
+    t.integer  "number_of_instances"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "images", ["cloud_server_id"], name: "index_images_on_cloud_server_id"
 
   create_table "roles", force: true do |t|
     t.string   "name"

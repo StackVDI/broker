@@ -66,13 +66,13 @@ group :test do
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'shoulda-matchers'
+  gem 'webmock'
 end
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'vcr'
   gem 'factory_girl_rails'
-  gem 'webmock'
 end
 
 gem 'puma'

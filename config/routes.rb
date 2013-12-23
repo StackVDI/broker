@@ -1,6 +1,8 @@
 Broker::Application.routes.draw do
 
-  resources :cloud_servers
+  resources :cloud_servers do
+    resources :images
+  end
 
   # Administracion
   get "administration/list_users"

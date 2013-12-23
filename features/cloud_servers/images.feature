@@ -5,10 +5,11 @@ Feature: Cloud Servers Images
 
   Background:
     Given I log as an admin
+    And   I create a cloud server
 
-  @wip
   Scenario: Admin can create Images
-    When  I visit the images link
+    When I click in the cloud servers link
+    And  I click in the images link of the first cloud server
     And  I add a Image
     Then I can see the new image in the image list
  

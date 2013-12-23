@@ -6,17 +6,17 @@ When(/^I click in the cloud servers link$/) do
   click_link 'Cloud servers'
 end
 
-When(/^I click in the images link of the first cloud server$/) do
-  click_link 'cloud_server_images_1' 
-end
+  When(/^I click in the images link of the first cloud server$/) do
+    pending # express the regexp above with the code you wish you had
+    end
 
 When(/^I add a cloud server$/) do
     click_link 'Add Cloud Server'
     fill_in "cloud_server_name", :with => 'Openstack 1'
     fill_in "cloud_server_description", :with => 'My openstack server'
-    fill_in "cloud_server_username", :with => 'adan'
-    fill_in "cloud_server_password", :with => 'cambiame'
-    fill_in "cloud_server_url", :with => 'http://nube.inf.um.es:5000/v2.0/'
+    fill_in "cloud_server_username", :with => 'username'
+    fill_in "cloud_server_password", :with => 'changeme'
+    fill_in "cloud_server_url", :with => 'http://url.com/auth'
     click_button 'Create Cloud server'
 end
 
@@ -28,9 +28,9 @@ When(/^I edit a cloud server$/) do
     click_link 'edit_cloud_server_1'
     fill_in "cloud_server_name", :with => 'Openstack 1'
     fill_in "cloud_server_description", :with => 'My openstack server edited'
-    fill_in "cloud_server_username", :with => 'adan'
-    fill_in "cloud_server_password", :with => 'cambiame'
-    fill_in "cloud_server_url", :with => 'http://nube.inf.um.es:5000/v2.0/'
+    fill_in "cloud_server_username", :with => 'username'
+    fill_in "cloud_server_password", :with => 'changeme'
+    fill_in "cloud_server_url", :with => 'http://url.com/auth'
     click_button 'Update Cloud server'
 end
 
@@ -43,19 +43,16 @@ When(/^I visit the images link$/) do
 end
 
 When(/^I add a Image$/) do
-  VCR.use_cassette('add image') {
     click_link 'Add Image'
     fill_in 'image_name', :with => 'Ubuntu server'
     fill_in 'image_description', :with => 'Default ubuntu 64 bits server'
-    select 'windows7', :from => 'image_machine'
-    select 'm1.tiny', :from => 'image_flavor'
-    fill_in 'image_number_of_instances', :with => "2"
-    click_button 'Create Image'
-  }
+    select 'Cloud Server', :from => 'image_cloud_server_id' 
+    pending
+    click_button 'create image'
 end
 
 Given(/^I create a cloud server$/) do
-  @cloudserver = FactoryGirl.build(:cloud_server, :username => 'adan', :password => 'cambiame', :url => 'http://nube.inf.um.es:5000/v2.0/')
+  @cloudserver = FactoryGirl.build(:cloud_server)
   @cloudserver.save
 end
 
@@ -73,5 +70,5 @@ Then(/^I can't see the edited cloud server in the cloud servers list$/) do
 end
 
 Then(/^I can see the new image in the image list$/) do
-  page.should have_content 'Ubuntu server'
+  page.should have_content 'Ubuntu Server'
 end

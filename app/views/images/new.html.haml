@@ -1,0 +1,20 @@
+%h1 
+  New image for 
+  = @cloud_server.name
+
+  = simple_form_for([@cloud_server, @image]) do |f|
+    = f.error_notification
+
+    .form-inputs
+      = f.input :name
+      = f.input :description
+      = f.input :machine do
+        = f.select :machine, @machines.map { |m| [m[:name], m[:name]] }, include_blank: true
+      = f.input :flavor do
+        = f.select :flavor, @flavors.map { |m| [m[:name], m[:name]] }, include_blank: true
+      = f.input :number_of_instances
+
+    .form-actions
+      = f.button :submit
+
+

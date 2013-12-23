@@ -4,12 +4,7 @@ class Cloud
   attr_reader :os 
   
   def initialize(params)
-    @os = OpenStack::Connection.create({
-      :username => params[:username],
-      :auth_method => params[:auth_method],
-      :api_key => params[:password],
-      :auth_url => params[:auth_url]
-    })        
+    @os = OpenStack::Connection.create(params)
   end
 
   def flavors

@@ -22,6 +22,8 @@
         %td= cloud_server.url
         %td
           %button.btn.btn-mini.btn-info
+            = link_to 'Images', cloud_server_images_path(cloud_server), id: "cloud_server_images_#{cloud_server.id}", class: 'btn-info'
+          %button.btn.btn-mini.btn-info
             = link_to 'Edit', edit_cloud_server_path(cloud_server), id: "edit_cloud_server_#{cloud_server.id}", class: 'btn-info'
           %button.btn.btn-mini.btn-danger
             = link_to 'Delete', cloud_server, :method => :delete, :data => { :confirm => 'Are you sure?' }, id: "delete_cloud_server_#{cloud_server.id}", class: 'btn-danger'

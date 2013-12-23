@@ -3,7 +3,7 @@ require 'spec_helper'
 describe '@cloud' do
   before do
     VCR.use_cassette('openstack_instance') do
-      @cloud = Cloud.new(username: 'user', password: 'password',  auth_method: "password", auth_url: "http://nube.inf.um.es:5000/v2.0/")
+      @cloud = Cloud.new(username: 'user', api_key: 'password',  auth_method: "password", auth_url: "http://nube.inf.um.es:5000/v2.0/")
     end
   end
 

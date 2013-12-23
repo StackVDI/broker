@@ -2,10 +2,10 @@
 
 FactoryGirl.define do
   factory :cloud_server do
-    name "MyString"
-    description "MyString"
-    username "MyString"
-    password "MyString"
-    url "MyString"
+    name "Cloud Server"
+    description "Cloud Server Description"
+    username "username"
+    password "changeme"
+    url "http://opendvi.com/auth/v2.0/"
   end
 end

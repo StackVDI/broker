@@ -1,0 +1,33 @@
+%h2= @cloud_server.name + " Images"
+%p You can manage images in this page
+
+%button.btn.btn-info
+  = link_to 'Add Image', new_cloud_server_image_path, class: 'btn-info'
+%br
+
+%table.table.table-bordered.table-hove
+  %thead
+    %th Name
+    %th Description
+    %th Machine
+    %th Flavor
+    %th Number of instances
+    %th Actions
+
+  %tbody
+    - @images.each do |image|
+      %tr
+        %td= image.name
+        %td= image.description
+        %td= image.machine
+        %td= image.flavor
+        %td= image.number_of_instances
+        %td
+          %button.btn.btn-mini.btn-info
+            = link_to 'Edit', edit_cloud_server_image_path(image.cloud_server, image), :class => 'btn-info'
+          %button.btn.btn-mini.btn-danger 
+            = link_to 'Destroy', cloud_server_image_path(@cloud_server,image), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn-danger'
+
+%br
+
+

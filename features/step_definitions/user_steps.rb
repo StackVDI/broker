@@ -127,7 +127,6 @@ end
 
 Then(/^I can see the admin menu$/) do 
   page.should have_content "Cloud"
-  page.should have_content "Images"
   page.should have_content "Users"
 end
 
