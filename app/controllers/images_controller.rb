@@ -5,6 +5,7 @@ class ImagesController < ApplicationController
   def index
     @cloud_server = CloudServer.find(params[:cloud_server_id])   
     @images = @cloud_server.images
+    authorize @images
   end
 
   # GET /images/new
@@ -14,11 +15,13 @@ class ImagesController < ApplicationController
     @flavors = @cloud_server.flavors
     @image = Image.new
     @image.cloud_server = @cloud_server
+    authorize @image
   end
 
   # GET /images/1/edit
   def edit
     @cloud_server = CloudServer.find(params[:cloud_server_id])
+    authorize @image
   end
 
   # POST /images
@@ -26,6 +29,7 @@ class ImagesController < ApplicationController
     @cloud_server = CloudServer.find(params[:cloud_server_id])
     @image = Image.new(image_params)
     @image.cloud_server = CloudServer.find(params[:cloud_server_id])
+    authorize @image
     if @image.save
       redirect_to cloud_server_images_path, notice: 'Image was successfully created.' 
     else
@@ -39,6 +43,7 @@ class ImagesController < ApplicationController
   def update
     @image.cloud_server = CloudServer.find(params[:cloud_server_id])
     if @image.update(image_params)
+    authorize @image
       redirect_to cloud_server_images_path, notice: 'Image was successfully updated.' 
     else
       render action: 'edit' 
@@ -47,6 +52,7 @@ class ImagesController < ApplicationController
 
   # DELETE /images/1
   def destroy
+    authorize @image
     @cloud_server = CloudServer.find(params[:cloud_server_id])
     @image.destroy
     redirect_to cloud_server_images_url

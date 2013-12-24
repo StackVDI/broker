@@ -2,6 +2,16 @@ require 'spec_helper'
 
 describe ImagesController do
 
+  let(:valid_attributes) { {  :cloud_server => @cloud_server,
+                              :name => "MyImage", 
+                              :description => "My Description", 
+                              :machine => "Ubuntu 12x04",
+                              :flavor => "medium",
+                              :number_of_instances => 2
+                          } }
+
+
+  context "as an admin" do
   before do
     @user = FactoryGirl.build(:user, :approved => true)
     @user.add_role :admin
@@ -12,20 +22,7 @@ describe ImagesController do
     @cloud_server.save
   end
 
-
-  
-  # This should return the minimal set of attributes required to create a valid
-  # Image. As you add validations to Image, be sure to
-  # adjust the attributes here as well.
-  let(:valid_attributes) { {  :cloud_server => @cloud_server,
-                              :name => "MyImage", 
-                              :description => "My Description", 
-                              :machine => "Ubuntu 12x04",
-                              :flavor => "medium",
-                              :number_of_instances => 2
-                          } }
-
-  # This should return the minimal set of values that should be in the session
+    # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # ImagesController. Be sure to keep this updated too.
 
@@ -148,6 +145,49 @@ describe ImagesController do
       delete :destroy, {:id => image.to_param, :cloud_server_id => @cloud_server.id}
       response.should redirect_to(cloud_server_images_path)
     end
+  end
+  end
+
+  context "as an user" do
+    before do
+      @user = FactoryGirl.build(:user, :approved => true)
+      @user.confirm!
+      @user.save
+      sign_in @user
+      @cloud_server = FactoryGirl.build(:cloud_server, :username => 'adan', :password => 'cambiame', :url => 'http://nube.inf.um.es:5000/v2.0/')
+      @cloud_server.save
+    end
+
+    describe "GET index" do
+      it "get an unauthorized error" do
+        get 'index', :cloud_server_id => @cloud_server.id
+        expect(response).to_not be_success
+      end
+    end
+
+    describe "GET new" do
+      it "get an unauthorized error" do
+        get :new, :cloud_server_id => @cloud_server.id
+        expect(response).to_not be_success
+      end
+    end
+
+    describe "GET edit" do
+      it "get an unauthorized error" do
+        image = Image.create! valid_attributes
+        get :edit, {:id => image.to_param, :cloud_server_id => @cloud_server.id}
+        expect(response).to_not be_success
+      end
+    end
+
+    describe "POST create" do
+      it "get an unauthorized error" do
+        post :create, {:image => valid_attributes, :cloud_server_id => @cloud_server.id}
+        expect(response).to_not be_success
+      end
+    end
+
+
   end
 
 end
