@@ -1,4 +1,5 @@
 class Image < ActiveRecord::Base
+  has_and_belongs_to_many :roles, :join_table => :images_roles
   belongs_to :cloud_server
 
   validates :name, :presence => true

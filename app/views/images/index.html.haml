@@ -12,6 +12,7 @@
     %th Machine
     %th Flavor
     %th Number of instances
+    %th Groups
     %th Actions
 
   %tbody
@@ -22,6 +23,7 @@
         %td= image.machine
         %td= image.flavor
         %td= image.number_of_instances
+        %td= image.roles.all.map { |r| r[:name]}.join(",")
         %td
           %button.btn.btn-mini.btn-info
             = link_to 'Edit', edit_cloud_server_image_path(image.cloud_server, image), :class => 'btn-info', :id => "edit_image_#{image.id}"

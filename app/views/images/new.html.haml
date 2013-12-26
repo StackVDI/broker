@@ -13,6 +13,7 @@
       = f.input :flavor do
         = f.select :flavor, @flavors.map { |m| [m[:name], m[:name]] }, include_blank: true
       = f.input :number_of_instances
+      = f.association :roles, as: :check_boxes
 
     .form-actions
       = f.button :submit
