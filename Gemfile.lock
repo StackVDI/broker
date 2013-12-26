@@ -37,6 +37,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.3)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -131,6 +135,11 @@ GEM
     openstack (1.1.2)
       json
     orm_adapter (0.5.0)
+    paperclip (3.5.2)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     polyglot (0.3.3)
     pry (0.9.12.4)
       coderay (~> 1.0)
@@ -249,6 +258,7 @@ DEPENDENCIES
   mina
   mysql2
   openstack
+  paperclip
   pry
   pry-debugger
   puma

@@ -7,17 +7,19 @@
 
 %table.table.table-bordered.table-hove
   %thead
+    %th
     %th Name
     %th Description
     %th Machine
     %th Flavor
-    %th Number of instances
+    %th Instances
     %th Groups
     %th Actions
 
   %tbody
     - @images.each do |image|
       %tr
+        %td= image_tag image.avatar.url(:thumb)
         %td= image.name
         %td= image.description
         %td= image.machine
