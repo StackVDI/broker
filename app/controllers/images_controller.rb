@@ -21,6 +21,8 @@ class ImagesController < ApplicationController
   # GET /images/1/edit
   def edit
     @cloud_server = CloudServer.find(params[:cloud_server_id])
+    @machines = @cloud_server.machines
+    @flavors = @cloud_server.flavors
     authorize @image
   end
 
@@ -46,6 +48,8 @@ class ImagesController < ApplicationController
     authorize @image
       redirect_to cloud_server_images_path, notice: 'Image was successfully updated.' 
     else
+      @machines = @image.cloud_server.machines
+      @flavors = @image.cloud_server.flavors
       render action: 'edit' 
     end
   end

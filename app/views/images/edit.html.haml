@@ -6,8 +6,10 @@
   .form-inputs
     = f.input :name
     = f.input :description
-    = f.input :machine
-    = f.input :flavor
+    = f.input :machine do
+      = f.select :machine, @machines.map { |m| [m[:name], m[:name]] }, include_blank: true
+    = f.input :flavor do
+      = f.select :flavor, @flavors.map { |m| [m[:name], m[:name]] }, include_blank: true
     = f.input :number_of_instances
 
   .form-actions

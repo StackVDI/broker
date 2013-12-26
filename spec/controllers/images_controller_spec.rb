@@ -5,8 +5,8 @@ describe ImagesController do
   let(:valid_attributes) { {  :cloud_server => @cloud_server,
                               :name => "MyImage", 
                               :description => "My Description", 
-                              :machine => "Ubuntu 12x04",
-                              :flavor => "medium",
+                              :machine => "windows7",
+                              :flavor => "m1.medium",
                               :number_of_instances => 2
                           } }
 

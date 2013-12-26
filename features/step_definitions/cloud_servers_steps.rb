@@ -64,7 +64,6 @@ When(/^I create an Image$/) do
   @image.save
 end
 
-
 When(/^I delete an Image$/) do
   click_link "delete_image_#{@image.id}"
 end
@@ -90,4 +89,12 @@ Then(/^I can't see the image in the image list$/) do
   page.should_not have_content @image.name   
 end
 
+Then(/^I edit the image$/) do
+  click_link "edit_image_1"
+  select 'ubuntu_server_12_04_x64', :from => 'image_machine'
+  click_button 'Update Image' 
+end
 
+Then(/^I can see the edited image in the image list$/) do
+  page.should have_content 'ubuntu_server_12_04_x64'
+end
