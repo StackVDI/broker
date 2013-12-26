@@ -24,9 +24,9 @@
         %td= image.number_of_instances
         %td
           %button.btn.btn-mini.btn-info
-            = link_to 'Edit', edit_cloud_server_image_path(image.cloud_server, image), :class => 'btn-info'
+            = link_to 'Edit', edit_cloud_server_image_path(image.cloud_server, image), :class => 'btn-info', :id => "edit_image_#{image.id}"
           %button.btn.btn-mini.btn-danger 
-            = link_to 'Destroy', cloud_server_image_path(@cloud_server,image), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn-danger'
+            = link_to 'Destroy', cloud_server_image_path(@cloud_server,image), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn-danger', :id => "delete_image_#{image.id}"
 
 %br
 

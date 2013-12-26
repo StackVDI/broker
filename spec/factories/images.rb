@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :image do
     name "MyString"
     description "MyString"
-    cloud_server nil
+    association :cloud_server, factory: :cloud_server, strategy: :build
     machine "MyString"
     flavor "MyString"
     number_of_instances 1

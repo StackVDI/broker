@@ -42,7 +42,7 @@ When(/^I visit the images link$/) do
   click_link 'Images'
 end
 
-When(/^I add a Image$/) do
+When(/^I add an Image$/) do
   VCR.use_cassette('add image') {
     click_link 'Add Image'
     fill_in 'image_name', :with => 'Ubuntu server'
@@ -57,6 +57,16 @@ end
 Given(/^I create a cloud server$/) do
   @cloudserver = FactoryGirl.build(:cloud_server, :username => 'adan', :password => 'cambiame', :url => 'http://nube.inf.um.es:5000/v2.0/')
   @cloudserver.save
+end
+
+When(/^I create an Image$/) do
+  @image = FactoryGirl.build(:image, :cloud_server => @cloudserver)
+  @image.save
+end
+
+
+When(/^I delete an Image$/) do
+  click_link "delete_image_#{@image.id}"
 end
 
 ##### THEN 
@@ -75,3 +85,9 @@ end
 Then(/^I can see the new image in the image list$/) do
   page.should have_content 'Ubuntu server'
 end
+
+Then(/^I can't see the image in the image list$/) do
+  page.should_not have_content @image.name   
+end
+
+
