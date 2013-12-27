@@ -1,2 +1,9 @@
 %h1 Welcome to OpenVDI
 %p Please, select the machine you want to connect to
+
+
+-@available_images.each do |image| 
+  %p
+    =image.name
+    =image_tag image.avatar.url(:medium), :id => image.name
+

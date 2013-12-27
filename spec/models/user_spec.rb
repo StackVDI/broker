@@ -31,7 +31,20 @@ describe User do
         user.toggle_approved!
       }.to change{user.approved?}
     end
+  end
 
+  describe '.images_available' do
+    it 'returns images available for the user' do
+      user = FactoryGirl.build(:user)
+      role = FactoryGirl.build(:role, :name => 'primero')
+      user.roles << role
+      image = FactoryGirl.build(:image)
+      image.roles << role
+      user.save
+      role.save
+      image.save
+      user.images_available.should == [image]
+    end
   end
 
 end

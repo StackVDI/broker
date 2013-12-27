@@ -1,3 +1,11 @@
+Given(/^I create a image in the group 'primero'$/) do
+  role = Role.create(:name => 'primero')
+  role.save
+  @image = FactoryGirl.build(:image, :cloud_server => @cloudserver)
+  @image.roles << role
+  @image.save
+end
+
 When(/^I visit the cloud servers link$/) do
   click_link 'Cloud servers'
 end
@@ -98,3 +106,8 @@ end
 Then(/^I can see the edited image in the image list$/) do
   page.should have_content 'ubuntu_server_12_04_x64'
 end
+
+Then(/^I can see the image$/) do
+  page.should have_content @image.name
+end
+

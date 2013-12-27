@@ -20,7 +20,7 @@ When(/^I log as an admin$/) do
 end
 
 When(/^I log as an user$/) do
-  @user = FactoryGirl.build(:user, :approved => true)
+  @user = FactoryGirl.build(:user, :name => "user", :approved => true)
   @user.confirm!
   @user.save
   visit '/users/sign_in'
@@ -28,6 +28,18 @@ When(/^I log as an user$/) do
   fill_in "user_password", :with => @user.password
   click_button "Sign in"
 end
+
+When(/^I log as an user in the group 'primero'$/) do
+  @user = FactoryGirl.build(:user, :name => "user", :approved => true)
+  @user.confirm!
+  @user.add_role(:primero)
+  @user.save
+  visit '/users/sign_in'
+  fill_in "user_email", :with => @user.email
+  fill_in "user_password", :with => @user.password
+  click_button "Sign in"
+end
+
 
 When(/^I sign up with valid data$/) do
   @user = FactoryGirl.build(:user)

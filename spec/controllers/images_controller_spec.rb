@@ -22,11 +22,11 @@ describe ImagesController do
     @cloud_server.save
   end
 
-    # This should return the minimal set of values that should be in the session
+  # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # ImagesController. Be sure to keep this updated too.
 
-  describe "GET index" do
+  describe "get index" do
     it "assigns all images as @images" do
       image = Image.create! valid_attributes
       get :index, :cloud_server_id => @cloud_server.id

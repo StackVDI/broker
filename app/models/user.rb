@@ -41,5 +41,14 @@ class User < ActiveRecord::Base
     self.approved = !self.approved
   end
 
+  def images_available
+    images_disponibles = []
+    self.roles.each do |role| 
+      role.images.each do |image| 
+        images_disponibles << image
+      end
+    end
+    images_disponibles 
+  end
 
 end
