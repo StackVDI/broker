@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131226130807) do
+ActiveRecord::Schema.define(version: 20131227112455) do
 
   create_table "cloud_servers", force: true do |t|
     t.string   "name"
@@ -80,6 +80,8 @@ ActiveRecord::Schema.define(version: 20131226130807) do
     t.datetime "updated_at"
     t.boolean  "approved",               default: false, null: false
     t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["approved"], name: "index_users_on_approved"
