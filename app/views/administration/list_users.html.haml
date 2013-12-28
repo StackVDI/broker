@@ -31,11 +31,9 @@
           - else
             %button.btn.btn-mini.btn-danger Not confirmed
           - if user.approved?
-            %button.btn.btn-mini.btn-success 
-              =link_to 'Approved', administration_toggle_approved_user_path(:id => user.id), :method => :put, :class => 'btn-success'
+            =link_to 'Approved', administration_toggle_approved_user_path(:id => user.id), :method => :put, :class => 'btn btn-mini btn-success'
           - else
-            %button.btn.btn-mini.btn-danger 
-              =link_to 'Not approved', administration_toggle_approved_user_path(:id => user.id), :method => :put, :class => 'btn-danger'
+            =link_to 'Not approved', administration_toggle_approved_user_path(:id => user.id), :method => :put, :class => 'btn btn-mini btn-danger'
           %button.btn.btn-mini.btn-danger
             =link_to 'Delete', administration_delete_user_path(id: user.id), 
               class: 'btn-danger', method: :delete, data: { confirm: 'Are you sure?' }, 
