@@ -41,7 +41,8 @@ When(/^I visit roles list link blindy$/) do
 end
 
 Then(/^I can see users with admin rol$/) do
-  page.should have_content "John Doe" 
+  page.should have_content "John"
+  page.should have_content "Doe" 
 end
 
 Then(/^I can see the new rol in the roles list$/) do

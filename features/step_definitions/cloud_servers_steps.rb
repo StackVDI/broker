@@ -98,9 +98,11 @@ Then(/^I can't see the image in the image list$/) do
 end
 
 Then(/^I edit the image$/) do
-  click_link "edit_image_1"
-  select 'ubuntu_server_12_04_x64', :from => 'image_machine'
-  click_button 'Update Image' 
+  VCR.use_cassette('edit image') {
+    click_link "edit_image_1"
+    select 'ubuntu_server_12_04_x64', :from => 'image_machine'
+    click_button 'Update Image' 
+  }
 end
 
 Then(/^I can see the edited image in the image list$/) do

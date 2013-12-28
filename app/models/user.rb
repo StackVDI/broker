@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable, :lockable,
          :recoverable, :rememberable, :trackable, :validatable
-  validates :name, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 
  
   def self.send_reset_password_instructions(attributes={})

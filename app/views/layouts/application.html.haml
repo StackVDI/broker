@@ -28,10 +28,13 @@
             %span.icon-bar
           %a.brand(href="/") OpenVDI Broker
           .container.nav-collapse
-            %ul.nav.pull-right
-              - if current_user 
-                %li= link_to "Logout", destroy_user_session_path, :method => :delete, :id => "logout"
-                
+            - if user_signed_in?
+              %ul.nav.pull-right
+                = drop_down current_user.last_name + ', ' + current_user.first_name do
+                  = menu_item "Edit", edit_user_registration_path
+                  = menu_item "Other link"
+                  = drop_down_divider
+                  = menu_item "Logout", destroy_user_session_path, :method => :delete, :id => "logout"        
 
     .container-fluid
 
