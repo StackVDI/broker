@@ -20,7 +20,7 @@ When(/^I log as an admin$/) do
 end
 
 When(/^I log as an user$/) do
-  @user = FactoryGirl.build(:user, :name => "user", :approved => true)
+  @user = FactoryGirl.build(:user, :first_name => "user", :approved => true)
   @user.confirm!
   @user.save
   visit '/users/sign_in'
@@ -30,7 +30,7 @@ When(/^I log as an user$/) do
 end
 
 When(/^I log as an user in the group 'primero'$/) do
-  @user = FactoryGirl.build(:user, :name => "user", :approved => true)
+  @user = FactoryGirl.build(:user, :first_name => "user", :approved => true)
   @user.confirm!
   @user.add_role(:primero)
   @user.save
