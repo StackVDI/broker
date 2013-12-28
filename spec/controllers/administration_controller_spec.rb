@@ -82,26 +82,54 @@ describe AdministrationController do
       end
 
     end
+    
+    describe "GET 'edit_user'" do
+      it "returns http success" do
+        get 'edit_user', id: @alex
+        response.should be_success
+      end
+    end
+
+    describe "PUT 'update_user'" do
+      it "returns http success" do
+        put 'update_user', id: @alex
+        response.should redirect_to administration_list_users_path
+      end
+    end
   end
 
 
 
   context 'login as an user' do
     before do
-      @user = FactoryGirl.build(:user)
       @user = FactoryGirl.build(:user, :approved => true)
       @user.confirm!
       @user.save
       sign_in @user
+      @another = FactoryGirl.build(:user, :approved => true)
+      @another.confirm!
+      @another.save
     end
 
     describe "GET 'list_users'" do
-      it "returns http success" do
+      it "doesn't return http success" do
         get 'list_users'
         response.should_not be_success
       end
     end
+
+    describe "GET 'edit_user'" do
+      it "doesn't return http success" do
+        get 'edit_user', id: @another
+        response.should_not be_success
+      end
+    end
+
+    describe "PUT 'update_user'" do
+      it "doesn't return http success" do
+        put 'update_user', id: @another
+        response.should_not redirect_to administration_list_users_path
+      end
+    end
   end
-
-
 end

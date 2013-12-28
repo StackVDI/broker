@@ -98,6 +98,18 @@ When(/^A user has sign up confirmed, but not approved$/) do
   @usernotapproved.save
 end
 
+When(/^I have created "(.*?)" and "(.*?)" role$/) do |arg1, arg2|
+  FactoryGirl.create(:role, :name => arg1)
+  FactoryGirl.create(:role, :name => arg2)
+end
+
+When(/^A user has sign up confirmed and approved$/) do
+  @user_approved = FactoryGirl.build(:user)
+  @user_approved.confirm!
+  @user_approved.approve!
+  @user_approved.save
+end
+
 ### THEN ###
 Then(/^I receive an email for confirmation$/) do
   unread_emails_for(@user.email).size.should == 1
@@ -181,3 +193,20 @@ end
 Then(/^user is deleted$/) do
   User.find_by_id(@usernotapproved.id).should be_nil
 end
+
+Then(/^I click in edit user link$/) do
+  click_link "edit_#{@user_approved.id}"
+end
+
+Then(/^I am in the user edit page$/) do
+  page.current_path.should  == administration_edit_user_path(@user_approved.id)
+end
+
+Then(/^I edit the user$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^I can see the edited user$/) do
+  pending # express the regexp above with the code you wish you had
+end
+

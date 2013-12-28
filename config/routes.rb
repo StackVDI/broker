@@ -9,6 +9,8 @@ Broker::Application.routes.draw do
   get "administration/list_groups"
   get "administration/users_from_group"
   put "administration/toggle_approved_user"
+  get 'administration/edit_user/:id', to: 'administration#edit_user', as: 'administration_edit_user'
+  put 'administration/update_user/:id', to: 'administration#update_user', as: 'administration_update_user'
   delete "administration/delete_user"
 
 

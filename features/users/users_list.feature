@@ -38,3 +38,13 @@ Feature: List Users
     Then I click in delete user link
     And user is deleted
 
+  @wip
+  Scenario: Admin can edit users
+    When I log as an admin
+    And I have created "first" and "second" role
+    And A user has sign up confirmed and approved
+    And  I visit user list link
+    Then I click in edit user link
+    And I am in the user edit page
+    And I edit the user
+    And I can see the edited user

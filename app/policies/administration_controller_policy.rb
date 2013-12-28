@@ -27,4 +27,12 @@ class AdministrationControllerPolicy
     user.admin?
   end
 
+  def edit_user?
+    user.admin?
+  end
+
+  def update_user?
+    user.admin?
+  end
+
 end

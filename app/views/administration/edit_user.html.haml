@@ -1,0 +1,13 @@
+%h1 
+  // = "Edit user " @user.first_name " " @user.last_name
+
+  = simple_form_for @user, :url => url_for(:action => 'update_user', :controller => 'administration'), :method => :put do |f|
+    = f.error_notification
+
+    .form-inputs
+      = f.input :first_name
+      = f.input :last_name
+      = f.association :roles, as: :check_boxes
+
+    .form-actions
+      = f.button :submit

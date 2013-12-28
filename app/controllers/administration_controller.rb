@@ -1,4 +1,5 @@
 class AdministrationController < ApplicationController
+  before_action :auth
 
   def list_users
     authorize self
@@ -34,5 +35,16 @@ class AdministrationController < ApplicationController
    @users = @role.users
   end
 
+  def edit_user
+    @user = User.find(params[:id])  
+  end
 
+  def update_user
+    redirect_to administration_list_users_path
+  end
+
+  private
+    def auth
+      authorize self
+    end
 end
