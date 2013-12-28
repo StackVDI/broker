@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe User do
 
-  it { should validate_presence_of(:name)}
+  it { should validate_presence_of(:first_name)}
+  it { should validate_presence_of(:last_name)}
 
   describe '.admin?' do
     it 'user is not admin by default' do

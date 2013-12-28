@@ -9,8 +9,8 @@ describe AdministrationController do
       @user.confirm!
       @user.save
       sign_in @user
-      @raul = FactoryGirl.create(:user, :name => 'Raul')
-      @alex = FactoryGirl.create(:user, :name => 'Alex')
+      @raul = FactoryGirl.create(:user, :first_name => 'Raul')
+      @alex = FactoryGirl.create(:user, :first_name => 'Alex')
       @raul.save
       @alex.save
     end

@@ -32,7 +32,8 @@ end
 When(/^I sign up with valid data$/) do
   @user = FactoryGirl.build(:user)
   visit '/users/sign_up'
-  fill_in "user_name", :with => @user.name
+  fill_in "user_first_name", :with => @user.first_name
+  fill_in "user_last_name", :with => @user.last_name
   fill_in "user_email", :with => @user.email
   fill_in "user_password", :with => @user.password
   fill_in "user_password_confirmation", :with => @user.password
@@ -135,7 +136,8 @@ Then(/^I can't see the admin menu$/) do
 end
 
 Then(/^I can see the user's list$/) do
-  page.should have_content @user.name
+  page.should have_content @user.first_name
+  page.should have_content @user.last_name
   page.should have_content @user.email
 end
 
@@ -144,11 +146,11 @@ Then(/^I get an unauthorized error$/) do
 end
 
 Then(/^I can see the the user in "warning"$/) do
-  find("tr.warning").should have_content @usernotconfirmed.name
+  find("tr.warning").should have_content @usernotconfirmed.first_name
 end
 
 Then(/^I can see the the user in "info"$/) do 
-  find("tr.info").should have_content @usernotapproved.name
+  find("tr.info").should have_content @usernotapproved.first_name
 end
 
 Then(/^I click in not approved link$/) do

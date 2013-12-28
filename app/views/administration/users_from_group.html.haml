@@ -4,7 +4,9 @@
 %table.table.table-bordered.table-hover
   %thead
     %th
-      Name
+      Last Name
+    %th
+      First Name
     %th 
       Email
     %th 
@@ -18,7 +20,9 @@
         - @class = "info"
       %tr{ :class => @class}
         %td
-          =user.name
+          =user.last_name
+        %td
+          =user.first_name
         %td
           =user.email
         %td
