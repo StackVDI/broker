@@ -1,8 +1,7 @@
 %h2= @cloud_server.name + " Images"
 %p You can manage images in this page
 
-%button.btn.btn-info
-  = link_to 'Add Image', new_cloud_server_image_path, class: 'btn-info'
+= link_to 'Add Image', new_cloud_server_image_path, class: 'btn btn-info'
 %br
 
 %table.table.table-bordered.table-hove
@@ -27,10 +26,8 @@
         %td= image.number_of_instances
         %td= image.roles.all.map { |r| r[:name]}.join(",")
         %td
-          %button.btn.btn-mini.btn-info
-            = link_to 'Edit', edit_cloud_server_image_path(image.cloud_server, image), :class => 'btn-info', :id => "edit_image_#{image.id}"
-          %button.btn.btn-mini.btn-danger 
-            = link_to 'Destroy', cloud_server_image_path(@cloud_server,image), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn-danger', :id => "delete_image_#{image.id}"
+          = link_to 'Edit', edit_cloud_server_image_path(image.cloud_server, image), :class => 'btn btn-mini btn-info', :id => "edit_image_#{image.id}"
+          = link_to 'Destroy', cloud_server_image_path(@cloud_server,image), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-mini btn-danger', :id => "delete_image_#{image.id}"
 
 %br
 
