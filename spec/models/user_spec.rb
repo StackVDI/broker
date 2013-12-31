@@ -5,6 +5,13 @@ describe User do
   it { should validate_presence_of(:first_name)}
   it { should validate_presence_of(:last_name)}
 
+
+  describe 'set_default_group' do 
+    it 'is in default group after create' do
+      user = FactoryGirl.create(:user)
+      user.has_role?(:default).should be true
+    end
+  end
   describe '.admin?' do
     it 'user is not admin by default' do
       User.new.admin?.should be_false
