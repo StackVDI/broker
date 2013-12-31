@@ -7,6 +7,12 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
 
+  after_create :set_default_role
+
+  def set_default_role
+    self.add_role(:default)
+  end
+
  
   def self.send_reset_password_instructions(attributes={})
     recoverable = find_or_initialize_with_errors(reset_password_keys, attributes, :not_found)
