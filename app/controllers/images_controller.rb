@@ -20,10 +20,10 @@ class ImagesController < ApplicationController
 
   # GET /images/1/edit
   def edit
+    authorize @image
     @cloud_server = CloudServer.find(params[:cloud_server_id])
     @machines = @cloud_server.machines
     @flavors = @cloud_server.flavors
-    authorize @image
   end
 
   # POST /images
@@ -35,8 +35,8 @@ class ImagesController < ApplicationController
     if @image.save
       redirect_to cloud_server_images_path, notice: 'Image was successfully created.' 
     else
-    @machines = @cloud_server.machines
-    @flavors = @cloud_server.flavors
+      @machines = @cloud_server.machines
+      @flavors = @cloud_server.flavors
       render action: 'new' 
     end
   end

@@ -38,7 +38,7 @@ Feature: List Users
     Then I click in delete user link
     And user is deleted
 
-  @wip
+  @wip_alex
   Scenario: Admin can edit users
     When I log as an admin
     And I have created "first" and "second" role

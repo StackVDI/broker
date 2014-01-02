@@ -17,7 +17,7 @@ describe WelcomeController do
         expect(response).to be_success
       end
       it "assigns all available images to @available_images" do
-        image = FactoryGirl.build(:image)
+        image = FactoryGirl.create(:image)
         image.roles << Role.find_by_name(:primero)
         image.save
         get :index

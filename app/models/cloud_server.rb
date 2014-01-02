@@ -11,13 +11,21 @@ class CloudServer < ActiveRecord::Base
   end
 
   def machines
-    @os ||= connect
-    @os.images
+    begin
+      @os ||= connect
+      @os.images
+    rescue
+      []
+    end
   end
 
   def flavors
-    @os ||= connect
-    @os.flavors
+    begin
+      @os ||= connect
+      @os.flavors
+    rescue
+      []
+    end
   end
 
 end

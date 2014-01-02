@@ -2,8 +2,22 @@
 %p Please, select the machine you want to connect to
 
 
--@available_images.each do |image| 
-  %p
-    =image.name
-    =image_tag image.avatar.url(:medium), :id => image.name
+-if @available_images
+  %table.table.table-bordered.table-hove
+    %thead
+      %th
+      %th Name
+      %th Description
+      %th Actions
+
+    %tbody
+      - @available_images.each do |image|
+        %tr
+          %td= image_tag image.avatar.url(:thumb)
+          %td= image.name
+          %td= image.description
+          %td
+            = link_to 'Launch', create_machine_path(image), :class => 'btn btn-mini btn-info', :id => "create_machine_#{image.id}"
+
+%br
 

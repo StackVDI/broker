@@ -2,12 +2,10 @@ class AdministrationController < ApplicationController
   before_action :auth
 
   def list_users
-    authorize self
     @users = User.all
   end
 
  def toggle_approved_user 
-    authorize self
     @user = User.find(params[:id])
     @user.toggle_approved!
     if @user.save
@@ -18,19 +16,16 @@ class AdministrationController < ApplicationController
   end
 
   def delete_user 
-    authorize self
     @user = User.find(params[:id])
     @user.destroy
     redirect_to administration_list_users_path
   end
 
   def list_groups
-    authorize self
     @groups = Role.all
   end
 
   def users_from_group
-   authorize self
    @role = Role.find(params[:id])
    @users = @role.users
   end

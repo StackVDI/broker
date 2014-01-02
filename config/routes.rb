@@ -13,6 +13,8 @@ Broker::Application.routes.draw do
   put 'administration/update_user/:id', to: 'administration#update_user', as: 'administration_update_user'
   delete "administration/delete_user"
 
+  get 'machines/create/:id', to: 'machines#create', as: 'create_machine'
+  get 'machines/:id', to: 'machines#show', as: 'machine'
 
   resources :roles
 

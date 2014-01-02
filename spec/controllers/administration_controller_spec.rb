@@ -45,7 +45,7 @@ describe AdministrationController do
 
       it "have all the groupss" do
         get :list_groups
-        expect(assigns(:groups)).to match_array([Role.first])
+        expect(assigns(:groups)).to match_array(Role.all)
       end
     end
 

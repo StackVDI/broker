@@ -25,7 +25,7 @@ When(/^I delete a role$/) do
   click_link ('Add role')
   fill_in 'role_name', :with  => 'newrole'
   click_button 'Create Role'
-  click_link 'delete_role_2'
+  click_link 'delete_role_3'
 end
 
 ######## THEN

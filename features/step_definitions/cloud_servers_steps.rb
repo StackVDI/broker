@@ -63,18 +63,36 @@ When(/^I add an Image$/) do
 end
 
 Given(/^I create a cloud server$/) do
-  @cloudserver = FactoryGirl.build(:cloud_server, :username => 'adan', :password => 'cambiame', :url => 'http://nube.inf.um.es:5000/v2.0/')
-  @cloudserver.save
+  @cloudserver = FactoryGirl.create(:cloud_server, :username => 'adan', :password => 'cambiame', :url => 'http://nube.inf.um.es:5000/v2.0/')
 end
 
 When(/^I create an Image$/) do
-  @image = FactoryGirl.build(:image, :cloud_server => @cloudserver)
-  @image.save
+  @image = FactoryGirl.create(:image, :cloud_server => @cloudserver)
 end
 
 When(/^I delete an Image$/) do
   click_link "delete_image_#{@image.id}"
 end
+
+Given(/^I have available machines to run$/) do
+  @cloudserver = FactoryGirl.create(:cloud_server, :username => 'adan', :password => 'cambiame', :url => 'http://nube.inf.um.es:5000/v2.0/') 
+  @image = FactoryGirl.create(:image, :cloud_server => @cloudserver, :name => 'Windows7')
+  Role.create(:name => "default")
+  @image.roles << Role.first
+  @image.save
+end
+
+Then(/^I can see the availabe machines for my groups$/) do
+  page.should have_content 'Windows7'
+end
+
+When(/^I launch an image$/) do
+  click_link 'create_machine_1'
+end
+
+  Then(/^A new page is opened and connect to the new machine$/) do
+    pending # express the regexp above with the code you wish you had
+    end
 
 ##### THEN 
 
@@ -113,3 +131,7 @@ Then(/^I can see the image$/) do
   page.should have_content @image.name
 end
 
+Then(/^A new machine is created$/) do
+  Machine.last.user = @user
+  Machine.created_at.should == Time.now
+end

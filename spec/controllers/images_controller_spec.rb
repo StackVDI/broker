@@ -51,9 +51,9 @@ describe ImagesController do
     end
   end
 
-  describe "POST create" do
+  describe "post create" do
     describe "with valid params" do
-      it "creates a new Image" do
+      it "creates a new image" do
         expect {
           post :create, {:image => valid_attributes, :cloud_server_id => @cloud_server.id}
         }.to change(Image, :count).by(1)
@@ -73,14 +73,14 @@ describe ImagesController do
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved image as @image" do
-        # Trigger the behavior that occurs when invalid params are submitted
+        # trigger the behavior that occurs when invalid params are submitted
         Image.any_instance.stub(:save).and_return(false)
         post :create, {:image => { "name" => "invalid value" }, :cloud_server_id => @cloud_server.id}
         assigns(:image).should be_a_new(Image)
       end
 
       it "re-renders the 'new' template" do
-        # Trigger the behavior that occurs when invalid params are submitted
+        # trigger the behavior that occurs when invalid params are submitted
         Image.any_instance.stub(:save).and_return(false)
         post :create, {:image => { "name" => "invalid value" }, :cloud_server_id => @cloud_server.id}
         response.should render_template("new")
