@@ -6,9 +6,7 @@
 
 require 'cucumber/rails'
 require 'email_spec/cucumber'
-#require 'factory_girl'
-#Dir.glob(File.join(File.dirname(__FILE__), '../../spec/factories/*.rb')).each {|f| require f }
-
+require 'cucumber/rspec/doubles'
 require File.expand_path("../../../spec/support/vcr", __FILE__)
 
 

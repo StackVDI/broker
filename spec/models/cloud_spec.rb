@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe '@cloud' do
   before do
-    VCR.use_cassette('openstack_instance') do
-      @cloud = Cloud.new(username: 'user', api_key: 'password',  auth_method: "password", auth_url: "http://nube.inf.um.es:5000/v2.0/")
+    VCR.use_cassette('openstack_connection') do
+      @cloud = Cloud.new(username: 'adan', api_key: 'cambiame',  auth_method: "password", auth_url: "http://nube.inf.um.es:5000/v2.0/")
     end
   end
 
@@ -63,7 +63,37 @@ describe '@cloud' do
         server = @cloud.create_server( :name  => "New Server", 
                                 :image => "ubuntu_server_12_04_x64", 
                                 :flavor => "m1.medium")
-        expect(@cloud.associate_ip_to_server(server)).to eq "155.54.225.151"
+        expect(@cloud.associate_ip_to_server(server)).to eq "155.54.225.153"
+      end
+    end
+  end
+
+  describe '.unpause' do
+    it 'unpause server' do
+      VCR.use_cassette('server_unpause') do
+        pending
+        server = @cloud.create_server( :name  => "unpause", 
+                                :image => "ubuntu_server_12_04_x64", 
+                                :flavor => "m1.tiny")
+        sleep 5
+        server.pause
+        sleep 5
+        @cloud.unpause("unpause").should_not raise_error
+        server.delete!
+      end
+    end
+  end
+  
+  describe '.pause' do
+    it 'pause server' do
+      pending
+      VCR.use_cassette('server_pause') do
+        server = @cloud.create_server( :name  => "pause", 
+                                :image => "ubuntu_server_12_04_x64", 
+                                :flavor => "m1.tiny")
+        sleep 5
+        @cloud.pause("pause").should_not raise_error
+        server.delete!
       end
     end
   end

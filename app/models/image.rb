@@ -11,4 +11,13 @@ class Image < ActiveRecord::Base
   validates_presence_of :flavor
   validates_presence_of :number_of_instances
   validates_numericality_of :number_of_instances, only_integer: true, greater_than: 0
+
+
+  def self.prelaunch
+    Image.all.each do |image|
+      (image.number_of_instances - Machine.paused(image.id).count).times do
+        machine = Machine.create(:image => image)
+      end
+    end
+  end
 end

@@ -11,5 +11,23 @@ describe CloudServer do
   describe ".flavors" do
     pending
   end
-  
-end
+
+  describe "pause" do
+    pending
+  end
+
+  describe "unpause" do
+    pending
+  end
+
+  describe "create_server" do
+    pending
+  end
+
+  describe "destroy_server" do
+    pending
+    #should_receive 
+  end
+
+
+end 

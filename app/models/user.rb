@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
 
+  has_many :machines
+
   after_create :set_default_role
 
   def set_default_role

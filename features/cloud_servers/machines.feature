@@ -11,8 +11,7 @@ Feature: Machines
     When  I'm in root page
     Then  I can see the availabe machines for my groups
 
-  @wip
-  Scenario:
+  Scenario: User can launch machines
     When I'm in root page
     And  I launch an image
     Then A new machine is created

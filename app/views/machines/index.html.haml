@@ -1,0 +1,29 @@
+%h1 Listing machines
+
+%table
+  %tr
+    %th Image
+    %th User
+    %th Remote username
+    %th Remote password
+    %th Remote address
+    %th Remote port
+    %th
+    %th
+    %th
+
+  - @machines.each do |machine|
+    %tr
+      %td= machine.image
+      %td= machine.user
+      %td= machine.remote_username
+      %td= machine.remote_password
+      %td= machine.remote_address
+      %td= machine.remote_port
+      %td= link_to 'Show', machine
+      %td= link_to 'Edit', edit_machine_path(machine)
+      %td= link_to 'Destroy', machine, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Machine', new_machine_path

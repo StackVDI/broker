@@ -3,6 +3,7 @@
 
 
 -if @available_images
+  %h2 Available Images
   %table.table.table-bordered.table-hove
     %thead
       %th
@@ -17,7 +18,29 @@
           %td= image.name
           %td= image.description
           %td
-            = link_to 'Launch', create_machine_path(image), :class => 'btn btn-mini btn-info', :id => "create_machine_#{image.id}"
+            =link_to 'Launch', create_machine_path(image), :class => 'btn btn-mini btn-info', :id => "create_machine_#{image.id}", :method => :post
+
+%br
+
+
+
+-if @running_machines
+  %h2 Running Machines
+  %table.table.table-bordered.table-hove
+    %thead
+      %th
+      %th Name
+      %th Description
+      %th Actions
+
+    %tbody
+      - @running_machines.each do |machine|
+        %tr
+          %td= image_tag machine.image.avatar.url(:thumb)
+          %td= machine.image.name
+          %td= machine.image.description
+          %td
+            =link_to 'Destroy', machine_path(machine) , :class => 'btn btn-mini btn-danger', :id => "destroy_machine_#{machine.id}", :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

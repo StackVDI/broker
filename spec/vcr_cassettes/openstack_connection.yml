@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://nube.inf.um.es:5000/v2.0/tokens
+    body:
+      encoding: UTF-8
+      string: '{"auth":{"passwordCredentials":{"username":"adan","password":"cambiame"},"tenantName":"adan"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - X-Auth-Token
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4850'
+      Date:
+      - Tue, 07 Jan 2014 09:46:05 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access": {"token": {"issued_at": "2014-01-07T09:46:05.687104", "expires":
+        "2014-01-08T09:46:05Z", "id": "MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=",
+        "tenant": {"description": "Adan", "enabled": true, "id": "a61e35ed059e4550b5c4dbf5bc55c90c",
+        "name": "adan"}}, "serviceCatalog": [{"endpoints": [{"adminURL": "http://nube.inf.um.es:8776/v1/a61e35ed059e4550b5c4dbf5bc55c90c",
+        "region": "ccalculo_espinardo", "internalURL": "http://nube.inf.um.es:8776/v1/a61e35ed059e4550b5c4dbf5bc55c90c",
+        "id": "19d7ca464ba34a52a4db301510bab0c8", "publicURL": "http://nube.inf.um.es:8776/v1/a61e35ed059e4550b5c4dbf5bc55c90c"}],
+        "endpoints_links": [], "type": "volume", "name": "cinder"}, {"endpoints":
+        [{"adminURL": "http://nube.inf.um.es:9292/v2.0", "region": "ccalculo_espinardo",
+        "internalURL": "http://nube.inf.um.es:9292/v2.0", "id": "2a75e326c48e4095bab207014afa0357",
+        "publicURL": "http://nube.inf.um.es:9292/v2.0"}], "endpoints_links": [], "type":
+        "image", "name": "glance"}, {"endpoints": [{"adminURL": "http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c",
+        "region": "ccalculo_espinardo", "internalURL": "http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c",
+        "id": "8c45b2503a8641178686cbf49e7b923b", "publicURL": "http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c"}],
+        "endpoints_links": [], "type": "compute", "name": "nova"}, {"endpoints": [{"adminURL":
+        "http://nube.inf.um.es:35357/v2.0", "region": "ccalculo_espinardo", "internalURL":
+        "http://nube.inf.um.es:5000/v2.0", "id": "10eb009f6bbd47aa9015eb15c884fdbf",
+        "publicURL": "http://nube.inf.um.es:5000/v2.0"}], "endpoints_links": [], "type":
+        "identity", "name": "keystone"}], "user": {"username": "adan", "roles_links":
+        [], "id": "7b72c55cfe934357853dd1e1d25f91fc", "roles": [{"name": "_member_"},
+        {"name": "Member"}], "name": "adan"}, "metadata": {"is_admin": 0, "roles":
+        ["9fe2ff9ee4384b1894a90878d3e92bab", "edb518c3062e48fba295c19f458e2fc6"]}}}'
+    http_version: 
+  recorded_at: Tue, 07 Jan 2014 09:46:05 GMT
+recorded_with: VCR 2.8.0

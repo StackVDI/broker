@@ -28,4 +28,24 @@ class CloudServer < ActiveRecord::Base
     end
   end
 
+  def create_server(args)
+      @os ||= connect
+      @os.create_server(:name => args[:name], :image => args[:image], :flavor => args[:flavor])
+  end
+
+  def pause(name)
+    @os ||= connect
+    @os.pause name 
+  end
+  
+  def unpause(name)
+    @os ||= connect
+    @os.unpause name
+  end
+
+  def destroy_server(name)
+    @os ||= connect
+    @os.destroy_server! name
+  end
+
 end

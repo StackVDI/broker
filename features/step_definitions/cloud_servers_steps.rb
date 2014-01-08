@@ -75,24 +75,26 @@ When(/^I delete an Image$/) do
 end
 
 Given(/^I have available machines to run$/) do
+  Machine.any_instance.stub(:cloud_create)
+  Machine.any_instance.stub(:pause)
   @cloudserver = FactoryGirl.create(:cloud_server, :username => 'adan', :password => 'cambiame', :url => 'http://nube.inf.um.es:5000/v2.0/') 
-  @image = FactoryGirl.create(:image, :cloud_server => @cloudserver, :name => 'Windows7')
+  @image = FactoryGirl.create(:image, :cloud_server => @cloudserver, :name => 'Ubuntu', :machine => "ubuntu_server_12_04_x64", :flavor => "m1.tiny" )
   Role.create(:name => "default")
   @image.roles << Role.first
   @image.save
+  @machine = FactoryGirl.create(:machine, :image => @image, :user => nil)
+  @machine.cloud_create
+  @machine.pause
 end
 
 Then(/^I can see the availabe machines for my groups$/) do
-  page.should have_content 'Windows7'
+  page.should have_content 'Ubuntu'
 end
 
 When(/^I launch an image$/) do
+  @machine_count = Machine.count
   click_link 'create_machine_1'
 end
-
-  Then(/^A new page is opened and connect to the new machine$/) do
-    pending # express the regexp above with the code you wish you had
-    end
 
 ##### THEN 
 
@@ -132,6 +134,9 @@ Then(/^I can see the image$/) do
 end
 
 Then(/^A new machine is created$/) do
-  Machine.last.user = @user
-  Machine.created_at.should == Time.now
+  Machine.count.should ==(@machine_count+1)
+end
+
+Then(/^A new page is opened and connect to the new machine$/) do
+  page.should have_content ('Machine launched')
 end

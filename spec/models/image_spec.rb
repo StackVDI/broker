@@ -12,5 +12,14 @@ describe Image do
     it { should validate_presence_of(:number_of_instances) }
     it { should validate_numericality_of(:number_of_instances).only_integer.is_greater_than(0) }
 
+    describe '#prelaunch' do
+      it 'launchs machines for all images' do
+        FactoryGirl.create(:image, :number_of_instances => 2)
+        Image.prelaunch
+        Image.all.each do |image|
+          (image.number_of_instances - Machine.paused(image.id).count).should == 0
+        end
+      end
+    end
 
 end

@@ -1,5 +1,7 @@
 Broker::Application.routes.draw do
 
+#  resources :machines
+
   resources :cloud_servers do
     resources :images
   end
@@ -13,8 +15,10 @@ Broker::Application.routes.draw do
   put 'administration/update_user/:id', to: 'administration#update_user', as: 'administration_update_user'
   delete "administration/delete_user"
 
-  get 'machines/create/:id', to: 'machines#create', as: 'create_machine'
+  post 'machines/create/:id', to: 'machines#create', as: 'create_machine'
   get 'machines/:id', to: 'machines#show', as: 'machine'
+  get 'machines', to: 'machines#index', as: 'machines'
+  delete 'machines/:id', to: 'machines#destroy', as: 'destroy_machine'
 
   resources :roles
 

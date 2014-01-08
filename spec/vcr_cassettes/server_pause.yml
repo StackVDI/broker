@@ -25,13 +25,13 @@ http_interactions:
       message: OK
     headers:
       X-Compute-Request-Id:
-      - req-03535677-66b8-42a1-aa2b-1103998ade9e
+      - req-a1525104-602e-4818-92e2-577ac7c49648
       Content-Type:
       - application/json
       Content-Length:
       - '1459'
       Date:
-      - Tue, 07 Jan 2014 09:46:06 GMT
+      - Tue, 07 Jan 2014 12:09:46 GMT
       Connection:
       - keep-alive
     body:
@@ -51,7 +51,7 @@ http_interactions:
         "2013-04-29T09:45:38Z", "minDisk": 0, "progress": 100, "minRam": 0, "metadata":
         {}}]}'
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:05 GMT
+  recorded_at: Tue, 07 Jan 2014 12:09:46 GMT
 - request:
     method: get
     uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/images/detail
@@ -77,13 +77,13 @@ http_interactions:
       message: OK
     headers:
       X-Compute-Request-Id:
-      - req-30fdd248-2d3b-480a-88fa-93a8399bd648
+      - req-fb2358aa-178d-41a6-a96d-ad4715d89f3c
       Content-Type:
       - application/json
       Content-Length:
       - '1459'
       Date:
-      - Tue, 07 Jan 2014 09:46:06 GMT
+      - Tue, 07 Jan 2014 12:09:46 GMT
       Connection:
       - keep-alive
     body:
@@ -103,7 +103,7 @@ http_interactions:
         "2013-04-29T09:45:38Z", "minDisk": 0, "progress": 100, "minRam": 0, "metadata":
         {}}]}'
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:06 GMT
+  recorded_at: Tue, 07 Jan 2014 12:09:46 GMT
 - request:
     method: get
     uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/flavors/detail
@@ -129,13 +129,13 @@ http_interactions:
       message: OK
     headers:
       X-Compute-Request-Id:
-      - req-ffa8e09e-885e-465c-afc1-d0de1228ddc2
+      - req-d6a76229-2779-4f8d-a001-4803d0773759
       Content-Type:
       - application/json
       Content-Length:
       - '2951'
       Date:
-      - Tue, 07 Jan 2014 09:46:06 GMT
+      - Tue, 07 Jan 2014 12:09:46 GMT
       Connection:
       - keep-alive
     body:
@@ -169,7 +169,7 @@ http_interactions:
         2, "swap": "", "os-flavor-access:is_public": true, "rxtx_factor": 1.0, "OS-FLV-EXT-DATA:ephemeral":
         0, "disk": 80, "id": "fdfd9907-d80d-4325-9e55-9826dd3c4543"}]}'
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:06 GMT
+  recorded_at: Tue, 07 Jan 2014 12:09:46 GMT
 - request:
     method: get
     uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/flavors/detail
@@ -195,13 +195,13 @@ http_interactions:
       message: OK
     headers:
       X-Compute-Request-Id:
-      - req-88a10f09-0b6f-44a6-8c83-cdac992cd31d
+      - req-3e6e4065-f694-4631-93af-b9d651ecbe82
       Content-Type:
       - application/json
       Content-Length:
       - '2951'
       Date:
-      - Tue, 07 Jan 2014 09:46:06 GMT
+      - Tue, 07 Jan 2014 12:09:46 GMT
       Connection:
       - keep-alive
     body:
@@ -235,13 +235,13 @@ http_interactions:
         2, "swap": "", "os-flavor-access:is_public": true, "rxtx_factor": 1.0, "OS-FLV-EXT-DATA:ephemeral":
         0, "disk": 80, "id": "fdfd9907-d80d-4325-9e55-9826dd3c4543"}]}'
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:06 GMT
+  recorded_at: Tue, 07 Jan 2014 12:09:46 GMT
 - request:
     method: post
     uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers
     body:
       encoding: UTF-8
-      string: '{"server":{"name":"New Server","imageRef":"c7818c6a-0868-4af7-af7e-6b8c55e1688d","flavorRef":"0241420c-5330-4b26-8d65-1cf67dad45e3","personality":null,"security_groups":[]}}'
+      string: '{"server":{"name":"pause","imageRef":"c7818c6a-0868-4af7-af7e-6b8c55e1688d","flavorRef":"1","personality":null,"security_groups":[]}}'
     headers:
       X-Auth-Token:
       - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
@@ -263,29 +263,29 @@ http_interactions:
       message: Accepted
     headers:
       X-Compute-Request-Id:
-      - req-b1be243e-35d3-4ef6-a584-baecf1cc7d5f
+      - req-0747b970-e1a9-4976-9409-05e76a93341b
       Location:
-      - http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/9e549eff-e4dd-49d6-9a68-9a37bbb75fb7
+      - http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10
       Content-Type:
       - application/json
       Content-Length:
       - '444'
       Date:
-      - Tue, 07 Jan 2014 09:46:06 GMT
+      - Tue, 07 Jan 2014 12:09:46 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: '{"server": {"security_groups": [{"name": "default"}], "OS-DCF:diskConfig":
-        "MANUAL", "id": "9e549eff-e4dd-49d6-9a68-9a37bbb75fb7", "links": [{"href":
-        "http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/9e549eff-e4dd-49d6-9a68-9a37bbb75fb7",
-        "rel": "self"}, {"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/servers/9e549eff-e4dd-49d6-9a68-9a37bbb75fb7",
-        "rel": "bookmark"}], "adminPass": "e5qm7WejPRTj"}}'
+        "MANUAL", "id": "c73a9e35-3c7e-43aa-b88f-b7589ffe8e10", "links": [{"href":
+        "http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10",
+        "rel": "self"}, {"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10",
+        "rel": "bookmark"}], "adminPass": "Yw7Qdk5pHFmU"}}'
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:06 GMT
+  recorded_at: Tue, 07 Jan 2014 12:09:46 GMT
 - request:
     method: get
-    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/9e549eff-e4dd-49d6-9a68-9a37bbb75fb7
+    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10
     body:
       encoding: US-ASCII
       string: ''
@@ -310,35 +310,118 @@ http_interactions:
       message: OK
     headers:
       X-Compute-Request-Id:
-      - req-7a44bd0d-da81-4d33-866b-678003370376
+      - req-af4e1646-4551-4d77-94f4-1fbec311d8f3
       Content-Type:
       - application/json
       Content-Length:
-      - '1310'
+      - '1235'
       Date:
-      - Tue, 07 Jan 2014 09:46:06 GMT
+      - Tue, 07 Jan 2014 12:09:47 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"server": {"status": "BUILD", "updated": "2014-01-07T09:46:06Z", "hostId":
-        "", "addresses": {}, "links": [{"href": "http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/9e549eff-e4dd-49d6-9a68-9a37bbb75fb7",
-        "rel": "self"}, {"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/servers/9e549eff-e4dd-49d6-9a68-9a37bbb75fb7",
+      string: '{"server": {"status": "BUILD", "updated": "2014-01-07T12:09:47Z", "hostId":
+        "", "addresses": {}, "links": [{"href": "http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10",
+        "rel": "self"}, {"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10",
         "rel": "bookmark"}], "key_name": null, "image": {"id": "c7818c6a-0868-4af7-af7e-6b8c55e1688d",
         "links": [{"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/images/c7818c6a-0868-4af7-af7e-6b8c55e1688d",
         "rel": "bookmark"}]}, "OS-EXT-STS:task_state": "scheduling", "OS-EXT-STS:vm_state":
-        "building", "flavor": {"id": "0241420c-5330-4b26-8d65-1cf67dad45e3", "links":
-        [{"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/flavors/0241420c-5330-4b26-8d65-1cf67dad45e3",
-        "rel": "bookmark"}]}, "id": "9e549eff-e4dd-49d6-9a68-9a37bbb75fb7", "security_groups":
+        "building", "flavor": {"id": "1", "links": [{"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/flavors/1",
+        "rel": "bookmark"}]}, "id": "c73a9e35-3c7e-43aa-b88f-b7589ffe8e10", "security_groups":
         [{"name": "default"}], "OS-EXT-AZ:availability_zone": "nova", "user_id": "7b72c55cfe934357853dd1e1d25f91fc",
-        "name": "New Server", "created": "2014-01-07T09:46:06Z", "tenant_id": "a61e35ed059e4550b5c4dbf5bc55c90c",
+        "name": "pause", "created": "2014-01-07T12:09:46Z", "tenant_id": "a61e35ed059e4550b5c4dbf5bc55c90c",
         "OS-DCF:diskConfig": "MANUAL", "accessIPv4": "", "accessIPv6": "", "progress":
         0, "OS-EXT-STS:power_state": 0, "config_drive": "", "metadata": {}}}'
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:06 GMT
+  recorded_at: Tue, 07 Jan 2014 12:09:46 GMT
 - request:
     method: get
-    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/extensions
+    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers?cacheid=1389096591
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Auth-Token:
+      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
+      X-Storage-Token:
+      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
+      Connection:
+      - Keep-Alive
+      User-Agent:
+      - OpenStack Ruby API 1.1.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Compute-Request-Id:
+      - req-662f8076-30e1-4857-a823-248605480ba3
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '362'
+      Date:
+      - Tue, 07 Jan 2014 12:09:52 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"servers": [{"id": "c73a9e35-3c7e-43aa-b88f-b7589ffe8e10", "links":
+        [{"href": "http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10",
+        "rel": "self"}, {"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10",
+        "rel": "bookmark"}], "name": "pause"}]}'
+    http_version: 
+  recorded_at: Tue, 07 Jan 2014 12:09:52 GMT
+- request:
+    method: get
+    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers?cacheid=1389096592
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Auth-Token:
+      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
+      X-Storage-Token:
+      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
+      Connection:
+      - Keep-Alive
+      User-Agent:
+      - OpenStack Ruby API 1.1.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Compute-Request-Id:
+      - req-402a7359-aec2-44bb-bda2-e1b2507493be
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '362'
+      Date:
+      - Tue, 07 Jan 2014 12:09:52 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"servers": [{"id": "c73a9e35-3c7e-43aa-b88f-b7589ffe8e10", "links":
+        [{"href": "http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10",
+        "rel": "self"}, {"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10",
+        "rel": "bookmark"}], "name": "pause"}]}'
+    http_version: 
+  recorded_at: Tue, 07 Jan 2014 12:09:52 GMT
+- request:
+    method: get
+    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10
     body:
       encoding: US-ASCII
       string: ''
@@ -363,375 +446,39 @@ http_interactions:
       message: OK
     headers:
       X-Compute-Request-Id:
-      - req-afdeab8b-8985-4d55-91dd-f20c1e688399
+      - req-1c839716-ddbe-41fe-899d-8958f88424e1
       Content-Type:
       - application/json
       Content-Length:
-      - '15304'
+      - '1361'
       Date:
-      - Tue, 07 Jan 2014 09:46:06 GMT
+      - Tue, 07 Jan 2014 12:09:52 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"extensions": [{"updated": "2011-06-09T00:00:00+00:00", "name": "Multinic",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/multinic/api/v1.1",
-        "alias": "NMN", "description": "Multiple network support."}, {"updated": "2011-09-27T00:00:00+00:00",
-        "name": "DiskConfig", "links": [], "namespace": "http://docs.openstack.org/compute/ext/disk_config/api/v1.1",
-        "alias": "OS-DCF", "description": "Disk Management Extension."}, {"updated":
-        "2013-01-30T00:00:00+00:00", "name": "ExtendedAvailabilityZone", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/extended_availability_zone/api/v2",
-        "alias": "OS-EXT-AZ", "description": "Extended Server Attributes support."},
-        {"updated": "2013-02-19T00:00:00+00:00", "name": "ImageSize", "links": [],
-        "namespace": "http://docs.openstack.org/compute/ext/image_size/api/v1.1",
-        "alias": "OS-EXT-IMG-SIZE", "description": "Adds image size to image listings."},
-        {"updated": "2013-01-06T00:00:00+00:00", "name": "ExtendedIps", "links": [],
-        "namespace": "http://docs.openstack.org/compute/ext/extended_ips/api/v1.1",
-        "alias": "OS-EXT-IPS", "description": "Adds type parameter to the ip list."},
-        {"updated": "2011-11-03T00:00:00+00:00", "name": "ExtendedServerAttributes",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/extended_status/api/v1.1",
-        "alias": "OS-EXT-SRV-ATTR", "description": "Extended Server Attributes support."},
-        {"updated": "2011-11-03T00:00:00+00:00", "name": "ExtendedStatus", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/extended_status/api/v1.1",
-        "alias": "OS-EXT-STS", "description": "Extended Status support."}, {"updated":
-        "2012-08-29T00:00:00+00:00", "name": "FlavorDisabled", "links": [], "namespace":
-        "http://docs.openstack.org/compute/ext/flavor_disabled/api/v1.1", "alias":
-        "OS-FLV-DISABLED", "description": "Support to show the disabled status of
-        a flavor."}, {"updated": "2011-09-14T00:00:00+00:00", "name": "FlavorExtraData",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/flavor_extra_data/api/v1.1",
-        "alias": "OS-FLV-EXT-DATA", "description": "Provide additional data for flavors."},
-        {"updated": "2011-07-19T00:00:00+00:00", "name": "SchedulerHints", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/scheduler-hints/api/v2",
-        "alias": "OS-SCH-HNT", "description": "Pass arbitrary key/value pairs to the
-        scheduler."}, {"updated": "2011-09-20T00:00:00+00:00", "name": "AdminActions",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/admin-actions/api/v1.1",
-        "alias": "os-admin-actions", "description": "Enable admin-only server actions\n\n    Actions
-        include: pause, unpause, suspend, resume, migrate,\n    resetNetwork, injectNetworkInfo,
-        lock, unlock, createBackup\n    "}, {"updated": "2012-10-28T00:00:00-00:00",
-        "name": "Agents", "links": [], "namespace": "http://docs.openstack.org/compute/ext/agents/api/v2",
-        "alias": "os-agents", "description": "Agents support."}, {"updated": "2012-01-12T00:00:00+00:00",
-        "name": "Aggregates", "links": [], "namespace": "http://docs.openstack.org/compute/ext/aggregates/api/v1.1",
-        "alias": "os-aggregates", "description": "Admin-only aggregate administration."},
-        {"updated": "2012-07-22T00:00:00+00:00", "name": "AttachInterfaces", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/interfaces/api/v1.1",
-        "alias": "os-attach-interfaces", "description": "Attach interface support."},
-        {"updated": "2012-12-21T00:00:00+00:00", "name": "AvailabilityZone", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/availabilityzone/api/v1.1",
-        "alias": "os-availability-zone", "description": "1. Add availability_zone
-        to the Create Server v1.1 API.\n       2. Add availability zones describing.\n    "},
-        {"updated": "2013-01-04T00:00:00+00:00", "name": "BareMetalNodes", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/baremetal_nodes/api/v2",
-        "alias": "os-baremetal-nodes", "description": "Admin-only bare-metal node
-        administration."}, {"updated": "2011-09-21T00:00:00+00:00", "name": "Cells",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/cells/api/v1.1",
-        "alias": "os-cells", "description": "Enables cells-related functionality such
-        as adding neighbor cells,\n    listing neighbor cells, and getting the capabilities
-        of the local cell.\n    "}, {"updated": "2012-01-19T00:00:00+00:00", "name":
-        "Certificates", "links": [], "namespace": "http://docs.openstack.org/compute/ext/certificates/api/v1.1",
-        "alias": "os-certificates", "description": "Certificates support."}, {"updated":
-        "2011-12-16T00:00:00+00:00", "name": "Cloudpipe", "links": [], "namespace":
-        "http://docs.openstack.org/compute/ext/cloudpipe/api/v1.1", "alias": "os-cloudpipe",
-        "description": "Adds actions to create cloudpipe instances.\n\n    When running
-        with the Vlan network mode, you need a mechanism to route\n    from the public
-        Internet to your vlans.  This mechanism is known as a\n    cloudpipe.\n\n    At
-        the time of creating this class, only OpenVPN is supported.  Support for\n    a
-        SSH Bastion host is forthcoming.\n    "}, {"updated": "2012-11-14T00:00:00+00:00",
-        "name": "CloudpipeUpdate", "links": [], "namespace": "http://docs.openstack.org/compute/ext/cloudpipe-update/api/v2",
-        "alias": "os-cloudpipe-update", "description": "Adds the ability to set the
-        vpn ip/port for cloudpipe instances."}, {"updated": "2012-07-16T00:00:00+00:00",
-        "name": "ConfigDrive", "links": [], "namespace": "http://docs.openstack.org/compute/ext/config_drive/api/v1.1",
-        "alias": "os-config-drive", "description": "Config Drive Extension."}, {"updated":
-        "2011-12-08T00:00:00+00:00", "name": "ConsoleOutput", "links": [], "namespace":
-        "http://docs.openstack.org/compute/ext/os-console-output/api/v2", "alias":
-        "os-console-output", "description": "Console log output support, with tailing
-        ability."}, {"updated": "2011-12-23T00:00:00+00:00", "name": "Consoles", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/os-consoles/api/v2",
-        "alias": "os-consoles", "description": "Interactive Console support."}, {"updated":
-        "2012-10-15T00:00:00+00:00", "name": "Coverage", "links": [], "namespace":
-        "http://docs.openstack.org/compute/ext/coverage/api/v2", "alias": "os-coverage",
-        "description": "Enable Nova Coverage."}, {"updated": "2011-07-19T00:00:00+00:00",
-        "name": "Createserverext", "links": [], "namespace": "http://docs.openstack.org/compute/ext/createserverext/api/v1.1",
-        "alias": "os-create-server-ext", "description": "Extended support to the Create
-        Server v1.1 API."}, {"updated": "2011-09-01T00:00:00+00:00", "name": "DeferredDelete",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/deferred-delete/api/v1.1",
-        "alias": "os-deferred-delete", "description": "Instance deferred delete."},
-        {"updated": "2013-01-06T00:00:00+00:00", "name": "Evacuate", "links": [],
-        "namespace": "http://docs.openstack.org/compute/ext/evacuate/api/v2", "alias":
-        "os-evacuate", "description": "Enables server evacuation."}, {"updated": "2012-10-18T13:25:27-06:00",
-        "name": "FixedIPs", "links": [], "namespace": "http://docs.openstack.org/compute/ext/fixed_ips/api/v2",
-        "alias": "os-fixed-ips", "description": "Fixed IPs support."}, {"updated":
-        "2012-08-01T00:00:00+00:00", "name": "FlavorAccess", "links": [], "namespace":
-        "http://docs.openstack.org/compute/ext/flavor_access/api/v2", "alias": "os-flavor-access",
-        "description": "Flavor access support."}, {"updated": "2011-06-23T00:00:00+00:00",
-        "name": "FlavorExtraSpecs", "links": [], "namespace": "http://docs.openstack.org/compute/ext/flavor_extra_specs/api/v1.1",
-        "alias": "os-flavor-extra-specs", "description": "Instance type (flavor) extra
-        specs."}, {"updated": "2012-01-19T00:00:00+00:00", "name": "FlavorManage",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/flavor_manage/api/v1.1",
-        "alias": "os-flavor-manage", "description": "\n    Flavor create/delete API
-        support\n    "}, {"updated": "2012-08-29T00:00:00+00:00", "name": "FlavorRxtx",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/flavor_rxtx/api/v1.1",
-        "alias": "os-flavor-rxtx", "description": "Support to show the rxtx status
-        of a flavor."}, {"updated": "2012-08-29T00:00:00+00:00", "name": "FlavorSwap",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/flavor_swap/api/v1.1",
-        "alias": "os-flavor-swap", "description": "Support to show the swap status
-        of a flavor."}, {"updated": "2011-12-23T00:00:00+00:00", "name": "FloatingIpDns",
-        "links": [], "namespace": "http://docs.openstack.org/ext/floating_ip_dns/api/v1.1",
-        "alias": "os-floating-ip-dns", "description": "Floating IP DNS support."},
-        {"updated": "2012-01-04T00:00:00+00:00", "name": "FloatingIpPools", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/floating_ip_pools/api/v1.1",
-        "alias": "os-floating-ip-pools", "description": "Floating IPs support."},
-        {"updated": "2011-06-16T00:00:00+00:00", "name": "FloatingIps", "links": [],
-        "namespace": "http://docs.openstack.org/compute/ext/floating_ips/api/v1.1",
-        "alias": "os-floating-ips", "description": "Floating IPs support."}, {"updated":
-        "2012-10-29T13:25:27-06:00", "name": "FloatingIpsBulk", "links": [], "namespace":
-        "http://docs.openstack.org/compute/ext/floating_ips_bulk/api/v2", "alias":
-        "os-floating-ips-bulk", "description": "Bulk handling of Floating IPs."},
-        {"updated": "2012-07-06T00:00:00+00:00", "name": "Fping", "links": [], "namespace":
-        "http://docs.openstack.org/compute/ext/fping/api/v1.1", "alias": "os-fping",
-        "description": "Fping Management Extension."}, {"updated": "2012-12-11T00:00:00+00:00",
-        "name": "HideServerAddresses", "links": [], "namespace": "http://docs.openstack.org/compute/ext/hide_server_addresses/api/v1.1",
-        "alias": "os-hide-server-addresses", "description": "Support hiding server
-        addresses in certain states."}, {"updated": "2011-06-29T00:00:00+00:00", "name":
-        "Hosts", "links": [], "namespace": "http://docs.openstack.org/compute/ext/hosts/api/v1.1",
-        "alias": "os-hosts", "description": "Admin-only host administration."}, {"updated":
-        "2012-06-21T00:00:00+00:00", "name": "Hypervisors", "links": [], "namespace":
-        "http://docs.openstack.org/compute/ext/hypervisors/api/v1.1", "alias": "os-hypervisors",
-        "description": "Admin-only hypervisor administration."}, {"updated": "2013-02-08T00:00:00+00:00",
-        "name": "InstanceActions", "links": [], "namespace": "http://docs.openstack.org/compute/ext/instance-actions/api/v1.1",
-        "alias": "os-instance-actions", "description": "View a log of actions and
-        events taken on an instance."}, {"updated": "2012-07-06T01:00:00+00:00", "name":
-        "OSInstanceUsageAuditLog", "links": [], "namespace": "http://docs.openstack.org/ext/services/api/v1.1",
-        "alias": "os-instance_usage_audit_log", "description": "Admin-only Task Log
-        Monitoring."}, {"updated": "2011-08-08T00:00:00+00:00", "name": "Keypairs",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/keypairs/api/v1.1",
-        "alias": "os-keypairs", "description": "Keypair Support."}, {"updated": "2012-08-07T00:00:00+00:00",
-        "name": "MultipleCreate", "links": [], "namespace": "http://docs.openstack.org/compute/ext/multiplecreate/api/v1.1",
-        "alias": "os-multiple-create", "description": "Allow multiple create in the
-        Create Server v1.1 API."}, {"updated": "2011-12-23T00:00:00+00:00", "name":
-        "Networks", "links": [], "namespace": "http://docs.openstack.org/compute/ext/os-networks/api/v1.1",
-        "alias": "os-networks", "description": "Admin-only Network Management Extension."},
-        {"updated": "2012-11-19T00:00:00+00:00", "name": "NetworkAssociationSupport",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/networks_associate/api/v2",
-        "alias": "os-networks-associate", "description": "Network association support."},
-        {"updated": "2012-03-12T00:00:00+00:00", "name": "QuotaClasses", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/quota-classes-sets/api/v1.1",
-        "alias": "os-quota-class-sets", "description": "Quota classes management support."},
-        {"updated": "2011-08-08T00:00:00+00:00", "name": "Quotas", "links": [], "namespace":
-        "http://docs.openstack.org/compute/ext/quotas-sets/api/v1.1", "alias": "os-quota-sets",
-        "description": "Quotas management support."}, {"updated": "2011-08-18T00:00:00+00:00",
-        "name": "Rescue", "links": [], "namespace": "http://docs.openstack.org/compute/ext/rescue/api/v1.1",
-        "alias": "os-rescue", "description": "Instance rescue mode."}, {"updated":
-        "2013-02-05T00:00:00+00:00", "name": "SecurityGroupDefaultRules", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/securitygroupdefaultrules/api/v1.1",
-        "alias": "os-security-group-default-rules", "description": "Default rules
-        for security group support."}, {"updated": "2011-07-21T00:00:00+00:00", "name":
-        "SecurityGroups", "links": [], "namespace": "http://docs.openstack.org/compute/ext/securitygroups/api/v1.1",
-        "alias": "os-security-groups", "description": "Security group support."},
-        {"updated": "2011-12-21T00:00:00+00:00", "name": "ServerDiagnostics", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/server-diagnostics/api/v1.1",
-        "alias": "os-server-diagnostics", "description": "Allow Admins to view server
-        diagnostics through server action."}, {"updated": "2012-11-29T00:00:00+00:00",
-        "name": "ServerPassword", "links": [], "namespace": "http://docs.openstack.org/compute/ext/server-password/api/v2",
-        "alias": "os-server-password", "description": "Server password support."},
-        {"updated": "2012-01-23T00:00:00+00:00", "name": "ServerStartStop", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/servers/api/v1.1",
-        "alias": "os-server-start-stop", "description": "Start/Stop instance compute
-        API support."}, {"updated": "2012-10-28T00:00:00-00:00", "name": "Services",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/services/api/v2",
-        "alias": "os-services", "description": "Services support."}, {"updated": "2011-08-19T00:00:00+00:00",
-        "name": "SimpleTenantUsage", "links": [], "namespace": "http://docs.openstack.org/compute/ext/os-simple-tenant-usage/api/v1.1",
-        "alias": "os-simple-tenant-usage", "description": "Simple tenant usage extension."},
-        {"updated": "2012-03-07T09:46:43-05:00", "name": "OSTenantNetworks", "links":
-        [], "namespace": "http://docs.openstack.org/compute/ext/os-tenant-networks/api/v2",
-        "alias": "os-tenant-networks", "description": "Tenant-based Network Management
-        Extension."}, {"updated": "2012-07-13T00:00:00+00:00", "name": "UsedLimits",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/used_limits/api/v1.1",
-        "alias": "os-used-limits", "description": "Provide data on limited resources
-        that are being used."}, {"updated": "2012-08-07T00:00:00+00:00", "name": "UserData",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/userdata/api/v1.1",
-        "alias": "os-user-data", "description": "Add user_data to the Create Server
-        v1.1 API."}, {"updated": "2011-08-17T00:00:00+00:00", "name": "VirtualInterfaces",
-        "links": [], "namespace": "http://docs.openstack.org/compute/ext/virtual_interfaces/api/v1.1",
-        "alias": "os-virtual-interfaces", "description": "Virtual interface support."},
-        {"updated": "2011-03-25T00:00:00+00:00", "name": "Volumes", "links": [], "namespace":
-        "http://docs.openstack.org/compute/ext/volumes/api/v1.1", "alias": "os-volumes",
-        "description": "Volumes support."}]}'
+      string: '{"server": {"status": "ACTIVE", "updated": "2014-01-07T12:09:52Z",
+        "hostId": "1acef3da4b4b06a699697a819c20f89e8cdc4c7e7e6ff3136243ec08", "addresses":
+        {"adan_net": [{"version": 4, "addr": "192.168.7.5", "OS-EXT-IPS:type": "fixed"}]},
+        "links": [{"href": "http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10",
+        "rel": "self"}, {"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10",
+        "rel": "bookmark"}], "key_name": null, "image": {"id": "c7818c6a-0868-4af7-af7e-6b8c55e1688d",
+        "links": [{"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/images/c7818c6a-0868-4af7-af7e-6b8c55e1688d",
+        "rel": "bookmark"}]}, "OS-EXT-STS:task_state": null, "OS-EXT-STS:vm_state":
+        "active", "flavor": {"id": "1", "links": [{"href": "http://nube.inf.um.es:8774/a61e35ed059e4550b5c4dbf5bc55c90c/flavors/1",
+        "rel": "bookmark"}]}, "id": "c73a9e35-3c7e-43aa-b88f-b7589ffe8e10", "security_groups":
+        [{"name": "default"}], "OS-EXT-AZ:availability_zone": "nova", "user_id": "7b72c55cfe934357853dd1e1d25f91fc",
+        "name": "pause", "created": "2014-01-07T12:09:46Z", "tenant_id": "a61e35ed059e4550b5c4dbf5bc55c90c",
+        "OS-DCF:diskConfig": "MANUAL", "accessIPv4": "", "accessIPv6": "", "progress":
+        0, "OS-EXT-STS:power_state": 1, "config_drive": "", "metadata": {}}}'
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:06 GMT
+  recorded_at: Tue, 07 Jan 2014 12:09:52 GMT
 - request:
     method: post
-    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/os-floating-ips
+    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10/action
     body:
       encoding: UTF-8
-      string: '{"pool":null}'
-    headers:
-      X-Auth-Token:
-      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
-      X-Storage-Token:
-      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
-      Connection:
-      - Keep-Alive
-      User-Agent:
-      - OpenStack Ruby API 1.1.1
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Compute-Request-Id:
-      - req-0a2f91c7-285a-43f4-badf-96363d6b53fa
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '106'
-      Date:
-      - Tue, 07 Jan 2014 09:46:06 GMT
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"floating_ip": {"instance_id": null, "ip": "155.54.225.153", "fixed_ip":
-        null, "id": 25, "pool": "nova"}}'
-    http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:06 GMT
-- request:
-    method: get
-    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/os-floating-ips/25
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      X-Auth-Token:
-      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
-      X-Storage-Token:
-      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
-      Connection:
-      - Keep-Alive
-      User-Agent:
-      - OpenStack Ruby API 1.1.1
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Compute-Request-Id:
-      - req-c24dc17a-f174-46d7-bbe2-e59ed5fdf007
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '106'
-      Date:
-      - Tue, 07 Jan 2014 09:46:06 GMT
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"floating_ip": {"instance_id": null, "ip": "155.54.225.153", "fixed_ip":
-        null, "id": 25, "pool": "nova"}}'
-    http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:06 GMT
-- request:
-    method: post
-    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/9e549eff-e4dd-49d6-9a68-9a37bbb75fb7/action
-    body:
-      encoding: UTF-8
-      string: '{"addFloatingIp":{"address":"155.54.225.153"}}'
-    headers:
-      X-Auth-Token:
-      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
-      X-Storage-Token:
-      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
-      Connection:
-      - Keep-Alive
-      User-Agent:
-      - OpenStack Ruby API 1.1.1
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Content-Length:
-      - '85'
-      Content-Type:
-      - application/json; charset=UTF-8
-      X-Compute-Request-Id:
-      - req-cbfdacb1-2c14-4797-be46-01378b61342e
-      Date:
-      - Tue, 07 Jan 2014 09:46:06 GMT
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"badRequest": {"message": "No nw_info cache associated with instance",
-        "code": 400}}'
-    http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:06 GMT
-- request:
-    method: get
-    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/os-floating-ips/25
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      X-Auth-Token:
-      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
-      X-Storage-Token:
-      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
-      Connection:
-      - Keep-Alive
-      User-Agent:
-      - OpenStack Ruby API 1.1.1
-      Accept:
-      - application/json
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Compute-Request-Id:
-      - req-ec25b972-4252-4233-8291-34e0e11bdd84
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '106'
-      Date:
-      - Tue, 07 Jan 2014 09:46:11 GMT
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"floating_ip": {"instance_id": null, "ip": "155.54.225.153", "fixed_ip":
-        null, "id": 25, "pool": "nova"}}'
-    http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:11 GMT
-- request:
-    method: post
-    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/9e549eff-e4dd-49d6-9a68-9a37bbb75fb7/action
-    body:
-      encoding: UTF-8
-      string: '{"addFloatingIp":{"address":"155.54.225.153"}}'
+      string: '{"pause":null}'
     headers:
       X-Auth-Token:
       - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
@@ -757,12 +504,51 @@ http_interactions:
       Content-Length:
       - '0'
       Date:
-      - Tue, 07 Jan 2014 09:46:12 GMT
+      - Tue, 07 Jan 2014 12:09:52 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 07 Jan 2014 09:46:12 GMT
+  recorded_at: Tue, 07 Jan 2014 12:09:52 GMT
+- request:
+    method: delete
+    uri: http://nube.inf.um.es:8774/v2/a61e35ed059e4550b5c4dbf5bc55c90c/servers/c73a9e35-3c7e-43aa-b88f-b7589ffe8e10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Auth-Token:
+      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
+      X-Storage-Token:
+      - MIIIpwYJKoZIhvcNAQcCoIIImDCCCJQCAQExCTAHBgUrDgMCGjCCB4AGCSqGSIb3DQEHAaCCB3EEggdteyJhY2Nlc3MiOiB7InRva2VuIjogeyJpc3N1ZWRfYXQiOiAiMjAxNC0wMS0wN1QwOTo0NjowNS42ODcxMDQiLCAiZXhwaXJlcyI6ICIyMDE0LTAxLTA4VDA5OjQ2OjA1WiIsICJpZCI6ICJwbGFjZWhvbGRlciIsICJ0ZW5hbnQiOiB7ImRlc2NyaXB0aW9uIjogIkFkYW4iLCAiZW5hYmxlZCI6IHRydWUsICJpZCI6ICJhNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJuYW1lIjogImFkYW4ifX0sICJzZXJ2aWNlQ2F0YWxvZyI6IFt7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIiwgInJlZ2lvbiI6ICJjY2FsY3Vsb19lc3BpbmFyZG8iLCAiaW50ZXJuYWxVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzYvdjEvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAiaWQiOiAiMTlkN2NhNDY0YmEzNGE1MmE0ZGIzMDE1MTBiYWIwYzgiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo4Nzc2L3YxL2E2MWUzNWVkMDU5ZTQ1NTBiNWM0ZGJmNWJjNTVjOTBjIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogInZvbHVtZSIsICJuYW1lIjogImNpbmRlciJ9LCB7ImVuZHBvaW50cyI6IFt7ImFkbWluVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo5MjkyL3YyLjAiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIiwgImlkIjogIjJhNzVlMzI2YzQ4ZTQwOTViYWIyMDcwMTRhZmEwMzU3IiwgInB1YmxpY1VSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6OTI5Mi92Mi4wIn1dLCAiZW5kcG9pbnRzX2xpbmtzIjogW10sICJ0eXBlIjogImltYWdlIiwgIm5hbWUiOiAiZ2xhbmNlIn0sIHsiZW5kcG9pbnRzIjogW3siYWRtaW5VUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMiLCAicmVnaW9uIjogImNjYWxjdWxvX2VzcGluYXJkbyIsICJpbnRlcm5hbFVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6ODc3NC92Mi9hNjFlMzVlZDA1OWU0NTUwYjVjNGRiZjViYzU1YzkwYyIsICJpZCI6ICI4YzQ1YjI1MDNhODY0MTE3ODY4NmNiZjQ5ZTdiOTIzYiIsICJwdWJsaWNVUkwiOiAiaHR0cDovL251YmUuaW5mLnVtLmVzOjg3NzQvdjIvYTYxZTM1ZWQwNTllNDU1MGI1YzRkYmY1YmM1NWM5MGMifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiY29tcHV0ZSIsICJuYW1lIjogIm5vdmEifSwgeyJlbmRwb2ludHMiOiBbeyJhZG1pblVSTCI6ICJodHRwOi8vbnViZS5pbmYudW0uZXM6MzUzNTcvdjIuMCIsICJyZWdpb24iOiAiY2NhbGN1bG9fZXNwaW5hcmRvIiwgImludGVybmFsVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAiLCAiaWQiOiAiMTBlYjAwOWY2YmJkNDdhYTkwMTVlYjE1Yzg4NGZkYmYiLCAicHVibGljVVJMIjogImh0dHA6Ly9udWJlLmluZi51bS5lczo1MDAwL3YyLjAifV0sICJlbmRwb2ludHNfbGlua3MiOiBbXSwgInR5cGUiOiAiaWRlbnRpdHkiLCAibmFtZSI6ICJrZXlzdG9uZSJ9XSwgInVzZXIiOiB7InVzZXJuYW1lIjogImFkYW4iLCAicm9sZXNfbGlua3MiOiBbXSwgImlkIjogIjdiNzJjNTVjZmU5MzQzNTc4NTNkZDFlMWQyNWY5MWZjIiwgInJvbGVzIjogW3sibmFtZSI6ICJfbWVtYmVyXyJ9LCB7Im5hbWUiOiAiTWVtYmVyIn1dLCAibmFtZSI6ICJhZGFuIn0sICJtZXRhZGF0YSI6IHsiaXNfYWRtaW4iOiAwLCAicm9sZXMiOiBbIjlmZTJmZjllZTQzODRiMTg5NGE5MDg3OGQzZTkyYmFiIiwgImVkYjUxOGMzMDYyZTQ4ZmJhMjk1YzE5ZjQ1OGUyZmM2Il19fX0xgf8wgfwCAQEwXDBXMQswCQYDVQQGEwJVUzEOMAwGA1UECBMFVW5zZXQxDjAMBgNVBAcTBVVuc2V0MQ4wDAYDVQQKEwVVbnNldDEYMBYGA1UEAxMPd3d3LmV4YW1wbGUuY29tAgEBMAcGBSsOAwIaMA0GCSqGSIb3DQEBAQUABIGAltAiWbSdNxpp8aHLS0uHedrTv+o-3GNZ7Wl15P4qgdttHqAKOfKdjOSZqLKNMq77nCtXsUe18AOhAmFqDYHT0-EInSwGX1-0fcy2ZH0+92xhgx2wVK0aaWFGTJ38WlhR2+mdF83wPWsJ1j8qYduWzFG1IcYkTxDPVvoqrDGpM20=
+      Connection:
+      - Keep-Alive
+      User-Agent:
+      - OpenStack Ruby API 1.1.1
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Content-Length:
+      - '0'
+      X-Compute-Request-Id:
+      - req-0f7b29c8-c593-4f98-90f6-5b28bd4f79c0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 07 Jan 2014 12:09:52 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 07 Jan 2014 12:09:52 GMT
 recorded_with: VCR 2.8.0

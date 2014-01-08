@@ -86,7 +86,7 @@ gem 'pundit'
 
 gem 'simple_form'
 
-gem 'openstack'
+gem 'openstack', :git => 'https://github.com/RaulKite/ruby-openstack.git'
 gem 'anticipate'
 
 gem 'paperclip'
