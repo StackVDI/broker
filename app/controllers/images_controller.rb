@@ -1,6 +1,10 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy ]
 
+  def show
+    authorize @image
+  end
+
   # GET /images
   def index
     @cloud_server = CloudServer.find(params[:cloud_server_id])   

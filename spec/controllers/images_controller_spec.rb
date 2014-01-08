@@ -22,9 +22,13 @@ describe ImagesController do
     @cloud_server.save
   end
 
-  # This should return the minimal set of values that should be in the session
-  # in order to pass any filters (e.g. authentication) defined in
-  # ImagesController. Be sure to keep this updated too.
+  describe "get show" do
+    it "assign the image to @image" do
+      image = Image.create! valid_attributes
+      get :show, {:id => image.to_param, :cloud_server_id => @cloud_server.id}
+      assigns(:image).should eq(image)
+    end
+  end
 
   describe "get index" do
     it "assigns all images as @images" do
@@ -156,6 +160,14 @@ describe ImagesController do
       sign_in @user
       @cloud_server = FactoryGirl.build(:cloud_server, :username => 'adan', :password => 'cambiame', :url => 'http://nube.inf.um.es:5000/v2.0/')
       @cloud_server.save
+    end
+
+    describe "get show" do
+      it "assign the image to @image" do
+        image = Image.create! valid_attributes
+        get :show, {:id => image.to_param, :cloud_server_id => @cloud_server.id}
+        expect(response).to_not be_success
+      end
     end
 
     describe "GET index" do
