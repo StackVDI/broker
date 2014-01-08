@@ -96,6 +96,10 @@ When(/^I launch an image$/) do
   click_link 'create_machine_1'
 end
 
+When(/^I visit running machines link$/) do
+  click_link 'Running Machines'
+end
+
 ##### THEN 
 
 Then(/^I can see the new cloud server in the cloud servers list$/) do
@@ -140,3 +144,8 @@ end
 Then(/^A new page is opened and connect to the new machine$/) do
   page.should have_content ('Machine launched')
 end
+
+Then(/^I can see all the running machines$/) do
+  page.all('table tr').count.should == 2
+end
+

@@ -1,29 +1,26 @@
-%h1 Listing machines
+%h1 Running machines
 
-%table
-  %tr
+%table.table.table-bordered.table-hove
+  %thead
     %th Image
     %th User
-    %th Remote username
-    %th Remote password
-    %th Remote address
-    %th Remote port
-    %th
-    %th
-    %th
+    %th Username
+    %th Password
+    %th Address
+    %th Port
+    %th Actions
 
+  %tbody
   - @machines.each do |machine|
     %tr
-      %td= machine.image
-      %td= machine.user
+      %td= link_to machine.image.name, cloud_server_image_path(machine.image.cloud_server, machine.image)
+      %td= machine.user ? machine.user.email : ""
       %td= machine.remote_username
       %td= machine.remote_password
       %td= machine.remote_address
       %td= machine.remote_port
       %td= link_to 'Show', machine
-      %td= link_to 'Edit', edit_machine_path(machine)
       %td= link_to 'Destroy', machine, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Machine', new_machine_path

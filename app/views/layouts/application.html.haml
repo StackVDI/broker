@@ -32,7 +32,6 @@
               %ul.nav.pull-right
                 = drop_down current_user.last_name + ', ' + current_user.first_name do
                   = menu_item "Edit", edit_user_registration_path
-                  = menu_item "Other link"
                   = drop_down_divider
                   = menu_item "Logout", destroy_user_session_path, :method => :delete, :id => "logout"        
 
@@ -45,7 +44,7 @@
           %ul.nav.nav-list
             %li.nav-header Cloud
             %li= link_to "Cloud servers", cloud_servers_path
-            %li= link_to "Running Machines", "/"
+            %li= link_to "Running Machines", machines_path
             %li.nav-header Users
             %li= link_to "Users", administration_list_users_path, :id => "userslist"
             %li= link_to "Groups", administration_list_groups_path, id: "groupslist"

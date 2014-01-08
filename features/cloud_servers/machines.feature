@@ -17,3 +17,9 @@ Feature: Machines
     Then A new machine is created
     And  A new page is opened and connect to the new machine
 
+  Scenario: Admin can see all the machines running
+    When I am not logged in
+    And  I log as an admin
+    And  I visit running machines link
+    Then I can see all the running machines
+
