@@ -146,6 +146,6 @@ Then(/^A new page is opened and connect to the new machine$/) do
 end
 
 Then(/^I can see all the running machines$/) do
-  page.all('table tr').count.should == 2
+  page.all('table tr').count.should == 1
 end
 
