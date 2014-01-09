@@ -32,7 +32,7 @@ class CloudServerPolicy
   end
 
   def destroy?
-    user.admin?
+    user.admin? && user.admin.count > 1
   end
 
 end

@@ -42,6 +42,10 @@ class User < ActiveRecord::Base
     has_role? :admin
   end
 
+  def self.admins
+    User.with_role(:admin)
+  end
+
   def approve!
     self.approved=true
   end

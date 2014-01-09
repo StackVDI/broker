@@ -66,8 +66,6 @@ describe AdministrationController do
       end
     end
 
-
-
     describe "PUT 'toggle_approved_user'"do
       it "redirects to administration user_list" do
         patch :toggle_approved_user, id: @raul 
@@ -96,9 +94,21 @@ describe AdministrationController do
         response.should redirect_to administration_list_users_path
       end
     end
+
+    describe "DELETE 'delete_user'" do
+      it "delete an user" do
+        expect {
+          delete :delete_user, {:id => @alex}
+        }.to change(User, :count).by(-1) 
+      end
+
+      it "can't delete las admin user" do
+        expect {
+          delete :delete_user, :id => @user
+        }.to_not change(User, :count)
+      end
+    end
   end
-
-
 
   context 'login as an user' do
     before do
@@ -131,5 +141,12 @@ describe AdministrationController do
         response.should_not redirect_to administration_list_users_path
       end
     end
+
+      describe "DELETE 'delete_user'" do
+        it "can't delete an user" do
+          delete :delete_user, {:id => @another}
+          response.should_not be_success
+        end
+      end
   end
 end

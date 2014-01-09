@@ -19,10 +19,6 @@ class AdministrationControllerPolicy
     user.admin?
   end
 
-  def delete_user?
-    user.admin?
-  end
-
   def users_from_group?
     user.admin?
   end

@@ -55,4 +55,16 @@ describe User do
     end
   end
 
+  describe '#admins' do
+    it 'returns admin users' do
+      user = FactoryGirl.create(:user)
+      user.add_role(:admin)
+      User.admins.should == [user]
+      user2 = FactoryGirl.create(:user)
+      user2.add_role(:admin)
+      User.admins.should == [user,user2]
+    end
+
+  end
+
 end
