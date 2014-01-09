@@ -19,6 +19,7 @@ Broker::Application.routes.draw do
   get 'machines/:id', to: 'machines#show', as: 'machine'
   get 'machines', to: 'machines#index', as: 'machines'
   delete 'machines/:id', to: 'machines#destroy', as: 'destroy_machine'
+  get 'machines/reboot/:id', to: 'machines#reboot', as: 'reboot_machine'
 
   resources :roles
 

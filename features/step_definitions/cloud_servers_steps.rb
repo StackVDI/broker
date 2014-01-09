@@ -77,6 +77,7 @@ end
 Given(/^I have available machines to run$/) do
   Machine.any_instance.stub(:cloud_create)
   Machine.any_instance.stub(:pause)
+  Machine.any_instance.stub(:reboot)
   @cloudserver = FactoryGirl.create(:cloud_server, :username => 'adan', :password => 'cambiame', :url => 'http://nube.inf.um.es:5000/v2.0/') 
   @image = FactoryGirl.create(:image, :cloud_server => @cloudserver, :name => 'Ubuntu', :machine => "ubuntu_server_12_04_x64", :flavor => "m1.tiny" )
   Role.create(:name => "default")
@@ -91,13 +92,17 @@ Then(/^I can see the availabe machines for my groups$/) do
   page.should have_content 'Ubuntu'
 end
 
-When(/^I launch an image$/) do
+When(/^I launch a machine$/) do
   @machine_count = Machine.count
   click_link 'create_machine_1'
 end
 
 When(/^I visit running machines link$/) do
   click_link 'Running Machines'
+end
+
+When(/^I reboot a machine$/) do
+  click_link 'reboot_machine_1'
 end
 
 ##### THEN 
@@ -147,5 +152,9 @@ end
 
 Then(/^I can see all the running machines$/) do
   page.all('table tr').count.should == 1
+end
+
+Then(/^The machine is rebooted$/) do
+  page.should have_content 'Machine has been rebooted'
 end
 

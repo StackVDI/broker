@@ -98,4 +98,10 @@ describe '@cloud' do
     end
   end
 
+  describe '.reboot' do
+    it 'reboot a server' do
+      pending
+    end
+  end
+
 end

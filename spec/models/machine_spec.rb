@@ -16,4 +16,9 @@ describe Machine do
       @ready_machine.should be_an_instance_of Machine
     end
   end
+
+  describe 'reboot' do
+    pending
+  end
+
 end

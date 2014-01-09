@@ -18,6 +18,7 @@
           %td= machine.image.name
           %td= machine.image.description
           %td
+            =link_to 'Reboot', reboot_machine_path(machine) , :class => 'btn btn-mini btn-danger', :id => "reboot_machine_#{machine.id}", :method => :get, :data => { :confirm => 'Rebooting machine. Are you sure?' }
             =link_to 'Destroy', machine_path(machine) , :class => 'btn btn-mini btn-danger', :id => "destroy_machine_#{machine.id}", :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br

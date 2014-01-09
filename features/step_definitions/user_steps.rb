@@ -110,6 +110,10 @@ When(/^A user has sign up confirmed and approved$/) do
   @user_approved.save
 end
 
+When(/^I go to root page$/) do
+  visit root_path
+end
+
 ### THEN ###
 Then(/^I receive an email for confirmation$/) do
   unread_emails_for(@user.email).size.should == 1

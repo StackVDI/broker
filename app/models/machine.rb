@@ -20,6 +20,10 @@ class Machine < ActiveRecord::Base
     self.image.cloud_server.pause(self.id.to_s)
   end
 
+  def reboot
+    self.image.cloud_server.reboot(self.id.to_s)
+  end
+
   def self.launch(image)
     machine = Machine.new(:image => image)
     ready_machine = Machine.paused(image.id).first

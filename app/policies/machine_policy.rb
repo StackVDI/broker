@@ -23,4 +23,8 @@ class MachinePolicy
     user.admin? || machine.user == user 
   end
 
+  def reboot?
+    user.admin? || machine.user == user
+  end
+
 end 

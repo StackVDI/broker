@@ -29,5 +29,9 @@ describe CloudServer do
     #should_receive 
   end
 
+  describe 'reboot' do
+    pending
+  end
+
 
 end 

@@ -47,5 +47,10 @@ class CloudServer < ActiveRecord::Base
     @os ||= connect
     @os.destroy_server! name
   end
+  
+  def reboot(name)
+    @os ||= connect
+    @os.reboot! name
+  end
 
 end

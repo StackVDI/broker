@@ -27,6 +27,15 @@ describe MachinesController do
           assigns(:machine).should eq(machine)
         end
       end
+
+      describe "GET reboot" do
+        it "reboots a machine" do
+          Machine.any_instance.stub(:reboot)
+          machine = FactoryGirl.create(:machine)
+          get :reboot, {:id => machine.id}
+          response.should redirect_to root_path
+        end
+      end
     end
 
     context "as user" do

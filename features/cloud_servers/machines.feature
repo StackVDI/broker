@@ -13,9 +13,16 @@ Feature: Machines
 
   Scenario: User can launch machines
     When I'm in root page
-    And  I launch an image
+    And  I launch a machine
     Then A new machine is created
     And  A new page is opened and connect to the new machine
+
+  Scenario: User can reboot his machines
+    When I'm in root page
+    And  I launch a machine
+    And  I go to root page
+    And  I reboot a machine
+    Then The machine is rebooted
 
   Scenario: Admin can see all the machines running
     When I am not logged in

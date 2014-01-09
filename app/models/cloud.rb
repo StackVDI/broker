@@ -61,4 +61,10 @@ class Cloud
     os.server(getserver(server_name)).pause
   end
 
+  def reboot!(server_name)
+    os.server(getserver(server_name)).reboot
+  end
+
+
+
 end

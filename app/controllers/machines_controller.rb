@@ -1,5 +1,5 @@
 class MachinesController < ApplicationController
-  before_action :set_machine, only: [:show, :destroy]
+  before_action :set_machine, only: [:show, :destroy, :reboot]
 
   def index
     @machines = Machine.all
@@ -36,6 +36,12 @@ class MachinesController < ApplicationController
     @machine.cloud_destroy
     @machine.destroy
     redirect_to root_path
+  end
+
+  def reboot
+    authorize @machine
+    @machine.reboot
+    redirect_to root_path, notice: ' Machine has been rebooted.'
   end
 
   private
