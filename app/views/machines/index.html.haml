@@ -2,25 +2,24 @@
 
 %table.table.table-bordered.table-hove
   %thead
+    %th
     %th Image
+    %th Description
     %th User
-    %th Username
-    %th Password
-    %th Address
-    %th Port
     %th Actions
 
   %tbody
   - @machines.each do |machine|
     %tr
+      %td
+        %center= image_tag machine.image.avatar.url(:thumb)
       %td= link_to machine.image.name, cloud_server_image_path(machine.image.cloud_server, machine.image)
+      %td= machine.image.description
       %td= machine.user ? machine.user.email : ""
-      %td= machine.remote_username
-      %td= machine.remote_password
-      %td= machine.remote_address
-      %td= machine.remote_port
-      %td= link_to 'Show', machine
-      %td= link_to 'Destroy', machine, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td 
+        =link_to 'Connect', machine_path(machine) , :class => 'btn btn-mini btn-info', :id => "connect_machine_#{machine.id}", :method => :get
+        =link_to 'Reboot', reboot_machine_path(machine) , :class => 'btn btn-mini btn-danger', :id => "reboot_machine_#{machine.id}", :method => :get, :data => { :confirm => 'Rebooting machine. Are you sure?' }
+        =link_to 'Destroy', machine_path(machine) , :class => 'btn btn-mini btn-danger', :id => "destroy_machine_#{machine.id}", :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
