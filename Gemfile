@@ -90,3 +90,4 @@ gem 'openstack', :git => 'https://github.com/RaulKite/ruby-openstack.git'
 gem 'anticipate'
 
 gem 'paperclip'
+gem 'sidekiq'

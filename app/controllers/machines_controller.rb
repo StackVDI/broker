@@ -20,11 +20,10 @@ class MachinesController < ApplicationController
     authorize @fakemachine
     @machine, @ready_machine = Machine.launch(Image.find_by_id(params.require(:id)))
     @ready_machine.user = current_user
+    # TODO: Añadir ip flotante
     @ready_machine.save
     if @machine.save
-      @machine.cloud_create
-      sleep 5
-      @machine.pause
+      StartMachine.perform_async(@machine.id)
       redirect_to @ready_machine, notice: 'Machine was successfully created.' 
     else
       redirect_to root_path
@@ -33,6 +32,7 @@ class MachinesController < ApplicationController
 
   def destroy
     authorize @machine
+    # TODO: Quitar ip flotante
     @machine.cloud_destroy
     @machine.destroy
     redirect_to root_path

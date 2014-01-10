@@ -17,6 +17,7 @@ class Image < ActiveRecord::Base
     Image.all.each do |image|
       (image.number_of_instances - Machine.paused(image.id).count).times do
         machine = Machine.create(:image => image)
+        StartMachine.perform_async(machine.id)
       end
     end
   end
