@@ -8,6 +8,9 @@ require 'cucumber/rails'
 require 'email_spec/cucumber'
 require 'cucumber/rspec/doubles'
 require File.expand_path("../../../spec/support/vcr", __FILE__)
+require 'sidekiq/testing'
+
+Sidekiq::Testing.fake!
 
 
 # Capybara defaults to CSS3 selectors rather than XPath.
