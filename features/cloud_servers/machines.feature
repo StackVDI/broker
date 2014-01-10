@@ -23,6 +23,14 @@ Feature: Machines
     And  I go to root page
     And  I reboot a machine
     Then The machine is rebooted
+  
+  @wip
+  Scenario: User can connect to his machines
+    When I'm in root page
+    And  I launch a machine
+    And  I go to root page
+    And  I connect to a machine
+    Then A new page is opened and connect to the new machine
 
   Scenario: Admin can see all the machines running
     When I am not logged in

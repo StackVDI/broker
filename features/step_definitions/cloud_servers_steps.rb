@@ -88,10 +88,6 @@ Given(/^I have available machines to run$/) do
   @machine.pause
 end
 
-Then(/^I can see the availabe machines for my groups$/) do
-  page.should have_content 'Ubuntu'
-end
-
 When(/^I launch a machine$/) do
   @machine_count = Machine.count
   click_link 'create_machine_1'
@@ -105,6 +101,9 @@ When(/^I reboot a machine$/) do
   click_link 'reboot_machine_1'
 end
 
+When(/^I connect to a machine$/) do
+  click_link 'connect_machine_1'
+end
 ##### THEN 
 
 Then(/^I can see the new cloud server in the cloud servers list$/) do
@@ -157,4 +156,9 @@ end
 Then(/^The machine is rebooted$/) do
   page.should have_content 'Machine has been rebooted'
 end
+
+Then(/^I can see the availabe machines for my groups$/) do
+  page.should have_content 'Ubuntu'
+end
+
 
