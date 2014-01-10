@@ -1,5 +1,11 @@
 == README
 
+Para todo necesitamos Redis, para instalarlo:
+    1.- apt-get install redis-server
+    2.- service redis-server start
+    3.- Iniciar sidekiq, para ello:
+	bundle exec sidekiq
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
