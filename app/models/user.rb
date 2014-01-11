@@ -61,7 +61,7 @@ class User < ActiveRecord::Base
         images_disponibles << image
       end
     end
-    images_disponibles 
+    images_disponibles.uniq 
   end
 
 end
