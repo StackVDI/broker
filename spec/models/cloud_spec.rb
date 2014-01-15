@@ -70,37 +70,37 @@ describe '@cloud' do
 
   describe '.unpause' do
     it 'unpause server' do
-      VCR.use_cassette('server_unpause') do
-        pending
-        server = @cloud.create_server( :name  => "unpause", 
-                                :image => "ubuntu_server_12_04_x64", 
-                                :flavor => "m1.tiny")
-        sleep 5
-        server.pause
-        sleep 5
-        @cloud.unpause("unpause").should_not raise_error
-        server.delete!
-      end
+      @server = double
+      @server.stub(:name).and_return("unpause")
+      @server.stub(:unpause)
+      @cloud.stub(:getserver)
+      @cloud.os.stub(:server).and_return(@server)
+      @server.should_receive(:unpause)
+      @cloud.unpause("unpause")
     end
   end
   
   describe '.pause' do
     it 'pause server' do
-      pending
-      VCR.use_cassette('server_pause') do
-        server = @cloud.create_server( :name  => "pause", 
-                                :image => "ubuntu_server_12_04_x64", 
-                                :flavor => "m1.tiny")
-        sleep 5
-        @cloud.pause("pause").should_not raise_error
-        server.delete!
-      end
+      @server = double
+      @server.stub(:name).and_return("pause")
+      @server.stub(:pause)
+      @cloud.stub(:getserver)
+      @cloud.os.stub(:server).and_return(@server)
+      @server.should_receive(:pause)
+      @cloud.pause("pause")
     end
   end
 
   describe '.reboot' do
     it 'reboot a server' do
-      pending
+      @server = double
+      @server.stub(:name).and_return("reboot")
+      @server.stub(:pause)
+      @cloud.stub(:getserver)
+      @cloud.os.stub(:server).and_return(@server)
+      @server.should_receive(:reboot)
+      @cloud.reboot!("reboot")
     end
   end
 

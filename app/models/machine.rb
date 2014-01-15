@@ -4,26 +4,6 @@ class Machine < ActiveRecord::Base
 
   scope :paused, ->(image) { where("image_id = ? and user_id is null", image) }
 
-  def cloud_create
-     self.image.cloud_server.create_server(:name => self.id.to_s, :image => self.image.machine, :flavor => self.image.flavor)
-  end
-
-  def cloud_destroy
-    self.image.cloud_server.destroy_server(self.id.to_s)
-  end
-
-  def unpause
-    self.image.cloud_server.unpause(self.id.to_s)
-  end
-
-  def pause
-    self.image.cloud_server.pause(self.id.to_s)
-  end
-
-  def reboot
-    self.image.cloud_server.reboot(self.id.to_s)
-  end
-
   def self.launch(image)
     # TODO: Crear usuario, clave, ip y puerto 
     machine = Machine.new(:image => image)
@@ -35,4 +15,29 @@ class Machine < ActiveRecord::Base
     end
     return machine, ready_machine
   end
+
+  def cloud_server
+    self.image.cloud_server
+  end
+
+  def cloud_create
+     self.cloud_server.create_server(:name => self.id.to_s, :image => self.image.machine, :flavor => self.image.flavor)
+  end
+
+  def cloud_destroy
+    self.cloud_server.destroy_server(self.id.to_s)
+  end
+
+  def unpause
+    self.cloud_server.unpause(self.id.to_s)
+  end
+
+  def pause
+    self.cloud_server.pause(self.id.to_s)
+  end
+
+  def reboot
+    self.cloud_server.reboot(self.id.to_s)
+  end
+
 end

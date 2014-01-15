@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :machine do
-    association :image, :factory =>:image, :strategy => :build
-    association :user, :factory => :user, :strategy => :build
+    association :image, :factory =>:image, :strategy => :create
+    association :user, :factory => :user, :strategy => :create
     remote_username "username"
     remote_password "password"
     remote_address "www.openvdi.com"

@@ -10,6 +10,10 @@ class CloudServer < ActiveRecord::Base
     }) 
   end
 
+  def os
+    @os
+  end
+
   def machines
     begin
       @os ||= connect
