@@ -80,9 +80,13 @@ gem 'rolify'
 gem 'pry'
 gem 'pry-debugger'
 
-gem 'puma'
 gem 'pundit'
-gem 'capistrano'
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+end
 
 gem 'simple_form'
 

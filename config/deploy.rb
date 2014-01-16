@@ -26,7 +26,6 @@ namespace :deploy do
     end
   end
 
-
   desc "Check that we can access everything"
   task :check_write_permissions do
     on roles(:all) do |host|
@@ -37,8 +36,6 @@ namespace :deploy do
       end
     end
   end
-
-
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do

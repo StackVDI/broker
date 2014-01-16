@@ -42,6 +42,15 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 0.0.23)
+    capistrano-bundler (1.1.1)
+      capistrano (~> 3.0)
+      sshkit (>= 1.2.0)
+    capistrano-rails (1.1.0)
+      capistrano (>= 3.0.0)
+      capistrano-bundler (>= 1.0.0)
+    capistrano-rvm (0.1.0)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2.0)
     capybara (2.2.1)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -274,6 +283,8 @@ PLATFORMS
 DEPENDENCIES
   anticipate
   capistrano
+  capistrano-rails
+  capistrano-rvm
   coffee-rails (~> 4.0.0)
   cucumber-rails
   database_cleaner
