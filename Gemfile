@@ -81,8 +81,8 @@ gem 'pry'
 gem 'pry-debugger'
 
 gem 'puma'
-gem 'mina'
 gem 'pundit'
+gem 'capistrano'
 
 gem 'simple_form'
 
