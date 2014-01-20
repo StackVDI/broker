@@ -1,4 +1,4 @@
 daemonize
 pidfile 'tmp/pids/puma.pid'
-bind 'unix:///tmp/broker_puma.sock'
+bind 'unix:///tmp/openvdi.sock'
 preload_app!
