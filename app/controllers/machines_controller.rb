@@ -1,9 +1,6 @@
 class MachinesController < ApplicationController
   before_action :set_machine, only: [:show, :destroy, :reboot]
 
-  rescue_from Timeout::Error, :with => :rescue_from_timeout
-
-
   def index
     @machines = Machine.all
     authorize @machines
@@ -38,13 +35,18 @@ class MachinesController < ApplicationController
     # TODO: Quitar ip flotante
     @machine.cloud_destroy
     rescue Timeout::Error => e
-      @mensaje_error = "Machine has been deleted from database, but there is no connection with cloud. YOU SHOULD DELETE THIS VM MANUALLY FROM THE CLOUD. Reason: #{e}. #{@machine.cloud_server.description} - #{@machine}"
+      @mensaje_error = "Machine has been deleted from database, but there is no connection with cloud. YOU SHOULD DELETE THIS VM MANUALLY FROM THE CLOUD. Reason: #{e}. #{@machine.cloud_server.description} - #{@machine.id}"
       @machine.destroy
-      redirect_to root_path, error: @mensaje_error 
+      redirect_to root_path, notice: @mensaje_error 
+    rescue Errno::ECONNREFUSED 
+      @mensaje_error = "Machine has been deleted from database, but there is no connection with cloud. YOU SHOULD DELETE THIS VM MANUALLY FROM THE CLOUD. Reason: Connection refused. #{@machine.cloud_server.description} - #{@machine.id}"
+      @machine.destroy
+      redirect_to root_path, notice: @mensaje_error 
+    
     rescue TypeError => e
       @mensaje_error = "Machine has been deleted from database, but there isn't a machine with id #{@machine.id} in #{@machine.cloud_server.description}"
       @machine.destroy     
-      redirect_to root_path, error: "hola"
+      redirect_to root_path, notice: @mensaje_error
     else 
      @machine.destroy 
      redirect_to root_path

@@ -101,6 +101,27 @@ describe MachinesController do
           delete :destroy, {:id => machine.id}
         }.to change(Machine, :count).by(-1)
       end
+
+      it "rescue timeout error" do
+        machine = FactoryGirl.create(:machine, :user => @user)
+        Machine.any_instance.stub(:cloud_destroy).and_raise(Timeout::Error)
+        delete :destroy, {:id => machine.id}
+        flash[:notice].should eq("Machine has been deleted from database, but there is no connection with cloud. YOU SHOULD DELETE THIS VM MANUALLY FROM THE CLOUD. Reason: Timeout::Error. Cloud Server Description - 1")
+      end
+
+      it "rescue type error" do
+        machine = FactoryGirl.create(:machine, :user => @user)
+        Machine.any_instance.stub(:cloud_destroy).and_raise(TypeError)
+        delete :destroy, {:id => machine.id}
+        flash[:notice].should eq("Machine has been deleted from database, but there isn't a machine with id 1 in Cloud Server Description")
+      end
+
+      it "rescue connection refused" do
+        machine = FactoryGirl.create(:machine, :user => @user)
+        Machine.any_instance.stub(:cloud_destroy).and_raise(Errno::ECONNREFUSED)
+        delete :destroy, {:id => machine.id}
+        flash[:notice].should eq("Machine has been deleted from database, but there is no connection with cloud. YOU SHOULD DELETE THIS VM MANUALLY FROM THE CLOUD. Reason: Connection refused. Cloud Server Description - 1")
+      end
     end
   end
 end
