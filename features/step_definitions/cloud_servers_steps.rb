@@ -104,6 +104,11 @@ end
 When(/^I connect to a machine$/) do
   click_link 'connect_machine_1'
 end
+
+When(/^I destroy machine$/) do
+  click_link 'destroy_machine_1'
+end
+
 ##### THEN 
 
 Then(/^I can see the new cloud server in the cloud servers list$/) do
@@ -159,6 +164,10 @@ end
 
 Then(/^I can see the availabe machines for my groups$/) do
   page.should have_content 'Ubuntu'
+end
+
+Then(/^The machine is destroyed$/) do
+  page.should_not have_content 'destroy_machine_1'   
 end
 
 
