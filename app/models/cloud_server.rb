@@ -48,8 +48,10 @@ class CloudServer < ActiveRecord::Base
   end
 
   def destroy_server(name)
-    @os ||= connect
-    @os.destroy_server! name
+    status = Timeout::timeout(5) {
+      @os ||= connect
+      @os.destroy_server! name
+    }
   end
   
   def reboot(name)

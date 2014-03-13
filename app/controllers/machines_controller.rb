@@ -1,6 +1,9 @@
 class MachinesController < ApplicationController
   before_action :set_machine, only: [:show, :destroy, :reboot]
 
+  rescue_from Timeout::Error, :with => :rescue_from_timeout
+
+
   def index
     @machines = Machine.all
     authorize @machines
@@ -33,10 +36,23 @@ class MachinesController < ApplicationController
   def destroy
     authorize @machine
     # TODO: Quitar ip flotante
+    # TODO: Añadir timeout
     @machine.cloud_destroy
-    @machine.destroy
-    redirect_to root_path
-  end
+    rescue Timeout::Error => e
+      puts "111111111111"
+      @mensaje_error = "Machine has been deleted from database, but there is no connection with cloud. YOU SHOULD DELETE THIS VM MANUALLY FROM THE CLOUD. Reason: #{e}. #{@machine.cloud_server.description} - #{@machine}"
+      @machine.destroy
+      redirect_to root_path, error: @mensaje_error 
+    rescue TypeError => e
+      puts "222222222222"
+      @mensaje_error = "Machine has been deleted from database, but there isn't a machine with id #{@machine.id} in #{@machine.cloud_server.description}"
+      @machine.destroy     
+      redirect_to root_path, error: "hola"
+    else 
+     puts "3333333333"
+     @machine.destroy 
+     redirect_to root_path
+    end
 
   def reboot
     authorize @machine
@@ -54,4 +70,5 @@ class MachinesController < ApplicationController
     def machine_params
       params.require(:machine).permit(:image_id, :user_id, :remote_username, :remote_password, :remote_address, :remote_port)
     end
+
 end
