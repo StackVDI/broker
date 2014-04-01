@@ -47,6 +47,10 @@ class MachinesController < ApplicationController
       @mensaje_error = "Machine has been deleted from database, but there isn't a machine with id #{@machine.id} in #{@machine.cloud_server.description}"
       @machine.destroy     
       redirect_to root_path, notice: @mensaje_error
+    rescue
+      @mensaje_error = "  Machine has been deleted from database, but there is an error deleting  machine with id #{@machine.id} in #{@machine.cloud_server.description}. Please, do it manually"
+      @machine.destroy
+      redirect_to root_path, notice: @mensaje_error
     else 
      @machine.destroy 
      redirect_to root_path
