@@ -8,11 +8,6 @@ class Machine < ActiveRecord::Base
     # TODO: Crear usuario, clave, ip y puerto 
     machine = Machine.new(:image => image)
     ready_machine = Machine.paused(image.id).first
-    begin 
-      ready_machine.unpause
-    rescue
-      puts "unpause fails"
-    end
     return machine, ready_machine
   end
 

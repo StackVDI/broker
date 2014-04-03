@@ -37,6 +37,10 @@ class ImagesController < ApplicationController
     @image.cloud_server = CloudServer.find(params[:cloud_server_id])
     authorize @image
     if @image.save
+      (@image.number_of_instances - Machine.paused(@image.id).count).times do
+        machine = Machine.create(:image => @image)
+        StartMachine.perform_async(machine.id)
+      end
       redirect_to cloud_server_images_path, notice: 'Image was successfully created.' 
     else
       @machines = @cloud_server.machines
@@ -49,7 +53,11 @@ class ImagesController < ApplicationController
   def update
     @image.cloud_server = CloudServer.find(params[:cloud_server_id])
     if @image.update(image_params)
-    authorize @image
+      authorize @image
+        (@image.number_of_instances - Machine.paused(@image.id).count).times do
+        machine = Machine.create(:image => @image)
+        StartMachine.perform_async(machine.id)
+      end
       redirect_to cloud_server_images_path, notice: 'Image was successfully updated.' 
     else
       @machines = @image.cloud_server.machines
