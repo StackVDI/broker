@@ -49,7 +49,7 @@
     
 #### Developer machine
 
-    git clone https://git.inf.um.es/root/broker.git
+    git clone https://git.inf.um.es/raul/broker.git
     vi config/deploy/production.rb
     bundle exec cap production deploy
    

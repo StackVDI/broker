@@ -1,5 +1,5 @@
 set :application, 'openvdi'
-set :repo_url, 'git@git.inf.um.es:root/broker.git'
+set :repo_url, 'git@git.inf.um.es:raul/broker.git'
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
