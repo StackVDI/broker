@@ -10,8 +10,6 @@ class MachinesController < ApplicationController
     authorize @machine
     respond_to do |format|
       format.html
-      format.rdp { render rdp: @machine.to_s, :template => 'machines/show.rdp.erb' }
-      format.vnc { render vnc: @machine.to_s, :template => 'machines/show.vnc.erb' }
     end
   end
 
