@@ -65,6 +65,9 @@ class Cloud
     os.server(getserver(server_name)).reboot
   end
 
+  def ip(server_name)
+    os.server(getserver(server_name)).addresses.first.address
+  end
 
 
 end

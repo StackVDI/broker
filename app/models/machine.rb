@@ -6,7 +6,9 @@ class Machine < ActiveRecord::Base
 
   def self.launch(image)
     # TODO: Crear usuario, clave, ip y puerto 
-    machine = Machine.new(:image => image)
+    clave = (0...16).map { ('a'..'z').to_a[rand(26)] }.join
+    machine = Machine.new(:image => image, :remote_username => "usuario", :remote_password=> clave )
+  
     ready_machine = Machine.paused(image.id).first
     return machine, ready_machine
   end
@@ -34,5 +36,12 @@ class Machine < ActiveRecord::Base
   def reboot
     self.cloud_server.reboot(self.id.to_s)
   end
+
+
+  #TODO
+  def ip
+    self.cloud_server.ip(self.id.to_s)
+  end
+
 
 end

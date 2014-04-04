@@ -59,4 +59,9 @@ class CloudServer < ActiveRecord::Base
     @os.reboot! name
   end
 
+  def ip(name)
+    @os ||= connect
+    @os.ip name
+  end
+
 end
