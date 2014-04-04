@@ -18,7 +18,7 @@ class Machine < ActiveRecord::Base
   end
 
   def cloud_create
-     self.cloud_server.create_server(:name => self.id.to_s, :image => self.image.machine, :flavor => self.image.flavor)
+     self.cloud_server.create_server(:name => self.id.to_s, :image => self.image.machine, :flavor => self.image.flavor, :password => self.remote_password)
   end
 
   def cloud_destroy

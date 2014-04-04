@@ -37,8 +37,8 @@ class Cloud
   end
 
   def create_server(args)
-  #:user_data=>"I2Nsb3VkLWNvbmZpZw0KaG9zdG5hbWU6IG15bm9kZQ=="
-    os.create_server(:name  => args[:name], :imageRef => getimage(args[:image]), :flavorRef => getflavor(args[:flavor]))
+    user_data =  Base64.encode64("#cloud-config\npassword: #{args[:password]}")
+    os.create_server(:name  => args[:name], :imageRef => getimage(args[:image]), :flavorRef => getflavor(args[:flavor]), :user_data => user_data)
   end
 
   def destroy_server!(name)
