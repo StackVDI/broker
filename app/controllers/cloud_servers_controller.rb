@@ -48,6 +48,13 @@ class CloudServersController < ApplicationController
   # DELETE /cloud_servers/1.json
   def destroy
     authorize @cloud_server
+    @cloud_server.images.each do | image |
+      image.machines.each do | machine |
+        machine.cloud_destroy
+        machine.destroy
+      end
+      image.destroy
+    end
     @cloud_server.destroy
     redirect_to cloud_servers_url
   end

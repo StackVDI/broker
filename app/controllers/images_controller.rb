@@ -38,7 +38,8 @@ class ImagesController < ApplicationController
     authorize @image
     if @image.save
       (@image.number_of_instances - Machine.paused(@image.id).count).times do
-        machine = Machine.create(:image => @image)
+      clave = (0...16).map { ('a'..'z').to_a[rand(26)] }.join
+        machine = Machine.create(:image => @image, :remote_username => "usuario", :remote_password=> clave )
         StartMachine.perform_async(machine.id)
       end
       redirect_to cloud_server_images_path, notice: 'Image was successfully created.' 
@@ -55,7 +56,8 @@ class ImagesController < ApplicationController
     if @image.update(image_params)
       authorize @image
         (@image.number_of_instances - Machine.paused(@image.id).count).times do
-        machine = Machine.create(:image => @image)
+        clave = (0...16).map { ('a'..'z').to_a[rand(26)] }.join
+        machine = Machine.create(:image => @image, :remote_username => "usuario", :remote_password=> clave )
         StartMachine.perform_async(machine.id)
       end
       redirect_to cloud_server_images_path, notice: 'Image was successfully updated.' 
@@ -70,6 +72,10 @@ class ImagesController < ApplicationController
   def destroy
     authorize @image
     @cloud_server = CloudServer.find(params[:cloud_server_id])
+    @image.machines.each do | machine |
+      machine.cloud_destroy
+      machine.destroy
+    end
     @image.destroy
     redirect_to cloud_server_images_url
   end

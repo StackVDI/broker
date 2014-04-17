@@ -1,6 +1,7 @@
 class Image < ActiveRecord::Base
   has_and_belongs_to_many :roles, :join_table => :images_roles
   belongs_to :cloud_server
+  has_many :machines
 
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "50x50>" }, :default_url => "/images/:style/missing.png"
 

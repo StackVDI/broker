@@ -7,7 +7,7 @@ class Machine < ActiveRecord::Base
   def self.launch(image)
     # TODO: Crear usuario, clave, ip y puerto 
     clave = (0...16).map { ('a'..'z').to_a[rand(26)] }.join
-    machine = Machine.new(:image => image, :remote_username => "usuario", :remote_password=> clave )
+    machine = Machine.new(:image => image, :remote_username => "usuario", :remote_password => clave )
   
     ready_machine = Machine.paused(image.id).first
     return machine, ready_machine

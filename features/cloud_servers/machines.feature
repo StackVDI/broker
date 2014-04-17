@@ -11,12 +11,14 @@ Feature: Machines
     When  I'm in root page
     Then  I can see the availabe machines for my groups
 
+  @wip
   Scenario: User can launch machines
     When I'm in root page
     And  I launch a machine
     Then A new machine is created
     And  A new page is opened and connect to the new machine
 
+  @wip
   Scenario: User can reboot his machines
     When I'm in root page
     And  I launch a machine
@@ -24,6 +26,7 @@ Feature: Machines
     And  I reboot a machine
     Then The machine is rebooted
   
+  @wip
   Scenario: User can connect to his machines
     When I'm in root page
     And  I launch a machine
