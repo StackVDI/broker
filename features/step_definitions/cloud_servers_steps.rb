@@ -78,6 +78,7 @@ Given(/^I have available machines to run$/) do
   Machine.any_instance.stub(:cloud_create)
   Machine.any_instance.stub(:pause)
   Machine.any_instance.stub(:reboot)
+  Machine.any_instance.stub(:ip)
   @cloudserver = FactoryGirl.create(:cloud_server, :username => 'adan', :password => 'cambiame', :url => 'http://nube.inf.um.es:5000/v2.0/') 
   @image = FactoryGirl.create(:image, :cloud_server => @cloudserver, :name => 'Ubuntu', :machine => "ubuntu_server_12_04_x64", :flavor => "m1.tiny" )
   Role.create(:name => "default")
@@ -85,7 +86,6 @@ Given(/^I have available machines to run$/) do
   @image.save
   @machine = FactoryGirl.create(:machine, :image => @image, :user => nil)
   @machine.cloud_create
-  @machine.pause
 end
 
 When(/^I launch a machine$/) do
