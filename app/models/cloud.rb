@@ -37,7 +37,6 @@ class Cloud
   end
 
   def create_server(args)
-    puts "\n\n CLOUD INIT \n\n #cloud-config\n\npassword: #{args[:password]}\nchpasswd: { expire: False }\nssh_pwauth: True\n\n\n"
     user_data =  Base64.encode64("#cloud-config\npassword: #{args[:password]}\nchpasswd: { expire: False }\nssh_pwauth: True\n")
     os.create_server(:name  => args[:name], :imageRef => getimage(args[:image]), :flavorRef => getflavor(args[:flavor]), :user_data => user_data)
   end
