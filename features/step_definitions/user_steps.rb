@@ -207,10 +207,14 @@ Then(/^I am in the user edit page$/) do
 end
 
 Then(/^I edit the user$/) do
-  pending # express the regexp above with the code you wish you had
+  fill_in('user_first_name', :with => "Antonio")
+  fill_in('user_last_name', :with => "Sánchez")
+  check('user_role_ids_2')
+  click_button('Update User')
 end
 
 Then(/^I can see the edited user$/) do
-  pending # express the regexp above with the code you wish you had
+  page.should have_content ('Antonio')
+  page.should have_content ('Sánchez')
 end
 

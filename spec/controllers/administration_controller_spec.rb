@@ -1,4 +1,4 @@
-require 'spec_helper'
+  require 'spec_helper'
 
 describe AdministrationController do
 
@@ -90,8 +90,22 @@ describe AdministrationController do
 
     describe "PUT 'update_user'" do
       it "returns http success" do
-        put 'update_user', id: @alex
+        put 'update_user', id: @alex, user: FactoryGirl.attributes_for(:user)
         response.should redirect_to administration_list_users_path
+      end
+
+      it "changes @user's attributes" do
+        patch 'update_user', id: @alex, user: FactoryGirl.attributes_for(:user, first_name:'Antonio', last_name:'Sánchez')
+        @alex.reload
+        expect(@alex.first_name).to eq('Antonio')
+        expect(@alex.last_name).to eq('Sánchez')
+      end
+
+      it "fails with blank first name" do
+        patch 'update_user', id: @alex, user: FactoryGirl.attributes_for(:user, first_name:'', last_name:'Sánchez')
+        @alex.reload
+        expect(@alex.first_name).to eq('Alex')
+        expect(@alex.last_name).to_not eq('Sánchez')
       end
     end
 

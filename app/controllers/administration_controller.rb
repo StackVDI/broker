@@ -40,8 +40,18 @@ class AdministrationController < ApplicationController
   end
 
   def update_user
-   authorize self
-    redirect_to administration_list_users_path
+    authorize self
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to administration_list_users_path
+    else
+      redirect_to administration_list_users_path, alert: "Error updating user"
+    end
   end
+
+  private
+    def user_params
+       params.require(:user).permit(:first_name, :last_name, :role_ids)
+    end
 
 end
