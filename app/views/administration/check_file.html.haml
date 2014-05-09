@@ -1,0 +1,23 @@
+%h1 Comprobación del fichero CSV
+- if @file_is_correct
+  %p
+    = "The file is OK, #{pluralize(@users_to_create, 'user')} will be created"
+    %br
+    = link_to 'Create Users!!!', administration_create_users_path, class: 'btn btn-info'
+- else
+  %p
+    = "#{pluralize(@users_to_create, 'user')} would be created, but the file has errors:"
+  %ul
+  - @CSV_errors.each do |error|
+    %li
+      = "#{error}"
+  - @data_errors.each do |error|
+    %li
+      = "#{error}"
+  - @role_errors.each do |error|
+    %li
+      = "#{error}"
+  %br
+  - @users.each do |f|
+    = "#{@f.to_s}"
+  = link_to 'Back to user list', administration_list_users_path

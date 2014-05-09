@@ -38,7 +38,6 @@ Feature: List Users
     Then I click in delete user link
     And user is deleted
 
-  @wip
   Scenario: Admin can edit users
     When I log as an admin
     And I have created "first" and "second" role
@@ -48,3 +47,15 @@ Feature: List Users
     And I am in the user edit page
     And I edit the user
     And I can see the edited user
+
+  Scenario: Admin can upload a CSV file for create users
+    When I log as an admin
+    And I upload a right CSV file
+    Then I can see there the CSV file is OK
+    Then I click in Create Users button
+    And I can see a list with the users created
+
+  Scenario: Admin uploads a wrong CSV file for create users
+    When I log as an admin
+    And I upload a wrong CSV file
+    Then I can see a list of errors of the file

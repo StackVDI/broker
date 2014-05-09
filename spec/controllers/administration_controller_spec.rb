@@ -122,6 +122,37 @@ describe AdministrationController do
         }.to_not change(User, :count)
       end
     end
+
+    describe "GET 'upload_csv'" do
+      it "get 'upload_csv'" do
+        get 'upload_csv'
+        expect(response).to be_success
+      end
+    end
+
+    describe "POST 'check_file'" do
+      before :each do
+        @file = fixture_file_upload('files/right.csv', 'text/csv')
+      end
+
+      it "can upload a CSV file" do
+        post :check_file, :upload => @file
+        response.should be_success
+      end
+
+      it "can't upload a CSV file if no file provided" do
+        post :check_file, :upload => nil
+        response.should_not be_success
+        page.should have_content("No file provided, upload a right file!!")
+      end
+    end
+
+    describe "GET 'create_users'" do
+      it "get 'create_users'" do
+        get 'create_users'
+        response.should_not be_success
+      end
+    end    
   end
 
   context 'login as an user' do
@@ -156,11 +187,18 @@ describe AdministrationController do
       end
     end
 
-      describe "DELETE 'delete_user'" do
-        it "can't delete an user" do
-          delete :delete_user, {:id => @another}
-          response.should_not be_success
-        end
+    describe "DELETE 'delete_user'" do
+      it "can't delete an user" do
+        delete :delete_user, {:id => @another}
+        response.should_not be_success
       end
+    end
+
+    describe "GET 'upload_csv'" do
+      it "doesn't return http success" do
+        get 'upload_csv'
+        response.should_not be_success
+      end
+    end
   end
 end

@@ -1,0 +1,16 @@
+%h1 Create users from CSV file
+%p From this option you can upload a file with a list of the users you need to create.
+%p You have to edit a file with these characteristics:
+%ul
+  %li The file MUST be in CSV format.
+  %li No header with the names of the fields.
+  %li One row per user.
+  %li The format must be: "mail", "Last Name", "First Name", "role1, role2..."
+%br
+  
+  = form_tag({action: :check_file}, multipart: true) do
+    = file_field_tag 'upload'
+    = submit_tag("Upload and check the file")
+
+
+  

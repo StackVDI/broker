@@ -31,4 +31,15 @@ class AdministrationControllerPolicy
     user.admin?
   end
 
+  def upload_csv?
+    user.admin?
+  end
+
+  def check_file?
+    user.admin?
+  end
+
+  def create_users?
+    user.admin?
+  end
 end

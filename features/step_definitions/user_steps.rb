@@ -218,3 +218,47 @@ Then(/^I can see the edited user$/) do
   page.should have_content ('Sánchez')
 end
 
+When(/^I upload a right CSV file$/) do
+  @role1 = FactoryGirl.build(:role, :name => "role1")
+  @role2 = FactoryGirl.build(:role, :name => "role2")
+  @role1.save
+  @role2.save  
+  visit ('administration/list_users')
+  click_link('Create users from CSV file')
+  attach_file('upload', 'features/csv_files/right.csv')
+  click_button('Upload and check the file')
+end
+
+Then(/^I can see there the CSV file is OK$/) do
+  page.should have_content('The file is OK, 5 users will be created')
+end
+
+Then(/^I click in Create Users button$/) do
+  click_link('Create Users!!!')
+end
+
+Then(/^I can see a list with the users created$/) do
+  page.should have_content('5 users created')
+end
+
+When(/^I upload a wrong CSV file$/) do
+  visit ('administration/list_users')
+  click_link('Create users from CSV file')
+  attach_file('upload', 'features/csv_files/wrong.csv')
+  click_button('Upload and check the file')
+end
+
+Then(/^I can see a list of errors of the file$/) do
+  page.should have_content('CSV error in line 1')
+  page.should have_content('CSV error in line 2')
+  page.should have_content('CSV error in line 3')
+  page.should have_content('CSV error in line 5')
+  page.should have_content('CSV error in line 6')
+  #page.should have_content('line 7: the mail admin@openvdi.com already exists ')
+  page.should have_content('line 9: the mail repeateduser@openvdi.com is repeated')
+  page.should have_content("line 4: the role role1;role2 doesn't exist")
+  page.should have_content("line 8: the role role1 doesn't exist")
+  page.should have_content("line 9: the role role1 doesn't exist")
+  page.should have_content("line 10: the role role1 doesn't exist")
+  page.should have_content("line 11: the role rolenotexist doesn't exist")
+end

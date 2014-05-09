@@ -18,6 +18,9 @@ end
   get 'administration/edit_user/:id', to: 'administration#edit_user', as: 'administration_edit_user'
   put 'administration/update_user/:id', to: 'administration#update_user', as: 'administration_update_user'
   delete "administration/delete_user"
+  get 'administration/upload_csv'
+  post 'administration/check_file'
+  get 'administration/create_users'
 
   post 'machines/create/:id', to: 'machines#create', as: 'create_machine'
   get 'machines/:id', to: 'machines#show', as: 'machine'
