@@ -69,7 +69,8 @@ class AdministrationController < ApplicationController
     authorize self
 
     if not params[:upload]
-      redirect_to administration_upload_csv_path, flash => { :error => "Null file, provide a right file!!"}
+
+      redirect_to administration_upload_csv_path, alert: "No file provided, upload a right file!!"
       return
     end
 
@@ -128,11 +129,15 @@ class AdministrationController < ApplicationController
   def create_users
     authorize self
     @my_file = session[:my_file]
+    if @my_file == nil
+      redirect_to administration_upload_csv_path, alert: "You must provide a CSV file"
+      return
+    end
     session[:my_file] = nil
     @users_created = 0
     line_number = 1
-    #begin
-      #User.transaction do
+    begin
+      User.transaction do
         CSV.open(@my_file) do |output|
           loop do
             begin
@@ -146,10 +151,12 @@ class AdministrationController < ApplicationController
                 role_to_find = Role.find_by(name: r)
                 user.roles << role_to_find
               end
-              user.password = "changeme"
-              user.password_confirmation = "changeme"
+              temp_password = (0...8).map { (65 + rand(26)).chr }.join
+              user.password = temp_password
+              user.password_confirmation = temp_password
               line_number += 1    
-              user.confirm!
+              #user.confirm!
+              user.confirmed_at = Time.now
               user.approved = true
               user.save
               @users_created += 1
@@ -161,11 +168,12 @@ class AdministrationController < ApplicationController
             end
           end
         end
-      #end
-    #rescue
-    #  @error = "Transaction aborted"
-    #end
+      end
+    rescue
+      @error = "Transaction aborted"
+    end
     FileUtils.remove_file(@my_file)
+    flash[:notice] = "#{@users_created} #{'user'.pluralize(@users_created)} created"
   end
 
   private

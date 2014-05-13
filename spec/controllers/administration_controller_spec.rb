@@ -131,7 +131,7 @@ describe AdministrationController do
     end
 
     describe "POST 'check_file'" do
-      before :each do
+      before do
         @file = fixture_file_upload('files/right.csv', 'text/csv')
       end
 
@@ -142,15 +142,26 @@ describe AdministrationController do
 
       it "can't upload a CSV file if no file provided" do
         post :check_file, :upload => nil
-        response.should_not be_success
-        page.should have_content("No file provided, upload a right file!!")
+        flash[:alert].should eq "No file provided, upload a right file!!"
       end
     end
 
     describe "GET 'create_users'" do
-      it "get 'create_users'" do
-        get 'create_users'
-        response.should_not be_success
+      describe "create users from temp file" do
+        it "with file in session goes OK" do
+          FactoryGirl.create(:role, :name => "role1")
+          FactoryGirl.create(:role, :name => "role2")
+
+          @file = fixture_file_upload('files/right.csv', 'text/csv')
+          session[:my_file] = @file.path
+          get :create_users       
+          response.should be_success
+        end
+        it "fails without temp file in session" do
+          session[:my_file] = nil
+          get :create_users
+          response.should redirect_to administration_upload_csv_path
+        end
       end
     end    
   end

@@ -1,7 +1,7 @@
 %h1 Imported users from CSV file
 %p
-  = "#{pluralize(@users_created, 'user')} created."
-  = "file: #{@my_file} read."
-  = @errors
+  =# "#{pluralize(@users_created, 'user')} created."
+  = @error
+  = @CSV_errors
   %br
   = link_to 'Back to user list', administration_list_users_path
