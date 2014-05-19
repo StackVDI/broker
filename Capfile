@@ -19,11 +19,11 @@ require 'capistrano/rails'
 #   https://github.com/capistrano/rails/tree/master/migrations
 #
 require 'capistrano/rvm'
+require 'capistrano/bundler'
 require "whenever/capistrano"
 
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
-# require 'capistrano/bundler'
 # require 'capistrano/rails/assets'
 # require 'capistrano/rails/migrations'
 

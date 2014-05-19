@@ -86,6 +86,7 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
 end
 
 gem 'simple_form'
