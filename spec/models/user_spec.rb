@@ -64,7 +64,47 @@ describe User do
       user2.add_role(:admin)
       User.admins.should == [user,user2]
     end
+  end
 
+  describe '.max_lifetime' do
+    before do
+      @user = FactoryGirl.build(:user)
+      role = FactoryGirl.build(:role, :name => 'primero', :machine_lifetime => '23')
+      @role2 = FactoryGirl.build(:role, :name => 'segundo', :machine_lifetime => '0')
+      @user.roles << role
+    end
+    it 'returns max lifetime of all groups of a user' do
+      @user.max_lifetime.should == 23
+    end
+    it 'returns 0 if anyone is 0' do
+      @user.roles << @role2
+      @user.max_lifetime.should == 0
+    end
+    it 'returns -1 if no rol assigned to user' do
+      user = FactoryGirl.build(:user)
+      user.max_lifetime.should == -1
+    end
+  end
+
+
+  describe '.max_idletime' do
+    before do
+      @user = FactoryGirl.build(:user)
+      role = FactoryGirl.build(:role, :name => 'primero', :machine_idletime => '23')
+      @role2 = FactoryGirl.build(:role, :name => 'segundo', :machine_idletime => '0')
+      @user.roles << role
+    end
+    it 'returns max idletime of all groups of a user' do
+      @user.max_idletime.should == 23
+    end
+    it 'returns 0 if anyone is 0' do
+      @user.roles << @role2
+      @user.max_idletime.should == 0
+    end
+    it 'returns -1 if no rol assigned to user' do
+      user = FactoryGirl.build(:user)
+      user.max_idletime.should == -1
+    end
   end
 
 end

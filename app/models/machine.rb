@@ -37,11 +37,37 @@ class Machine < ActiveRecord::Base
     self.cloud_server.reboot(self.id.to_s)
   end
 
-
-  #TODO
   def ip
     self.cloud_server.ip(self.id.to_s)
   end
 
+  def must_destroy?
+    max_lifetime_expired || max_idletime_expired
+  end
+
+  def max_lifetime_expired
+    if user 
+      if user.max_lifetime == 0
+        false
+      else
+        Time.now > updated_at.to_time + user.max_lifetime.hours
+      end
+    else
+      false
+    end
+  end
+
+  def max_idletime_expired
+    if user 
+      if user.max_idletime == 0
+        false
+      else
+        Time.now > user.current_sign_in_at + user.max_idletime.hours
+      end
+    else
+      false
+    end
+
+  end
 
 end

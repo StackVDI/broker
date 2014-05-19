@@ -71,4 +71,65 @@ describe Machine do
     end
   end
 
+  describe 'must_destroy?' do
+    describe 'check machine lifetime and machine idletime' do
+      it 'is true when max lifetime is expired' do
+        @machine.stub(:max_lifetime_expired).and_return(true)
+        @machine.should be_must_destroy
+      end
+      it 'is true when max idletime is expired' do
+        @machine.stub(:max_lifetime_expired)
+        @machine.stub(:max_idletime_expired).and_return(true)
+        @machine.should be_must_destroy
+      end
+      it 'is false if doesnt belongs to any user' do
+        @machine.stub(:user).and_return(false)
+        @machine.should_not be_must_destroy
+      end
+      it 'is false when max_liteftime and max_idletime are false' do
+        @machine.stub(:max_lifetime_expired).and_return(false)
+        @machine.stub(:max_idletime_expired).and_return(false)
+        @machine.should_not be_must_destroy
+      end
+    end
+  end
+
+  describe 'max_lifetime_expired' do
+    describe 'check if machine lifetime is expired' do
+      it 'With 23hours machine live a day ' do
+        @time_now = Time.parse("May 27 1975")
+        Time.stub(:now).and_return(@time_now)
+        @machine.stub(:user).and_return(@user)
+        @machine.user.stub(:max_lifetime).and_return(23)
+        @machine.stub(:updated_at).and_return(Time.parse("May 26 1975"))
+        @machine.max_lifetime_expired.should be_true
+      end
+
+      it 'With 0hours machine doesnt expire' do
+        @machine.stub(:user).and_return(@user)
+        @machine.user.stub(:max_lifetime).and_return(0)
+        @machine.max_lifetime_expired.should be_false
+      end
+    end
+  end
+
+  describe 'max_idletime_expired' do
+    describe 'check if machine idletime is expired' do
+      it 'With 23hours machine live a day from last user sign_in ' do
+        @time_now = Time.parse("May 27 1975")
+        Time.stub(:now).and_return(@time_now)
+        @machine.stub(:user).and_return(@user)
+        @machine.user.stub(:max_idletime).and_return(23)
+        @machine.user.stub(:current_sign_in_at).and_return(Time.parse("May 26 1975"))
+        @machine.max_idletime_expired.should be_true
+      end
+
+      it 'With 0hours machine doesnt expire' do
+        @machine.stub(:user).and_return(@user)
+        @machine.user.stub(:max_idletime).and_return(0)
+        @machine.max_idletime_expired.should be_false
+      end
+    end
+  end
+
 end

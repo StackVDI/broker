@@ -23,7 +23,6 @@ Feature: Roles
     And  I visit roles list link
     And  I add a role
     Then I can see the new rol in the roles list
-
   Scenario: Admin can edit roles
     When I log as an admin
     And  I visit roles list link

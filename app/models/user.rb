@@ -64,4 +64,28 @@ class User < ActiveRecord::Base
     images_disponibles.uniq 
   end
 
+  def max_lifetime
+    max = -1
+    roles.each do |rol|
+      if rol.machine_lifetime == 0 
+        return 0
+      elsif rol.machine_lifetime > max
+        max = rol.machine_lifetime
+      end 
+    end
+    max
+  end
+
+  def max_idletime
+    max = -1
+    roles.each do |rol|
+      if rol.machine_idletime == 0 
+        return 0
+      elsif rol.machine_idletime > max
+        max = rol.machine_idletime
+      end 
+    end
+    max
+  end
+
 end
