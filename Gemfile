@@ -82,12 +82,10 @@ gem 'pry-debugger'
 
 gem 'pundit'
 
-group :development do
-  gem 'capistrano'
-  gem 'capistrano-rails'
-  gem 'capistrano-rvm'
-  gem 'capistrano-bundler'
-end
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
 
 gem 'simple_form'
 
