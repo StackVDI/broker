@@ -67,7 +67,19 @@ class Machine < ActiveRecord::Base
     else
       false
     end
-
   end
 
+  def self.check_expired
+    Machine.all.each do |maquina|
+      if maquina.must_destroy? 
+        begin
+          maquina.cloud_destroy
+        rescue Timeout::Error || TypeError || Errno::ECONNREFUSED
+          maquina.destroy
+        else
+          maquina.destroy
+        end
+      end
+    end
+  end
 end
