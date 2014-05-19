@@ -20,7 +20,7 @@ require 'capistrano/rails'
 #
 require 'capistrano/rvm'
 require 'capistrano/bundler'
-require "whenever/capistrano"
+#require 'whenever/capistrano'
 
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'

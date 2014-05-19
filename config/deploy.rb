@@ -17,6 +17,8 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 set :keep_releases, 5
 
 set :whenever_command, "bundle exec whenever"
+set :whenever_identifier, -> { "#{fetch(:application)}_#{fetch(:stage)}" }
+
 
 namespace :deploy do
 
@@ -26,6 +28,24 @@ namespace :deploy do
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
       execute :sudo, '/etc/init.d/openvdi restart'
+    end
+  end
+
+  desc 'Stop application'
+  task :stop do
+    on roles(:app), in: :sequence, wait: 5 do
+      # Your restart mechanism here, for example:
+      # execute :touch, release_path.join('tmp/restart.txt')
+      execute :sudo, '/etc/init.d/openvdi stop'
+    end
+  end
+
+  desc 'Start application'
+  task :start do
+    on roles(:app), in: :sequence, wait: 5 do
+      # Your restart mechanism here, for example:
+      # execute :touch, release_path.join('tmp/restart.txt')
+      execute :sudo, '/etc/init.d/openvdi start'
     end
   end
 

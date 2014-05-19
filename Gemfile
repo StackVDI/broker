@@ -97,4 +97,4 @@ gem 'sidekiq'
 
 gem 'sinatra', '>= 1.3.0', :require => nil
 
-gem 'whenever'
+gem 'whenever', :git => 'https://github.com/javan/whenever.git'
