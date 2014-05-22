@@ -26,8 +26,8 @@ module Broker
     config.generators.javascripts = false
     config.generators.helper      = false
 
-    config.after_initialize do
-      Image.prelaunch 
-    end
+#    config.after_initialize do
+#      Image.prelaunch 
+#    end
   end
 end
