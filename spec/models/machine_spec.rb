@@ -41,7 +41,7 @@ describe Machine do
     describe ' destroy a running machine in the cloud_server' do
       it 'call machine.cloud_server reboot' do
         CloudServer.any_instance.stub(:reboot)   
-        @machine.cloud_server.should_receive(:reboot).with(@machine.id.to_s).and_return("")
+        @machine.cloud_server.should_receive(:reboot).with("openvdi" + @machine.id.to_s).and_return("")
         @machine.reboot
       end
     end
@@ -50,7 +50,7 @@ describe Machine do
   describe 'pause' do
     it 'call machine.cloud_server pause' do
       CloudServer.any_instance.stub(:pause)   
-      @machine.cloud_server.should_receive(:pause).with(@machine.id.to_s)  
+      @machine.cloud_server.should_receive(:pause).with("openvdi" + @machine.id.to_s)  
       @machine.pause
     end
   end
@@ -58,7 +58,7 @@ describe Machine do
   describe 'unpause' do
     it 'call machine.cloud_server unpause' do
       CloudServer.any_instance.stub(:unpause)   
-      @machine.cloud_server.should_receive(:unpause).with(@machine.id.to_s)  
+      @machine.cloud_server.should_receive(:unpause).with("openvdi" + @machine.id.to_s)  
       @machine.unpause
     end
   end
@@ -66,7 +66,7 @@ describe Machine do
   describe 'reboot' do
     it 'call machine.cloud_server reboot' do
       CloudServer.any_instance.stub(:reboot)   
-      @machine.cloud_server.should_receive(:reboot).with(@machine.id.to_s).and_return("")
+      @machine.cloud_server.should_receive(:reboot).with("openvdi" + @machine.id.to_s).and_return("")
       @machine.reboot
     end
   end

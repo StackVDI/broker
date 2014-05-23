@@ -18,27 +18,27 @@ class Machine < ActiveRecord::Base
   end
 
   def cloud_create
-     self.cloud_server.create_server(:name => self.id.to_s, :image => self.image.machine, :flavor => self.image.flavor, :password => self.remote_password)
+     self.cloud_server.create_server(:name => "openvdi" + self.id.to_s, :image => self.image.machine, :flavor => self.image.flavor, :password => self.remote_password)
   end
 
   def cloud_destroy
-    self.cloud_server.destroy_server(self.id.to_s)
+    self.cloud_server.destroy_server("openvdi" + self.id.to_s)
   end
 
   def unpause
-    self.cloud_server.unpause(self.id.to_s)
+    self.cloud_server.unpause("openvdi" + self.id.to_s)
   end
 
   def pause
-    self.cloud_server.pause(self.id.to_s)
+    self.cloud_server.pause("openvdi" + self.id.to_s)
   end
 
   def reboot
-    self.cloud_server.reboot(self.id.to_s)
+    self.cloud_server.reboot("openvdi" + self.id.to_s)
   end
 
   def ip
-    self.cloud_server.ip(self.id.to_s)
+    self.cloud_server.ip("openvdi" + self.id.to_s)
   end
 
   def must_destroy?
