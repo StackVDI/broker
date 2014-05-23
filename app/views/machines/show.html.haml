@@ -1,6 +1,7 @@
 %h1 Machine launched
 
-You can connect to the machine with this parameters:
+%p
+  You can connect manually to the machine with this parameters:
 %p
   %b Remote username:
   = @machine.remote_username
@@ -11,7 +12,16 @@ You can connect to the machine with this parameters:
   %b Remote address:
   = @machine.ip
 
-
+%p
+  If you don't connect automagically, do this :)
+%p 
+  Check 
+  = link_to 'here', 'http://www.java.com/es/download/installed.jsp'
+  if you have Java installed. Then, add this host to trust sites in your Java Control Panel. Security tab -> Edit Sites
+%p
+  If you are using Linux, install freerdp (sudo apt-get install freerdp-x11)
+%p
+  If you are using Mac OS X, install CoRD(http://sourceforge.net/projects/cord/files/cord/0.5.7/CoRD_0.5.7.zip/download) in your application folder.
 
 %applet{ :code => "appletvdi.class", :archive => "/applet/appletvdi.jar" }
   %param{ :name => "vdidesktop_ip", :value => "#{@machine.ip}" }
