@@ -178,7 +178,7 @@ class AdministrationController < ApplicationController
 
   private
     def user_params
-       params.require(:user).permit(:first_name, :last_name, :role_ids)
+       params.require(:user).permit(:first_name, :last_name, :role_ids => [])
     end
 
 end
