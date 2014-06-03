@@ -39,7 +39,7 @@ class ImagesController < ApplicationController
     if @image.save
       (@image.number_of_instances - Machine.paused(@image.id).count).times do
       clave = (0...16).map { ('a'..'z').to_a[rand(26)] }.join
-        machine = Machine.create(:image => @image, :remote_username => "usuario", :remote_password=> clave )
+        machine = Machine.create(:image => @image, :remote_username => "openvdi", :remote_password=> clave )
         StartMachine.perform_async(machine.id)
       end
       redirect_to cloud_server_images_path, notice: 'Image was successfully created.' 
