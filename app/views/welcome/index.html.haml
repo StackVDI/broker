@@ -1,4 +1,4 @@
-%h1 Welcome to OpenVDI
+%h1 Welcome to StackVDI
 %p Please, select the machine you want to connect to
 
 -if @running_machines
@@ -8,6 +8,8 @@
       %th
       %th Name
       %th Description
+      %th Address
+      %th Date
       %th Actions
 
     %tbody
@@ -17,6 +19,8 @@
             %center= image_tag machine.image.avatar.url(:thumb)
           %td= machine.image.name
           %td= machine.image.description
+          %td= machine.ip
+          %td= machine.updated_at.localtime
           %td
             =link_to 'Connect', machine_path(machine) , :class => 'btn btn-mini btn-info', :id => "connect_machine_#{machine.id}", :method => :get
             =link_to 'Reboot', reboot_machine_path(machine) , :class => 'btn btn-mini btn-danger', :id => "reboot_machine_#{machine.id}", :method => :get, :data => { :confirm => 'Rebooting machine. Are you sure?' }
