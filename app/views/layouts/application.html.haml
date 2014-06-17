@@ -52,13 +52,16 @@
         = bootstrap_flash
         = yield
     - else
-      .span12
-        = bootstrap_flash
-      .span4
-      .span4
-        .well
-          = yield
-      .span4
-      .span12
-        %footer
-          %p &copy; StackVDI
+      .container
+        .span12
+          = bootstrap_flash
+      .container
+        .span4
+        .span4
+          .well
+            = yield
+        .span4
+      .container
+        .span12
+          %footer
+            %p &copy; StackVDI
