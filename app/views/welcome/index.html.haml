@@ -1,7 +1,28 @@
 %h1 Welcome to StackVDI
 %p Please, select the machine you want to connect to
 
+-case current_user.machines.count
+  -when 0
+    %div.progress.progress-success.active
+      %div.bar{:style => "width: 100%;"}
+        You have 3 machines availables to launch
+  -when 1
+    %div.progress.progress.active
+      %div.bar{:style => "width: 33%;"}
+        You have 2 machines availables to launch
+  -when 2
+    %div.progress.progress-warning.active
+      %div.bar{:style => "width: 66%;"}
+        You have 1 machine available to launch
+  -when 3
+    %div.progress.progress-danger.active
+      %div.bar{:style => "width: 100%;"}
+        You don't have machines availables to launch
+
+
+
 -if @running_machines
+
   %h2 Running Machines
   %table.table.table-bordered.table-hove
     %thead
@@ -24,7 +45,7 @@
           %td
             =link_to 'Connect', machine_path(machine) , :class => 'btn btn-mini btn-info', :id => "connect_machine_#{machine.id}", :method => :get
             =link_to 'Reboot', reboot_machine_path(machine) , :class => 'btn btn-mini btn-danger', :id => "reboot_machine_#{machine.id}", :method => :get, :data => { :confirm => 'Rebooting machine. Are you sure?' }
-            =link_to 'Destroy', machine_path(machine) , :class => 'btn btn-mini btn-danger', :id => "destroy_machine_#{machine.id}", :method => :delete, :data => { :confirm => 'Are you sure?' }
+            =link_to 'Destroy', machine_path(machine) , :class => 'btn btn-mini btn-danger', :id => "destroy_machine_#{machine.id}", :method => :delete, :data => { :confirm => 'Machine will be deleted. It can\'t be undone. Are you sure?' }
 
 %br
 
