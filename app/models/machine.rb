@@ -38,7 +38,13 @@ class Machine < ActiveRecord::Base
   end
 
   def ip
-    self.cloud_server.ip("openvdi" + self.id.to_s)
+    if self.remote_address
+      self.remote_address
+    else
+      self.remote_address = self.cloud_server.ip("openvdi" + self.id.to_s)
+      self.save
+      remote_address
+    end
   end
 
   def must_destroy?
