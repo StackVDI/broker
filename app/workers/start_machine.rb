@@ -15,5 +15,6 @@ class StartMachine
       end
       rescue 
         @machine.destroy
+        GeneralMailer.errorMail("Error Creating Machine. Quota problems?").deliver
     end
 end

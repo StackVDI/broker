@@ -22,8 +22,7 @@ class MachinesController < ApplicationController
       @ready_machine.save
     else 
       redirect_to root_path, notice: 'Error creating machine. Contact with Administrator'
-      # TODO
-      # send mail
+      GeneralMailer.errorMail("Error Creating Machine. Quota problems?").deliver
       return
     end
     if @machine.save
@@ -31,8 +30,7 @@ class MachinesController < ApplicationController
       redirect_to @ready_machine, notice: 'Machine was successfully created.' 
     else
       redirect_to root_path, notice: 'Error creating machine. Contact with Administrator'
-      # TODO
-      # Send mail
+      GeneralMailer.errorMail("Error Creating Machine. Quota problems?").deliver
     end
   end
 

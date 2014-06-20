@@ -43,7 +43,7 @@ class User < ActiveRecord::Base
   end
 
   def self.admins
-    User.with_role(:admin)
+    User.with_role :admin
   end
 
   def approve!
@@ -87,5 +87,4 @@ class User < ActiveRecord::Base
     end
     max
   end
-
 end
