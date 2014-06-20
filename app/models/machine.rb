@@ -45,6 +45,8 @@ class Machine < ActiveRecord::Base
       self.save
       remote_address
     end
+    rescue TypeError => e
+      ""
   end
 
   def must_destroy?
