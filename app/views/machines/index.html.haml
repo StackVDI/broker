@@ -5,6 +5,7 @@
     %th
     %th Image
     %th Description
+    %th Name
     %th Address
     %th User
     %th Actions
@@ -16,6 +17,7 @@
         %center= image_tag machine.image.avatar.url(:thumb)
       %td= link_to machine.image.name, cloud_server_image_path(machine.image.cloud_server, machine.image)
       %td= machine.image.description
+      %td= "openvdi#{machine.id}"
       %td= machine.ip
       %td= machine.user ? machine.user.email : ""
       %td 

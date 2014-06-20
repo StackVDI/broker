@@ -17,14 +17,22 @@ class MachinesController < ApplicationController
     @fakemachine = Machine.new
     authorize @fakemachine
     @machine, @ready_machine = Machine.launch(Image.find_by_id(params.require(:id)))
-    @ready_machine.user = current_user
-    # TODO: Añadir ip flotante
-    @ready_machine.save
+    if @ready_machine 
+      @ready_machine.user = current_user
+      @ready_machine.save
+    else 
+      redirect_to root_path, notice: 'Error creating machine. Contact with Administrator'
+      # TODO
+      # send mail
+      return
+    end
     if @machine.save
       StartMachine.perform_async(@machine.id)
       redirect_to @ready_machine, notice: 'Machine was successfully created.' 
     else
-      redirect_to root_path
+      redirect_to root_path, notice: 'Error creating machine. Contact with Administrator'
+      # TODO
+      # Send mail
     end
   end
 

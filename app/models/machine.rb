@@ -45,7 +45,7 @@ class Machine < ActiveRecord::Base
       self.save
       remote_address
     end
-    rescue TypeError => e
+    rescue
       ""
   end
 
