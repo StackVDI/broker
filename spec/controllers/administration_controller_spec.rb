@@ -112,11 +112,11 @@ describe AdministrationController do
     describe "DELETE 'delete_user'" do
       it "delete an user" do
         expect {
-          delete :delete_user, {:id => @alex}
+          delete :delete_user, {:id => @alex.id}
         }.to change(User, :count).by(-1) 
       end
 
-      it "can't delete las admin user" do
+      it "can't delete last admin user" do
         expect {
           delete :delete_user, :id => @user
         }.to_not change(User, :count)

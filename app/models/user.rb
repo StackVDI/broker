@@ -39,11 +39,11 @@ class User < ActiveRecord::Base
   end 
 
   def admin?
-    has_role? :admin
+    has_role?(:admin)
   end
 
   def self.admins
-    User.with_role :admin
+    User.with_role(:admin)
   end
 
   def approve!
