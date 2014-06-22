@@ -11,6 +11,7 @@ describe CloudServer do
 
   describe ".machines" do
     it "returns machines of the cloud server" do
+      allow_message_expectations_on_nil
       @cloud_server.os.should_receive(:images)
       @cloud_server.machines
     end
@@ -18,6 +19,7 @@ describe CloudServer do
 
   describe ".flavors" do
     it "returns flavors of the cloud server" do
+      allow_message_expectations_on_nil
       @cloud_server.os.should_receive(:flavors)
       @cloud_server.flavors
     end
@@ -25,6 +27,7 @@ describe CloudServer do
 
   describe "pause" do
     it "pauses a runnning machine in a cloud server" do
+      allow_message_expectations_on_nil
       @cloud_server.os.should_receive(:pause).with(:name)
       @cloud_server.pause :name
     end
@@ -33,6 +36,7 @@ describe CloudServer do
 
   describe "unpause" do
       it "unpauses a running machine in the cloud server" do
+      allow_message_expectations_on_nil
       @cloud_server.os.should_receive(:unpause).with(:name)
       @cloud_server.unpause :name
     end
@@ -41,6 +45,7 @@ describe CloudServer do
 
   describe "create_server" do
     it "create a new server in the cloud" do
+      allow_message_expectations_on_nil
       @cloud_server.os.should_receive(:create_server)
       @cloud_server.create_server({:name => "name", :image => "ubuntu", :flavor => "m1.tiny"})
     end
@@ -48,6 +53,7 @@ describe CloudServer do
 
   describe "destroy_server" do
     it "destroys a running machine of the cloud server" do
+      allow_message_expectations_on_nil
       @cloud_server.os.should_receive(:destroy_server!).with(:name)
       @cloud_server.destroy_server :name
     end
@@ -55,6 +61,7 @@ describe CloudServer do
 
   describe 'reboot' do
     it "reboots a running machine of the cloud server" do
+      allow_message_expectations_on_nil
       @cloud_server.os.should_receive(:reboot!).with(:name)
       @cloud_server.reboot :name
     end
