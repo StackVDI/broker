@@ -9,7 +9,7 @@ class UserPolicy
 
   def delete_user?
     last_admin = false
-    if @user.has_role(:admin) && User.admins.size == 1
+    if @user.has_role?(:admin) && User.admins.size == 1
       last_admin = true
     end
     current_user.admin? && !last_admin
