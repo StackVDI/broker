@@ -51,7 +51,14 @@
       .span10
         = bootstrap_flash
         = yield
-    - else
+    - elsif current_user
+      .container
+        .span12
+          = bootstrap_flash
+      .container 
+        .span12
+          = yield
+    - else 
       .container
         .span12
           = bootstrap_flash
