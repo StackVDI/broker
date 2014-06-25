@@ -18,6 +18,7 @@
 .vagrant
 
 /public/system/images/*
+/public/system/users/*
 
 ./DS_Store
 
