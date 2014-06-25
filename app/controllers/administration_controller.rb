@@ -6,7 +6,9 @@ class AdministrationController < ApplicationController
 
   def list_users
     authorize self
-    @users = User.all
+    #@users = User.all
+    @q = User.search(params[:q])
+    @users = @q.result(distinct: true).page params[:page]
   end
 
  def toggle_approved_user 

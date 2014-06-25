@@ -3,12 +3,15 @@
 
 %table.table.table-bordered.table-hover
   %thead
-    %th
-      Last Name
-    %th
-      First Name
-    %th 
-      Email
+    = content_tag :th, sort_link(@q, :last_name)
+    = content_tag :th, sort_link(@q, :first_name)
+    = content_tag :th, sort_link(@q, :email)
+    //%th
+    //  Last Name
+    //%th
+    //  First Name
+    //%th 
+    //  Email
     %th 
       Actions
   %tbody
@@ -38,6 +41,8 @@
           =link_to 'Delete', administration_delete_user_path(id: user.id), 
               class: 'btn btn-mini btn-danger', method: :delete, data: { confirm: 'Are you sure?' }, 
               id: "delete_#{user.id}"
+
+= paginate @users
 
 = link_to 'Create users from CSV file', administration_upload_csv_path, class: 'btn btn-info'
 
