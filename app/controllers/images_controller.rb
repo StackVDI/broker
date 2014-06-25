@@ -62,6 +62,7 @@ class ImagesController < ApplicationController
       end
       redirect_to cloud_server_images_path, notice: 'Image was successfully updated.' 
     else
+      @cloud_server = @image.cloud_server
       @machines = @image.cloud_server.machines
       @flavors = @image.cloud_server.flavors
       render action: 'edit' 
