@@ -7,6 +7,7 @@
     .form-inputs
       = f.input :first_name
       = f.input :last_name
+      = f.file_field :avatar
       = f.association :roles, as: :check_boxes
 
     .form-actions

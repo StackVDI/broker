@@ -12,6 +12,10 @@
     %br/
     = f.text_field :last_name
   %div
+    = f.label :avatar
+    %br/
+    = f.file_field :avatar
+  %div
     = f.label :email
     %br/
     = f.email_field :email, :autofocus => true
