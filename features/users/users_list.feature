@@ -59,3 +59,10 @@ Feature: List Users
     When I log as an admin
     And I upload a wrong CSV file
     Then I can see a list of errors of the file
+
+  @wip
+  Scenario: Admin can search users
+    When I log as an admin
+    And I visit user list link
+    And I look for a user 
+    Then I can see the user

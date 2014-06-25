@@ -1,5 +1,15 @@
 %h1 Users
-%p You can manage users in this page
+%br
+
+.container
+  .span7
+    .form-search.right
+      = search_form_for @q, url: administration_list_users_path do |f| 
+        .search-query
+          = f.text_field :email_cont, :placeholder => "Email contains ..."
+          = f.submit
+  .span4
+    = link_to 'Create users from CSV file', administration_upload_csv_path, class: 'btn btn-info'
 
 %table.table.table-bordered.table-hover
   %thead
@@ -43,7 +53,5 @@
               id: "delete_#{user.id}"
 
 = paginate @users
-
-= link_to 'Create users from CSV file', administration_upload_csv_path, class: 'btn btn-info'
 
       

@@ -114,6 +114,15 @@ When(/^I go to root page$/) do
   visit root_path
 end
 
+When(/^I look for a user$/) do
+  a = FactoryGirl.create(:user, :email => "prueba@buscame.com", :first_name => "escondido")
+  fill_in "q_email_cont", :with => "buscame"
+end
+
+Then(/^I can see the user$/) do
+  page.should have_content "escondido"
+end
+
 ### THEN ###
 Then(/^I receive an email for confirmation$/) do
   unread_emails_for(@user.email).size.should == 1
