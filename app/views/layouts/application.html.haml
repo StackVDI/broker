@@ -30,12 +30,11 @@
           .container.nav-collapse
             - if user_signed_in?
               %ul.nav.pull-right
-                //= drop_down current_user.last_name + ', ' + current_user.first_name do
                 = drop_down current_user.last_name + ', ' + current_user.first_name do
                   = menu_item "Edit", edit_user_registration_path
                   = drop_down_divider
                   = menu_item "Logout", destroy_user_session_path, :method => :delete, :id => "logout"
-                = image_tag current_user.avatar.url(:thumb), :class => "img-rounded"
+                = image_tag current_user.avatar.url(:thumb), :id => "padding5px", :class => "img-rounded"
 
     .container-fluid
 
