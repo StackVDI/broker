@@ -13,6 +13,8 @@
 
 %table.table.table-bordered.table-hover
   %thead
+    %th
+      Avatar
     = content_tag :th, sort_link(@q, :last_name)
     = content_tag :th, sort_link(@q, :first_name)
     = content_tag :th, sort_link(@q, :email)
@@ -32,6 +34,9 @@
       - elsif !user.approved?
         - @class = "info"
       %tr{ :class => @class}
+        %td
+          %center
+            = image_tag user.avatar.url(:thumb)
         %td
           =user.last_name
         %td

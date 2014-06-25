@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
 
   has_many :machines
 
+  has_attached_file :avatar, :styles => { :medium => "100x100>", :thumb => "50x50>" }, :default_url => "/images/:style/anonymous.png"
+
   after_create :set_default_role
 
   def set_default_role
