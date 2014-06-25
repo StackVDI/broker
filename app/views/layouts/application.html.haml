@@ -35,7 +35,7 @@
                   = menu_item "Edit", edit_user_registration_path
                   = drop_down_divider
                   = menu_item "Logout", destroy_user_session_path, :method => :delete, :id => "logout"
-                = image_tag current_user.avatar.url(:thumb)
+                = image_tag current_user.avatar.url(:thumb), :class => "img-rounded"
 
     .container-fluid
 
