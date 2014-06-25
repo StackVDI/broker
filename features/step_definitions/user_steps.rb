@@ -117,6 +117,7 @@ end
 When(/^I look for a user$/) do
   a = FactoryGirl.create(:user, :email => "prueba@buscame.com", :first_name => "escondido")
   fill_in "q_email_cont", :with => "buscame"
+  click_button "Search"
 end
 
 Then(/^I can see the user$/) do
