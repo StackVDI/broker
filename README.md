@@ -1,6 +1,6 @@
 ## StackVDI: Open Software Virtual Desktop Infraestructure
 
-
+[![Broker Video](https://i.vimeocdn.com/video/480446920_960.jpg)](https://vimeo.com/99310525)
 
 ### StackVDI allows you to
  * Connect to different cloud servers
