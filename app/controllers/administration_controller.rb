@@ -31,7 +31,9 @@ class AdministrationController < ApplicationController
 
   def list_groups
     authorize self
-    @groups = Role.all
+    #@groups = Role.all
+    @q = Role.search(params[:q])
+    @groups = @q.result(distinct: true).page params[:page]
   end
 
   def users_from_group

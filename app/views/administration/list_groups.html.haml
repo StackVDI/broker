@@ -6,8 +6,9 @@
 
 %table.table.table-bordered.table-hover
   %thead
-    %th
-      Name
+    // %th
+    // Name
+    = content_tag :th, sort_link(@q, :name)
     %th
       Machine Lifetime
     %th
@@ -30,6 +31,7 @@
             class: 'btn btn-mini btn-danger', method: :delete, data: { confirm: 'Are you sure?' }, 
             id: "delete_role_#{group.id}"
 
+= paginate @groups
 
 
 
