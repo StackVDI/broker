@@ -20,5 +20,7 @@
 /public/system/images/*
 /public/system/users/*
 
+/config/deploy/production.rb
+
 ./DS_Store
 
