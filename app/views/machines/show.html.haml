@@ -1,17 +1,28 @@
 %h1 Machine launched
 
-%p
-  You can connect manually to the machine with this parameters:
-%p
-  %b Remote username:
-  = @machine.remote_username
-%p
-  %b Remote password:
-  = @machine.remote_password
-%p
-  %b Remote address:
-  = @machine.ip
 
+= link_to "View connection parameters", "#modalparameters", :role => "button", :class => "btn btn-primary", :data =>{:toggle =>"modal"}
+
+%div{:id =>"modalparameters", :class => "modal hide fade", :tabindex => "-1", :role => "dialog", :aria => {:labelledby => "myModalLabel", :hidden =>"true"}}
+  %div{:class => "modal-header"}
+    %button{:type => "button", :class =>"close", :data => {:dismiss =>"modal"}, :aria => {:hidden => "true"}}
+      x
+    %h4
+      %center
+        You can connect manually to the machine with this parameters using RDP
+  %div{:class => "modal-body"}
+    %p
+      %b Remote username:
+      = @machine.remote_username
+    %p
+      %b Remote password:
+      = @machine.remote_password
+    %p
+      %b Remote address:
+      = @machine.ip
+
+%br
+%br
 %p
   If you don't connect automagically, do this :)
 %p 
