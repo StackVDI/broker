@@ -19,22 +19,24 @@
 
 
   %body
-    .navbar.navbar-fluid-top
-      .navbar-inner
-        .container-fluid
-          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand(href="/") StackVDI
-          .container.nav-collapse
-            - if user_signed_in?
-              %ul.nav.pull-right
-                = drop_down current_user.last_name + ', ' + current_user.first_name do
-                  = menu_item "Edit", edit_user_registration_path
-                  = drop_down_divider
-                  = menu_item "Logout", destroy_user_session_path, :method => :delete, :id => "logout"
-                = image_tag current_user.avatar.url(:thumb), :class => "img-rounded"
+
+    - if current_user
+      .navbar.navbar-fluid-top
+        .navbar-inner
+          .container-fluid
+            %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.brand(href="/") StackVDI
+            .container.nav-collapse
+              - if user_signed_in?
+                %ul.nav.pull-right
+                  = drop_down current_user.last_name + ', ' + current_user.first_name do
+                    = menu_item "Edit", edit_user_registration_path
+                    = drop_down_divider
+                    = menu_item "Logout", destroy_user_session_path, :method => :delete, :id => "logout"
+                  = image_tag current_user.avatar.url(:thumb), :class => "img-rounded"
 
     .container-fluid
 
@@ -62,7 +64,9 @@
     - else 
       .container
         .span12
+          %br
           = bootstrap_flash
+          %br
       .container
         .span4
         .span4
@@ -72,4 +76,5 @@
       .container
         .span12
           %footer
-            %p &copy; StackVDI
+            %p 
+            = link_to 'StackVDI', 'http://www.stackvdi.com'
