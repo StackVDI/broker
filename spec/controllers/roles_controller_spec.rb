@@ -3,8 +3,7 @@ require 'spec_helper'
 describe RolesController do
 
   before do
-    @rol = FactoryGirl.build(:role)
-    @rol.save
+    @rol = FactoryGirl.create(:role)
   end
 
   context 'login as an admin' do

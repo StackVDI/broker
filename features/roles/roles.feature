@@ -35,8 +35,10 @@ Feature: Roles
     And  I delete a role
     Then I can't see the deleted rol in the roles list
 
-
-
-
-
+  @wip
+  Scenario: Admin can assign number of concurrent machines to rol
+    When I log as an admin
+    And  I visit roles list link
+    And I edit a role
+    Then I can see number of concurrent machines edited
 

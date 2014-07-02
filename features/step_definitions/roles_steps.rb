@@ -19,11 +19,13 @@ When(/^I edit a role$/) do
   fill_in 'role_name', :with  => 'newrole'
   fill_in 'role_machine_lifetime', :with  => '5'
   fill_in 'role_machine_idletime', :with  => '7'
+  fill_in 'role_concurrent_machines', :with => '2'
   click_button 'Create Role'
   click_link 'edit_role_2'
   fill_in 'role_name', :with => 'newrole2'
   fill_in 'role_machine_lifetime', :with  => '6'
   fill_in 'role_machine_idletime', :with  => '1'
+  fill_in 'role_concurrent_machines', :with => '8'
   click_button 'Edit Role'
 end
 
@@ -68,3 +70,6 @@ Then(/^I can't see the deleted rol in the roles list$/) do
   page.should_not have_content 'newrole'
 end
 
+Then(/^I can see number of concurrent machines edited$/) do
+  page.should have_content "8"
+end

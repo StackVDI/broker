@@ -107,5 +107,24 @@ describe User do
     end
   end
 
+  describe '.max_concurrent_machines' do
+    before do
+      @user = FactoryGirl.build(:user)
+      role = FactoryGirl.build(:role, :name => 'primero', :concurrent_machines => '2')
+      @role2 = FactoryGirl.build(:role, :name => 'segundo', :concurrent_machines => '23')
+      @user.roles << role
+    end
+
+    it 'returns max concurrent_machines of all groups of a user' do
+      @user.max_concurrent_machines.should == 2
+      @user.roles << @role2
+      @user.max_concurrent_machines.should == 23
+    end
+
+    it 'returns -1 if no rol assigned to user' do
+      user = FactoryGirl.build(:user)
+      user.max_concurrent_machines.should == -1
+    end
+  end
 
 end

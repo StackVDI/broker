@@ -89,4 +89,15 @@ class User < ActiveRecord::Base
     end
     max
   end
+
+  def max_concurrent_machines
+    max = -1
+    roles.each do |rol| 
+      if rol.concurrent_machines > max
+        max = rol.concurrent_machines
+      end
+    end
+    max
+  end
+
 end

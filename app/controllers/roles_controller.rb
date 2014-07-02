@@ -44,6 +44,6 @@ class RolesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
     def role_params
-      params.require(:role).permit(:name, :machine_lifetime, :machine_idletime)
+      params.require(:role).permit(:name, :machine_lifetime, :machine_idletime, :concurrent_machines )
     end
 end

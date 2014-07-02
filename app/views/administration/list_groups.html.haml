@@ -13,6 +13,8 @@
       Machine Lifetime
     %th
       Machine Idletime
+    %th
+      Concurrent Machines
     %th 
       Actions
   %tbody
@@ -24,6 +26,8 @@
           =group.machine_lifetime
         %td
           =group.machine_idletime
+        %td
+          =group.concurrent_machines
         %td
           =link_to 'See users', administration_users_from_group_path(:id => group.id), :class => 'btn btn-mini btn-info', id: "see_users_from_group_#{group.id}"
           =link_to 'Edit', edit_role_path(:id => group.id), :class => 'btn btn-mini btn-info', id: "edit_role_#{group.id}"

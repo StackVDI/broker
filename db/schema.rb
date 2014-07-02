@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625100911) do
+ActiveRecord::Schema.define(version: 20140702105617) do
 
   create_table "cloud_servers", force: true do |t|
     t.string   "name"
@@ -67,8 +67,9 @@ ActiveRecord::Schema.define(version: 20140625100911) do
     t.string   "resource_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "machine_lifetime", default: 24
-    t.integer  "machine_idletime", default: 24
+    t.integer  "machine_lifetime",    default: 24
+    t.integer  "machine_idletime",    default: 24
+    t.integer  "concurrent_machines", default: 1
   end
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
