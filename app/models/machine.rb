@@ -46,6 +46,10 @@ class Machine < ActiveRecord::Base
       remote_address
     end
     rescue
+      puts "************************"
+      puts " ERROR: IP NOT AVAILABLE" 
+      puts "************************"
+      GeneralMailer.errorMail("Error Assigning IP to  Machine. Connection problems?").deliver
       ""
   end
 
