@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
   validates :speed, inclusion: { in: ["normal", "slow connection", "fast connection"],
       message: "%{value} is not a valid speed value" }
 
+  validates :gatewayhost, :presence => true, :if => :gatewayenabled?
+  validates :gatewayuser, :presence => true, :if => :gatewayenabled?
+  validates :gatewaypassword, :presence => true, :if => :gatewayenabled?
+
   has_many :machines
 
   has_attached_file :avatar, :styles => { :medium => "100x100>", :thumb => "40x40>" }, :default_url => "/images/:style/anonymous.png"
@@ -102,6 +106,10 @@ class User < ActiveRecord::Base
       end
     end
     max
+  end
+
+  def gatewayenabled?
+    self.gatewayenabled
   end
 
 end

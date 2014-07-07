@@ -47,6 +47,7 @@
         %div
           = f.label "Connect folder to virtual machine"
           = f.text_field :folder
+        %br
         .alert.alert-success
           Gateway preferences
         %div
@@ -61,9 +62,8 @@
           = f.text_field :gatewayuser
         %div
           = f.label "Gateway password"
-          %i Leave blank if you don't want to change it
           %br
-          = f.password_field :gatewaypassword
+          = f.password_field :gatewaypassword, :value => current_user.gatewaypassword
       %br
       %div
         .alert.alert-info 
