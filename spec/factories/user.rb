@@ -9,6 +9,8 @@ FactoryGirl.define do
     last_name 'Doe'
     password 'changeme99'
     approved false
+    speed 'normal'
+    resolution 'fullscreen'
   end
 
 end

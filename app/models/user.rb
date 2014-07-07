@@ -6,6 +6,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :resolution, inclusion: { in: %w(fullscreen 1024x768 800x600),
+      message: "%{value} is not a valid resolution value" }
+  validates :speed, inclusion: { in: ["normal", "slow connection", "fast connection"],
+      message: "%{value} is not a valid speed value" }
 
   has_many :machines
 

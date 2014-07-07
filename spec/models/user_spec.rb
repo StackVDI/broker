@@ -4,6 +4,8 @@ describe User do
 
   it { should validate_presence_of(:first_name)}
   it { should validate_presence_of(:last_name)}
+  it { should ensure_inclusion_of(:resolution).in_array(%w(fullscreen 1024x768 800x600))}
+  it { should ensure_inclusion_of(:speed).in_array(["normal", "slow connection", "fast connection"])}
 
 
   describe 'set_default_group' do 
