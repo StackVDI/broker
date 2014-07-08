@@ -7,6 +7,6 @@ class AddConectionPreferencesToUsers < ActiveRecord::Migration
     add_column :users, :gatewaypassword, :string
     add_column :users, :speed, :string, :default => "normal"
     add_column :users, :folder, :string
-    add_column :users, :showonlaunch, :boolean, :default => "false"
+    add_column :users, :showonlaunch, :boolean, :default => false
   end
 end
