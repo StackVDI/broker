@@ -3,41 +3,79 @@
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   = devise_error_messages!
   
-  %div
-    = f.label :first_name
-    %br/
-    = f.text_field :first_name
-  %div
-    = f.label :last_name
-    %br/
-    = f.text_field :last_name
-  %div
-    = f.label :avatar
-    %br/
-    = f.file_field :avatar
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email, :autofocus => true
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  %div
-    = f.label :password
-    %i (leave blank if you don't want to change it)
-    %br/
-    = f.password_field :password, :autocomplete => "off"
-  %div
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation
-  %div
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-    %br/
-    = f.password_field :current_password
-  %div= f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete}
-= link_to "Back", :back
+  .tabable
+    %ul.nav.nav-tabs
+      %li.active
+        = link_to 'Preferences', '#tab1', :data => {:toggle => "tab"}
+      %li
+        = link_to 'Connection', '#tab2', :data => {:toggle =>"tab"}
+    .tab-content
+      .tab-pane.active#tab1
+        %div
+          = f.label :first_name
+          = f.text_field :first_name
+        %div
+          = f.label :last_name
+          = f.text_field :last_name
+        %div
+          = f.label :avatar
+          = f.file_field :avatar
+        %div
+          = f.label :email
+          = f.email_field :email, :autofocus => true
+        - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+          %div
+            Currently waiting confirmation for: #{resource.unconfirmed_email}
+        %div
+          %i Leave blank if you don't want to change it.
+          %br
+          = f.label :password
+          = f.password_field :password, :autocomplete => "off", :value => ""
+        %div
+          = f.label :password_confirmation
+          = f.password_field :password_confirmation, :autocomplete => "off", :value => ""
+      .tab-pane#tab2
+        %div
+          = f.label :resolution
+          = f.select :resolution, ["fullscreen","1024x768", "800x600"], :selected => current_user.resolution
+        %div
+          = f.label "Connection speed"
+          = f.select :speed, ["slow connection", "normal", "fast connection"], :selected => current_user.speed
+          / %div
+          /  = f.label "Show parameters launching machine" 
+          /          = f.check_box :showonlaunch
+        %div
+          = f.label "Connect folder to virtual machine"
+          = f.text_field :folder
+        %br
+        .alert.alert-success
+          Gateway preferences
+        %div
+          = f.label "Enable Gateway"
+          = f.check_box :gatewayenabled
+        %div
+          = f.label 'Gateway host and port'
+          %br
+          = f.text_field :gatewayhost, :placeholder => "http://www.stackvdi.com:443"
+        %div
+          = f.label "Gateway User"
+          = f.text_field :gatewayuser
+        %div
+          = f.label "Gateway password"
+          %br
+          = f.password_field :gatewaypassword, :value => current_user.gatewaypassword
+      %br
+      %div
+        .alert.alert-info 
+          We need your current password to confirm your changes.
+        = f.label :current_password
+        = f.password_field :current_password
+      %br 
+      %div= f.submit "Update"
+%h4 
+  .alert.alert-error
+    Dangerous Zone!
+  Cancel my account
+  %p
+    #{button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete}
+ 
