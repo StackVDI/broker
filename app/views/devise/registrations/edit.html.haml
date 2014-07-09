@@ -55,14 +55,12 @@
           = f.check_box :gatewayenabled
         %div
           = f.label 'Gateway host and port'
-          %br
           = f.text_field :gatewayhost, :placeholder => "http://www.stackvdi.com:443"
         %div
           = f.label "Gateway User"
           = f.text_field :gatewayuser
         %div
           = f.label "Gateway password"
-          %br
           = f.password_field :gatewaypassword, :value => current_user.gatewaypassword
       %br
       %div
@@ -79,3 +77,41 @@
   %p
     #{button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete}
  
+
+
+
+%script
+
+  var enableProxy = function() {   
+  $("#user_gatewayhost").removeAttr('disabled');
+  $("#user_gatewayuser").removeAttr('disabled');
+  $("#user_gatewaypassword").removeAttr('disabled');
+  };
+
+  var disableProxy = function() {
+  $("#user_gatewayhost").attr('disabled','disabled');
+  $("#user_gatewayuser").attr('disabled','disabled');
+  $("#user_gatewaypassword").attr('disabled','disabled');
+  };
+
+  $( document ).ready(function() {
+  if($('#user_gatewayenabled').attr("checked")=='checked'){
+  enableProxy();
+  }
+  else {
+  disableProxy();
+  }
+
+  $('#user_gatewayenabled').click(function() {
+  if (!$(this).is(':checked')) {
+  disableProxy();
+  }
+  else{
+  enableProxy();
+  }
+  });
+  
+  });
+
+
+
