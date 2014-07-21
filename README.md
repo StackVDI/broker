@@ -27,11 +27,12 @@ StackVDI can manage users, groups, virtual machines, machine templates and conec
 
 __ABOVE UNDER TRANSLATION__
 
-## Instalación y configuración
+## Installation and configuration
 
-Aquí se expone como instalar el broker en un servidor Ubuntu 14.04, pero las instrucciones son extrapolables a cualquier otra distribución
+We have intalled broker with Ubuntu 14.04, but it's easy to do in any other distribution
+If you install it in another operating system, please, send us how to and will share it here.
 
-En el servidor necesitamos tener un usuario llamado openvdi con permisos de sudo. De no tenerlo, como root, tecleamos:
+We need an openvdi user with sudo perms:
 
 ```
 adduser openvdi
@@ -39,9 +40,10 @@ adduser openvdi adm
 adduser openvdi sudo
 ```
 
-Despues de esto, creamos la confianza ssh con la maquina para poder conectarnos sin clave con el usuario openvdi. A partir de aquí, nos conectamos por ssh con usuario openvdi y  todos los comandos los teclearemos como usuario openvdi.
+After this, logout and log in again with openvdi user. We will use openvdi user from now.
 
-Necesitamos tener Ruby 2.0 instalado. Lo instalamos a través de la herramienta rvm.
+We need Ruby 2.0. We'll use rvm to install it. Please remove any other version of ruby (intalled with apt or whatever) if you are not sure aboute how ruby works. 
+
 
 ```
 \curl -sSL https://get.rvm.io | bash -s stable
@@ -49,7 +51,7 @@ source /home/openvdi/.rvm/scripts/rvm
 rvm install 2.0
 ```
 
-Y obtenemos una salida parecida a esta
+With this output:
 
 ```
 openvdi@pp:~$ rvm install 2.0
@@ -92,10 +94,11 @@ Install of ruby-2.0.0-p481 - #complete
 Ruby was built without documentation, to build it run: rvm docs generate-ri
 ``` 
 
-Para comprobar que tenemos ruby 2.0 funcionando, basta con escribir en la consola `ruby -v` y obtendremos una salida asi: `ruby 2.0.0p481 (2014-05-08 revision 45883) [x86_64-linux]`. 
-Procedemos con la instalación de diversos servicios necesarios para el broker con el comando `sudo apt-get install mysql-client-5.5 mysql-server nginx-full redis-server git libmysqlclient-dev postfix git imagemagick`. 
+To check that we have ruby working, type `ruby -v` and we must have an output like this: `ruby 2.0.0p481 (2014-05-08 revision 45883) [x86_64-linux]`. May last version number changes, but don't worry about it.
 
-Una vez instalados los servicios, procedemos a la creación de la base de datos de producción
+We need to install some packages `sudo apt-get install mysql-client-5.5 mysql-server nginx-full redis-server git libmysqlclient-dev postfix git imagemagick`. 
+
+Create database as this:
 
 ```
 mysql -u root -p
@@ -103,16 +106,7 @@ create database openvdi_production;
 exit
 ```
 
-Editamos .gitconfig para evitar que se chequee el certificado del servidor.
-
-`vi ~/.gitconfig`
-
-```
-[http]
-    sslVerify = false
-```
-
-Creamos los directorios donde alojaremos el broker `sudo mkdir -p /var/www/openvdi/ -p; `, clonamos el repositorio con `cd /var/www/ ; sudo chown openvdi.openvdi openvdi/ ; cd openvdi; git clone https://github.com/OpenMurVDI/broker.git`  y editamos la conexión a la base de datos asi: `sudo vi /var/www/openvdi/broker/config/database.yml`. El contenido será algo como que asi
+We'll create directory where install the broker with `sudo mkdir -p /var/www/openvdi/ -p; `, clone the repository  `cd /var/www/ ; sudo chown openvdi.openvdi openvdi/ ; cd openvdi; git clone https://github.com/OpenMurVDI/broker.git` and edit the database connection: `sudo vi /var/www/openvdi/broker/config/database.yml`. Content of the file should be like this:
 
 ```
 production:
@@ -122,11 +116,11 @@ production:
   password: 
 ```
 
-Tambiém creamos el directorio para albergar el applet, `sudo mkdir -p /var/www/openvdi/broker/public/applet` y copiamos el applet a ese directorio.
+Create the directory to copy the applet, `sudo mkdir -p /var/www/openvdi/broker/public/applet` and copy into it.
 
-y lo dejamos todo con los permisos adecuados para que nuestro usuario sea el propietario `sudo  chown openvdi.openvdi /var/www/openvdi/ -R`
+Change permissions `sudo  chown openvdi.openvdi /var/www/openvdi/ -R`
 
-Creamos el fichero de configuración ngnix: `sudo vi /etc/nginx/sites-available/openvdi.conf` con este contenido:
+Create the file to configure nginx: `sudo vi /etc/nginx/sites-available/openvdi.conf` with this content:
 
 ```
 upstream openvdi {
@@ -164,7 +158,7 @@ server {
 
 ```
 
-y configuramos el servidor web
+Configure webserver
 
 ```
   cd /etc/nginx/sites-enabled
@@ -173,7 +167,7 @@ y configuramos el servidor web
   sudo /etc/init.d/nginx restart
 ```
     
-Despues, creamos el servicio para manejar la aplicación con `sudo vi /etc/init.d/openvdi` con el contenido
+and create the service to start/stop/restart the broker
 
 ```
 #!/bin/bash
@@ -298,7 +292,7 @@ exit 0
 
 ```
 
-y lo añadimos al sudo del usuario openvdi. Tecleamos `sudo visudo` y dejamos el fichero asi
+And we change sudoers to permit openvdi to use service without password: `sudo visudo` 
 
 ```
 #
@@ -339,7 +333,7 @@ openvdi ALL=NOPASSWD:OPENVDI
 ```
 
 
-Por último, añadimos el arranque automático del servicio:
+Enable start service on machine boot.
 
 ```
 cd /etc/rc2.d/
