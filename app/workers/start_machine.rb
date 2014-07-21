@@ -15,6 +15,6 @@ class StartMachine
       end
       rescue 
         @machine.destroy
-        GeneralMailer.errorMail("Error Creating Machine. Quota problems?").deliver
+        GeneralMailer.errorMail("Error Creating Machine. Quota problems? Sidekiq Launched?").deliver
     end
 end
