@@ -333,7 +333,7 @@ openvdi ALL=NOPASSWD:OPENVDI
 ```
 
 
-Enable start service on machine boot.
+Enable start service when machine boot.
 
 ```
 cd /etc/rc2.d/
@@ -342,32 +342,46 @@ sudo chmod  +x /etc/init.d/openvdi
 /etc/init.d/openvdi start
 ```
 
-Sitúate de nuevo en el directorio de la aplicación `cd /var/www/openvdi/broker`
-Teclea `bundle install; RAILS_ENV=production bundle exec rake assets:precompile; RAILS_ENV=production bundle exec rake db:migrate` para hacer la instalación de las gemas y la migración de la base de datos y si quieres crear los usuarios por defecto, `RAILS_ENV=production bundle exec rake db:seed`.
+Install gems and precompile assets and migrate database: 
 
-Y reiniciamos de nuevo nginx y openvdi
+```
+cd /var/www/openvdi/broker
+bundle install
+RAILS_ENV=production bundle exec rake assets:precompile
+RAILS_ENV=production bundle exec rake db:migrate
+```
+
+If you want to create default users:
+
+```
+RAILS_ENV=production bundle exec rake db:seed
+```
+
+Restart nginx and openvdi:
+
 ````
 sudo /etc/init.d/openvdi restart
 sudo /etc/init.d/nginx restart
 ````
 
-Los usuarios seran
+Created users are:
+
 ```
-admin@openvdi.com, con clave changeme
-user@openvdi.com, con clave changeme
+admin@stackvdi.com, with pass changeme
+user@stackvdi.com, with pass changeme
 ```
 
-Editaremos nuestro crontab con `crontab -e` y dejaremos la línea parecida a esto. Sólo tendremos que cambiar el directrio donde hacemos el cd. 
+We have to edit crontab jobs with `crontab -e` to run every hour a task to know when to destroy a machine if life|idle time of a machine has expired.
 
 ````
 0 * * * * /bin/bash -l -c 'cd /var/www/openvdi/broker && bundle exec rails runner Machine.check_expired -e production 2> /dev/null'
 ```
 
-## Pasos para configurar OpenVDI en el cliente
+## StackVDI in the browser
 
-Comprueba [aquí](http://www.java.com/es/download/installed.jsp) que tienes correctamente instalado Java en tu navegador. Una vez hecho esto, añada la dirección http://www.openvdi.com (o el correspondiente donde este instalada) como sitio de confianza en el panel de control de Java. Pestaña Seguridad->Editar lista de sitios.
+Check [here](http://www.java.com/es/download/installed.jsp) that you have installed propertly Java in your browser. After taht, add the url of the broker (http://broker.stackvdi.com, for example) in the Java Control Panel as a trusted site. Security Tab -> Edit.
 
-Si utiliza un cliente Linux, instale la aplicación freerdp-x11 (sudo apt-get install freerdp-x11).
-Si utiliza Mac Os X, instale la aplicación [CoRD](http://sourceforge.net/projects/cord/files/cord/0.5.7/CoRD_0.5.7.zip/download) en su carpeta de aplicaciones.
+If you use a Linux client, install freerdp-x11  (sudo apt-get install freerdp-x11).
+If you use Mac OS X, install [CoRD](http://sourceforge.net/projects/cord/files/cord/0.5.7/CoRD_0.5.7.zip/download) in your application folder.
 
 
