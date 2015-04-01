@@ -37,21 +37,34 @@ class Machine < ActiveRecord::Base
     self.cloud_server.reboot("openvdi" + self.id.to_s)
   end
 
-  def ip
+  def set_ip
+    puts "**************************************************"
+    puts "\n\nENTRANDO EN MACHINE IP CON ID #{self.id}\n\n"
+    puts "**************************************************"
+
     if self.remote_address
       self.remote_address
     else
-      self.remote_address = self.cloud_server.ip("openvdi" + self.id.to_s)
+      self.remote_address = self.cloud_server.set_ip("openvdi" + self.id.to_s)
       self.save
       remote_address
     end
     rescue
       puts "************************"
       puts " ERROR: IP NOT AVAILABLE" 
+      puts $!, $@
       puts "************************"
       GeneralMailer.errorMail("Error Assigning IP to  Machine. Connection problems?").deliver
       ""
   end
+
+  def ip
+    if self.remote_address
+      self.remote_address
+    else
+      ""
+    end
+ end
 
   def must_destroy?
     max_lifetime_expired || max_idletime_expired

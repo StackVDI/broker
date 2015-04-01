@@ -34,7 +34,7 @@ class CloudServer < ActiveRecord::Base
 
   def create_server(args)
       @os ||= connect
-      @os.create_server(:name => args[:name], :image => args[:image], :flavor => args[:flavor], :password => args[:password])
+      @os.create_server(:name => args[:name], :image => args[:image], :flavor => args[:flavor], :password => args[:password] )
   end
 
   def pause(name)
@@ -62,6 +62,11 @@ class CloudServer < ActiveRecord::Base
   def ip(name)
     @os ||= connect
     @os.ip name
+  end
+
+  def set_ip(name)
+    @os ||= connect
+    @os.associate_ip_to_server name
   end
 
 end

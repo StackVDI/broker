@@ -81,8 +81,8 @@ end
 
 gem 'puma'
 gem 'rolify'
-gem 'pry'
-gem 'pry-debugger'
+#gem 'pry'
+#gem 'pry-debugger'
 
 gem 'pundit'
 
