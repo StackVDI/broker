@@ -32,9 +32,20 @@ class CloudServer < ActiveRecord::Base
     end
   end
 
+  def networks
+    begin
+      @os ||= connect
+      @os.networks
+    rescue
+      []
+    end
+  end
+
+
+
   def create_server(args)
       @os ||= connect
-      @os.create_server(:name => args[:name], :image => args[:image], :flavor => args[:flavor], :password => args[:password] )
+      @os.create_server(:name => args[:name], :image => args[:image], :flavor => args[:flavor], :password => args[:password], :network => args[:network])
   end
 
   def pause(name)

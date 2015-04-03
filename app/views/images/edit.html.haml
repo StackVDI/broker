@@ -11,6 +11,7 @@
       = f.select :machine, @machines.map { |m| [m[:name], m[:name]] }, include_blank: true
     = f.input :flavor do
       = f.select :flavor, @flavors.map { |m| [m[:name], m[:name]] }, include_blank: true
+    = f.input :network
     = f.input :number_of_instances
     = f.association :roles, as: :check_boxes
 

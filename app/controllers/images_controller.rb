@@ -17,6 +17,7 @@ class ImagesController < ApplicationController
     @cloud_server = CloudServer.find(params[:cloud_server_id])
     @machines = @cloud_server.machines
     @flavors = @cloud_server.flavors
+#    @networks = @cloud_server.networks
     @image = Image.new
     @image.cloud_server = @cloud_server
     authorize @image
@@ -28,6 +29,7 @@ class ImagesController < ApplicationController
     @cloud_server = CloudServer.find(params[:cloud_server_id])
     @machines = @cloud_server.machines
     @flavors = @cloud_server.flavors
+#    @networks = @cloud_server.networks
   end
 
   # POST /images
@@ -46,6 +48,7 @@ class ImagesController < ApplicationController
     else
       @machines = @cloud_server.machines
       @flavors = @cloud_server.flavors
+#      @networks = @cloud_server.networks
       render action: 'new' 
     end
   end
@@ -65,6 +68,7 @@ class ImagesController < ApplicationController
       @cloud_server = @image.cloud_server
       @machines = @image.cloud_server.machines
       @flavors = @image.cloud_server.flavors
+#      @networks = @cloud_server.networks
       render action: 'edit' 
     end
   end
@@ -89,6 +93,6 @@ class ImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
-      params.require(:image).permit(:name, :description, :machine, :flavor, :number_of_instances, :cloud_server_id, {:role_ids => []}, :avatar)
+      params.require(:image).permit(:name, :description, :machine, :flavor, :network, :number_of_instances, :cloud_server_id, {:role_ids => []}, :avatar)
     end
 end

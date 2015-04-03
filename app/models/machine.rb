@@ -18,7 +18,7 @@ class Machine < ActiveRecord::Base
   end
 
   def cloud_create
-     self.cloud_server.create_server(:name => "openvdi" + self.id.to_s, :image => self.image.machine, :flavor => self.image.flavor, :password => self.remote_password)
+     self.cloud_server.create_server(:name => "openvdi" + self.id.to_s, :image => self.image.machine, :flavor => self.image.flavor, :password => self.remote_password, :network => self.image.network)
   end
 
   def cloud_destroy
